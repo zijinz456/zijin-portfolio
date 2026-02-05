@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { NumberTicker } from "@/components/ui/number-ticker";
 
 // Skill 1: Complexity to Clarity
 const clarityTransformations = [
@@ -58,9 +57,9 @@ const builderMindset = [
 ];
 
 const projectStats = [
-  { label: "Questions Processed", value: 3000, suffix: "+" },
-  { label: "Test Cases", value: 2100, suffix: "+" },
-  { label: "R² Correlation", value: 0.87, suffix: "", decimalPlaces: 2 },
+  { label: "Questions Processed", value: "3,000+" },
+  { label: "Test Cases", value: "2,100+" },
+  { label: "R² Correlation", value: "0.87" },
 ];
 
 export default function TopSkillsShowcase() {
@@ -93,12 +92,12 @@ export default function TopSkillsShowcase() {
             className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-20 h-20 bg-[#ffe135] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 bg-[#ffe135] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/skills/fast-learner.png"
                   alt="Fast Learner"
-                  width={70}
-                  height={70}
+                  width={140}
+                  height={140}
                   className="object-contain"
                 />
               </div>
@@ -159,12 +158,12 @@ export default function TopSkillsShowcase() {
             className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-20 h-20 bg-[#87ceeb] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 bg-[#87ceeb] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/skills/clarity.png"
                   alt="Complexity to Clarity"
-                  width={70}
-                  height={70}
+                  width={140}
+                  height={140}
                   className="object-contain"
                 />
               </div>
@@ -241,12 +240,12 @@ export default function TopSkillsShowcase() {
             className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-20 h-20 bg-[#ff6b9d] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+              <div className="w-40 h-40 bg-[#ff6b9d] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/skills/end-to-end.png"
                   alt="End-to-End Builder"
-                  width={70}
-                  height={70}
+                  width={140}
+                  height={140}
                   className="object-contain"
                 />
               </div>
@@ -270,12 +269,7 @@ export default function TopSkillsShowcase() {
               <div className="flex justify-around">
                 {projectStats.map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <NumberTicker
-                      value={stat.value}
-                      suffix={stat.suffix}
-                      decimalPlaces={stat.decimalPlaces || 0}
-                      className="text-xl font-bold text-white"
-                    />
+                    <p className="text-xl font-bold text-white">{stat.value}</p>
                     <p className="text-xs text-white/80">{stat.label}</p>
                   </div>
                 ))}

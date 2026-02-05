@@ -76,6 +76,7 @@ export default function IDCard({ className = "" }: IDCardProps) {
           <span className="text-[#ff6b9d] text-[8px] font-bold text-center leading-tight">AI<br/>BUILDER</span>
         </div>
       </div>
+
     </motion.div>
   );
 }
