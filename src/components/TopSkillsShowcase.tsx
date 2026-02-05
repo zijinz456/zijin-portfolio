@@ -92,12 +92,12 @@ export default function TopSkillsShowcase() {
             className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-40 h-40 bg-[#ffe135] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+              <div className="w-48 h-48 bg-[#ffe135] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/skills/fast-learner.png"
                   alt="Fast Learner"
-                  width={140}
-                  height={140}
+                  width={180}
+                  height={180}
                   className="object-contain"
                 />
               </div>
@@ -158,12 +158,12 @@ export default function TopSkillsShowcase() {
             className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-40 h-40 bg-[#87ceeb] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+              <div className="w-48 h-48 bg-[#87ceeb] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/skills/clarity.png"
                   alt="Complexity to Clarity"
-                  width={140}
-                  height={140}
+                  width={180}
+                  height={180}
                   className="object-contain"
                 />
               </div>
@@ -240,12 +240,12 @@ export default function TopSkillsShowcase() {
             className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-40 h-40 bg-[#ff6b9d] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+              <div className="w-48 h-48 bg-[#ff6b9d] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                 <Image
                   src="/skills/end-to-end.png"
                   alt="End-to-End Builder"
-                  width={140}
-                  height={140}
+                  width={180}
+                  height={180}
                   className="object-contain"
                 />
               </div>
