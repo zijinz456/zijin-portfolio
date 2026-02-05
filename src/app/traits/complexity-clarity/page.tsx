@@ -10,9 +10,9 @@ const transformations = [
     context: "VectorPaths Learning System",
   },
   {
-    before: "User says \"I want to transfer money\"",
-    after: "Understanding real need: \"I'm not sure how to use the app\"",
-    context: "CBA Customer Service",
+    before: "Customer walks in frustrated with a form they can't complete",
+    after: "Identify the confusion point, guide step-by-step",
+    context: "CBA Front-line Service",
   },
   {
     before: "3000+ raw question data",

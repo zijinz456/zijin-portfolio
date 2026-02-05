@@ -5,6 +5,8 @@ import Link from "next/link";
 import AvatarWithBubbles from "@/components/AvatarWithBubbles";
 import AboutMe from "@/components/AboutMe";
 import TopSkillsShowcase from "@/components/TopSkillsShowcase";
+import { SparklesText } from "@/components/ui/sparkles-text";
+import { WordRotate } from "@/components/ui/word-rotate";
 
 export default function Home() {
   return (
@@ -24,8 +26,13 @@ export default function Home() {
                 Hi, I&apos;m <span className="highlight-pink">Zijin</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-700 mb-6 tracking-wide">
-                Product Builder & <span className="highlight-yellow">Banking Specialist</span>
+              <p className="text-lg md:text-xl text-gray-700 mb-6 tracking-wide flex items-center gap-2 justify-center md:justify-start flex-wrap">
+                <span>Product Builder &</span>
+                <WordRotate
+                  words={["Banking Specialist", "AI Enthusiast", "Fast Learner", "End-to-End Builder"]}
+                  duration={3000}
+                  className="highlight-yellow inline-block"
+                />
               </p>
 
               <div className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed tracking-wide max-w-lg space-y-2">
@@ -176,8 +183,15 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-6 tracking-wide">
-              Let&apos;s <span className="text-[#ffe135]">Build</span> Together
+            <h2 className="text-3xl font-bold mb-6 tracking-wide flex items-center justify-center gap-2 flex-wrap">
+              <span>Let&apos;s</span>
+              <SparklesText
+                className="text-3xl font-bold text-[#ffe135]"
+                colors={{ first: "#ffe135", second: "#ff6b9d" }}
+              >
+                Build
+              </SparklesText>
+              <span>Together</span>
             </h2>
             <p className="text-gray-300 mb-10 tracking-wide">
               Want to chat about AI or have an interesting project idea?

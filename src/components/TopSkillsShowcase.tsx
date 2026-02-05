@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { NumberTicker } from "@/components/ui/number-ticker";
 
 // Skill 1: Complexity to Clarity
 const clarityTransformations = [
@@ -32,8 +33,8 @@ const clarityPrinciples = [
 // Skill 2: Fast Learner
 const learningExamples = [
   {
-    title: "This Website in 3 Hours",
-    description: "Built this entire portfolio from scratch with Next.js + Tailwind + Framer Motion",
+    title: "Zero to Portfolio in 3 Hours",
+    description: "Built this entire site from scratch with Next.js + Tailwind + Framer Motion",
     icon: "🚀",
   },
   {
@@ -57,9 +58,9 @@ const builderMindset = [
 ];
 
 const projectStats = [
-  { label: "Questions Processed", value: "3,000+" },
-  { label: "Test Cases", value: "2,100+" },
-  { label: "R² Correlation", value: "0.87" },
+  { label: "Questions Processed", value: 3000, suffix: "+" },
+  { label: "Test Cases", value: 2100, suffix: "+" },
+  { label: "R² Correlation", value: 0.87, suffix: "", decimalPlaces: 2 },
 ];
 
 export default function TopSkillsShowcase() {
@@ -269,7 +270,12 @@ export default function TopSkillsShowcase() {
               <div className="flex justify-around">
                 {projectStats.map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <p className="text-xl font-bold text-white">{stat.value}</p>
+                    <NumberTicker
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      decimalPlaces={stat.decimalPlaces || 0}
+                      className="text-xl font-bold text-white"
+                    />
                     <p className="text-xs text-white/80">{stat.label}</p>
                   </div>
                 ))}

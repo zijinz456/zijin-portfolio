@@ -168,63 +168,58 @@ export default function ExperiencePage() {
           {/* CBA Case Study */}
           <CaseStudy
             id="cba-case"
-            title="CBA Customer Service"
-            subtitle="Real Customer Interactions → Design Insights"
+            title="Commonwealth Bank"
+            subtitle="Customer Banking Specialist"
             customImage="/skills/cba.png"
             color="green"
-            challenge="How do you design AI assistants that actually help real customers with messy, emotional, and often unclear requests?"
+            challenge="Serving diverse customers — from elderly to business clients — each with different needs, tech comfort levels, and communication styles."
             sections={[
               {
-                title: "What I Learned from the Front Line",
+                title: "Adapting to Different Users",
                 content: (
                   <div className="space-y-4">
                     <div className="p-4 bg-[#98d4bb] border-2 border-[#1a1a1a] rounded-xl">
-                      <p className="font-semibold text-[#1a1a1a] mb-2">Adaptive Tone</p>
+                      <p className="font-semibold text-[#1a1a1a] mb-2">Read the User</p>
                       <p className="text-sm text-gray-700">
-                        Slow down for elderly customers, be direct with tech-savvy users.
-                        One-size-fits-all doesn&apos;t work.
+                        Adjusting tone, pacing, and complexity based on who I&apos;m talking to.
+                        What works for one person doesn&apos;t work for another.
                       </p>
                     </div>
                     <div className="p-4 bg-[#ffb6c1] border-2 border-[#1a1a1a] rounded-xl">
-                      <p className="font-semibold text-[#1a1a1a] mb-2">De-escalation Patterns</p>
+                      <p className="font-semibold text-[#1a1a1a] mb-2">Reduce Friction</p>
                       <p className="text-sm text-gray-700">
-                        &quot;I want to complain&quot; often means &quot;I need to be heard.&quot;
-                        Recognition before resolution.
+                        Clarifying requirements upfront and guiding users to the right channel
+                        — sometimes self-serve is better, sometimes they need a conversation.
                       </p>
                     </div>
                     <div className="p-4 bg-[#e8d4f8] border-2 border-[#1a1a1a] rounded-xl">
-                      <p className="font-semibold text-[#1a1a1a] mb-2">Know When to Handoff</p>
+                      <p className="font-semibold text-[#1a1a1a] mb-2">Handle Frustration</p>
                       <p className="text-sm text-gray-700">
-                        Recognize chatbot limits. Some conversations need human touch.
+                        De-escalating by identifying confusion points first,
+                        then providing clear, step-by-step resolution.
                       </p>
                     </div>
                   </div>
                 ),
               },
               {
-                title: "Design Principles I Developed",
+                title: "What I Noticed",
                 content: (
                   <div className="space-y-3">
                     <p>
-                      <strong>1. Understand the real goal, not the literal request</strong>
+                      <strong>Information design gaps in forms and processes</strong>
                       <br />
                       <span className="text-gray-600">
-                        &quot;I want to transfer money&quot; might mean &quot;I&apos;m not sure how to use the
-                        app.&quot;
+                        Many customer issues came from unclear instructions or confusing flows —
+                        problems that better design could prevent.
                       </span>
                     </p>
                     <p>
-                      <strong>2. Design for the frustrated user first</strong>
+                      <strong>Coordination matters</strong>
                       <br />
                       <span className="text-gray-600">
-                        If it works for someone who&apos;s upset, it&apos;ll work for everyone.
-                      </span>
-                    </p>
-                    <p>
-                      <strong>3. Context is everything</strong>
-                      <br />
-                      <span className="text-gray-600">
-                        Same words, different history = different response needed.
+                        Working with lending and business banking teams on handoffs showed me
+                        how important smooth transitions are for user experience.
                       </span>
                     </p>
                   </div>
