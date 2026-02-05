@@ -98,8 +98,8 @@ export default function ContactPage() {
                 <span className="text-white text-xl">🎯</span>
               </div>
               <div>
-                <h3 className="font-semibold text-[#1a1a1a]">Interview Quick Links</h3>
-                <p className="text-sm text-gray-500">Questions HR might ask — answered in one click</p>
+                <h3 className="font-semibold text-[#1a1a1a]">Questions to Me</h3>
+                <p className="text-sm text-gray-500">Common interview questions — answered in one click</p>
               </div>
             </div>
 
