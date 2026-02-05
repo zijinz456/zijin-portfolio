@@ -11,22 +11,20 @@ interface Update {
 
 const updates: Update[] = [
   {
-    icon: "📚",
-    label: "最近在读",
-    content: "《纳瓦尔宝典》",
-    platform: "微信读书",
+    icon: "🚀",
+    label: "Building",
+    content: "Finishing VectorPaths",
+    platform: "1st AI Vibe Coding Project",
   },
   {
-    icon: "🎬",
-    label: "最近在刷",
-    content: "葛太头失业视频",
-    platform: "B站",
+    icon: "🤖",
+    label: "Learning",
+    content: "AI Model Local Deployment & Training",
   },
   {
-    icon: "💻",
-    label: "最近感兴趣",
-    content: "AI 编程",
-    platform: "Cursor",
+    icon: "📷",
+    label: "Creating",
+    content: "Photography for Others",
   },
 ];
 
@@ -38,12 +36,10 @@ export default function RecentUpdates() {
       viewport={{ once: true }}
       className="relative"
     >
-      {/* 标题 */}
+      {/* Title */}
       <div className="text-center mb-8">
         <h3 className="inline-block text-xl font-bold">
-          <span className="highlight-pink px-3 py-1">近日生活</span>
-          <span className="mx-2">|</span>
-          <span className="text-gray-600">RECENT UPDATES</span>
+          <span className="highlight-pink px-3 py-1">Recent Life</span>
         </h3>
       </div>
 

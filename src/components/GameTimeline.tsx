@@ -13,21 +13,21 @@ interface TimelineItem {
 const mainQuests: TimelineItem[] = [
   {
     date: "2025.03",
-    title: "Commonwealth Bank 客户服务专员",
+    title: "Commonwealth Bank — Customer Banking Specialist",
     type: "main",
     icon: "🏦",
     color: "#4a90d9",
   },
   {
-    date: "2024",
-    title: "VectorPaths 创始人 & 产品负责人",
+    date: "2025.12",
+    title: "VectorPaths — Founder & Product Lead",
     type: "main",
     icon: "🚀",
     color: "#ffe135",
   },
   {
     date: "2024",
-    title: "墨尔本大学 商学学士 (Finance & Business Analytics) 在读",
+    title: "University of Melbourne — B.Com (Finance & Business Analytics)",
     type: "main",
     icon: "🎓",
     color: "#98d4bb",
@@ -36,22 +36,22 @@ const mainQuests: TimelineItem[] = [
 
 const sideQuests: TimelineItem[] = [
   {
-    date: "2024",
-    title: "LLM + Schema 数据提取: 3,000+ 题目结构化",
+    date: "2025",
+    title: "LLM + Schema Data Extraction: 3,000+ Questions Structured",
     type: "side",
     icon: "🤖",
     color: "#e8d4f8",
   },
   {
-    date: "2024",
-    title: "设计自适应学习系统: 2,100+ 测试用例",
+    date: "2025",
+    title: "Adaptive Learning System Design: 2,100+ Test Cases",
     type: "side",
     icon: "📊",
     color: "#87ceeb",
   },
   {
-    date: "进行中",
-    title: "学习 Vibe Coding & AI Workflow",
+    date: "Ongoing",
+    title: "Learning Vibe Coding & AI Workflow",
     type: "side",
     icon: "💻",
     color: "#ffe135",
@@ -69,7 +69,7 @@ export default function GameTimeline() {
         className="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0_#1a1a1a]"
       >
         <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-          <span className="highlight-yellow px-2">主线任务</span>
+          <span className="highlight-yellow px-2">Main Quests</span>
         </h3>
 
         <div className="space-y-6 relative">
@@ -111,7 +111,7 @@ export default function GameTimeline() {
         className="bg-white border-2 border-[#1a1a1a] rounded-xl p-6 shadow-[4px_4px_0_#1a1a1a]"
       >
         <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-          <span className="highlight-pink px-2">支线任务</span>
+          <span className="highlight-pink px-2">Side Quests</span>
         </h3>
 
         <div className="space-y-6 relative">

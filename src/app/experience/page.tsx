@@ -8,17 +8,17 @@ import CaseStudy, { FlowDiagram, ValidationStats } from "@/components/CaseStudy"
 export default function ExperiencePage() {
   return (
     <div className="min-h-screen bg-[#fef9f3] pt-24">
-      {/* Timeline Section */}
-      <section className="py-12 px-6">
-        <div className="max-w-5xl mx-auto">
-          <Timeline />
-        </div>
-      </section>
-
       {/* Recent Updates Section */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <RecentUpdates />
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-12 px-6">
+        <div className="max-w-5xl mx-auto">
+          <Timeline />
         </div>
       </section>
 
@@ -232,38 +232,6 @@ export default function ExperiencePage() {
             ]}
           />
 
-          {/* Visualization Case Study */}
-          <CaseStudy
-            id="visualization-case"
-            title="Visualization Projects"
-            subtitle="Interactive Data Stories"
-            avatarScene="coding"
-            color="blue"
-            challenge="How do you make complex data accessible and engaging for non-technical audiences?"
-            sections={[
-              {
-                title: "Project Gallery",
-                content: (
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 bg-white border-2 border-[#1a1a1a] rounded-xl text-center shadow-[3px_3px_0_#1a1a1a]">
-                      <div className="w-full h-24 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-3 flex items-center justify-center">
-                        <span className="text-3xl">📊</span>
-                      </div>
-                      <p className="font-medium text-[#1a1a1a]">Project 1</p>
-                      <p className="text-xs text-gray-500">Coming soon</p>
-                    </div>
-                    <div className="p-4 bg-white border-2 border-[#1a1a1a] rounded-xl text-center shadow-[3px_3px_0_#1a1a1a]">
-                      <div className="w-full h-24 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-3 flex items-center justify-center">
-                        <span className="text-3xl">📈</span>
-                      </div>
-                      <p className="font-medium text-[#1a1a1a]">Project 2</p>
-                      <p className="text-xs text-gray-500">Coming soon</p>
-                    </div>
-                  </div>
-                ),
-              },
-            ]}
-          />
         </div>
       </section>
     </div>

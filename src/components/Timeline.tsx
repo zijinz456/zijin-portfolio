@@ -17,7 +17,7 @@ const mainQuests: TimelineEvent[] = [
   {
     id: "cba",
     year: "2025.03",
-    title: "Commonwealth Bank 客户服务专员",
+    title: "Commonwealth Bank — Customer Banking Specialist",
     type: "main",
     linkTo: "#cba-case",
     status: "in-progress",
@@ -25,17 +25,17 @@ const mainQuests: TimelineEvent[] = [
   },
   {
     id: "vectorpaths",
-    year: "2024",
-    title: "VectorPaths 创始人 & 产品负责人",
+    year: "2025.12",
+    title: "VectorPaths — Founder & Product Lead",
     type: "main",
     linkTo: "#vectorpaths-case",
-    status: "completed",
+    status: "in-progress",
     icon: "🚀",
   },
   {
     id: "unimelb",
     year: "2024",
-    title: "墨尔本大学 商学学士 (Finance & Business Analytics) 在读",
+    title: "University of Melbourne — B.Com (Finance & Business Analytics)",
     type: "main",
     status: "in-progress",
     icon: "🎓",
@@ -45,24 +45,24 @@ const mainQuests: TimelineEvent[] = [
 const sideQuests: TimelineEvent[] = [
   {
     id: "llm",
-    year: "2024",
-    title: "LLM + Schema 数据提取: 3,000+ 题目结构化",
+    year: "2025",
+    title: "LLM + Schema Data Extraction: 3,000+ Questions Structured",
     type: "side",
     status: "completed",
     icon: "🤖",
   },
   {
     id: "adaptive",
-    year: "2024",
-    title: "设计自适应学习系统: 2,100+ 测试用例",
+    year: "2025",
+    title: "Adaptive Learning System Design: 2,100+ Test Cases",
     type: "side",
     status: "completed",
     icon: "📊",
   },
   {
     id: "vibe-coding",
-    year: "进行中",
-    title: "学习 Vibe Coding & AI Workflow",
+    year: "Ongoing",
+    title: "Learning Vibe Coding & AI Workflow",
     type: "side",
     status: "in-progress",
     icon: "💻",
@@ -80,7 +80,7 @@ export default function Timeline() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">
-            地球 Online <span className="highlight-pink">开放游戏进度</span>
+            Earth Online <span className="highlight-pink">Game Progress</span>
           </h2>
         </motion.div>
 
@@ -94,7 +94,7 @@ export default function Timeline() {
           >
             {/* Main Quest Header */}
             <h3 className="inline-block text-lg font-bold mb-6">
-              <span className="highlight-pink px-2 py-1">主线任务</span>
+              <span className="highlight-pink px-2 py-1">Main Quests</span>
             </h3>
 
             {/* Timeline */}
@@ -120,7 +120,7 @@ export default function Timeline() {
           >
             {/* Side Quest Header */}
             <h3 className="inline-block text-lg font-bold mb-6">
-              <span className="highlight-pink px-2 py-1">支线任务</span>
+              <span className="highlight-pink px-2 py-1">Side Quests</span>
             </h3>
 
             {/* Timeline */}

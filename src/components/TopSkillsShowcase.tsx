@@ -6,19 +6,19 @@ import Image from "next/image";
 // Skill 1: Complexity to Clarity
 const clarityTransformations = [
   {
-    before: "10+ 维度的题目分类（难度、知识点、题型、易错点...）",
-    after: "「这是下一道最适合你的题」",
+    before: "10+ dimensions of question classification (difficulty, knowledge points, question type, common mistakes...)",
+    after: "\"Here's the next best question for you\"",
     context: "VectorPaths",
   },
   {
-    before: "用户说「我要转账」",
-    after: "理解真实需求：「我不确定怎么操作 app」",
-    context: "CBA 客服",
+    before: "User says \"I want to transfer money\"",
+    after: "Understanding real need: \"I'm not sure how to use the app\"",
+    context: "CBA Service",
   },
   {
-    before: "3000+ 道题目的原始数据",
-    after: "结构化知识图谱 + ROI 排序算法",
-    context: "LLM 提取",
+    before: "3000+ raw question data",
+    after: "Structured knowledge graph + ROI ranking algorithm",
+    context: "LLM Extraction",
   },
 ];
 
@@ -33,34 +33,34 @@ const clarityPrinciples = [
 const learningExamples = [
   {
     title: "LLM Engineering",
-    description: "从零开始学习 prompt design、schema constraints、AI agents",
+    description: "Self-taught prompt design, schema constraints, and AI agents from scratch",
     icon: "🤖",
   },
   {
-    title: "VectorPaths 全栈",
-    description: "独立完成数据库设计到前端交互的完整开发",
+    title: "VectorPaths Full Stack",
+    description: "Independently built everything from database design to frontend interactions",
     icon: "💻",
   },
   {
     title: "Vibe Coding",
-    description: "快速适应 AI-assisted development 工作流",
+    description: "Quickly adapted to AI-assisted development workflows",
     icon: "🎵",
   },
 ];
 
 const learningTimeline = [
-  { period: "2024 Q1", event: "开始接触 LLM，学习 prompt engineering" },
-  { period: "2024 Q2", event: "掌握 LangChain、Schema constraints" },
-  { period: "2024 Q3", event: "深入 AI Agents，自动化提取 3000+ 题目" },
-  { period: "2025", event: "探索 Vibe Coding、n8n workflow" },
+  { period: "2025 Q1", event: "Started exploring LLMs, learning prompt engineering" },
+  { period: "2025 Q2", event: "Mastered LangChain, Schema constraints" },
+  { period: "2025 Q3", event: "Deep dive into AI Agents, automated extraction of 3000+ questions" },
+  { period: "2025 Q4", event: "Exploring Vibe Coding, n8n workflows, agentic systems" },
 ];
 
 // Skill 3: End-to-End Builder
 const builderMindset = [
-  { title: "Ownership", description: "不等别人来解决问题。如果我看到问题，我就去修。", icon: "🔧" },
-  { title: "Iteration", description: "先 ship 一个 MVP，然后根据反馈快速迭代。", icon: "🔄" },
-  { title: "Full Stack Thinking", description: "不只是做前端或后端，而是理解整个系统如何运作。", icon: "🧠" },
-  { title: "Ship > Perfect", description: "完美是进步的敌人。先让它工作，再让它更好。", icon: "🚢" },
+  { title: "Ownership", description: "Don't wait for someone else to solve it. If I see a problem, I fix it.", icon: "🔧" },
+  { title: "Iteration", description: "Ship an MVP first, then iterate fast based on feedback.", icon: "🔄" },
+  { title: "Full Stack Thinking", description: "Not just frontend or backend — understanding how the whole system works.", icon: "🧠" },
+  { title: "Ship > Perfect", description: "Perfect is the enemy of progress. Make it work first, then make it better.", icon: "🚢" },
 ];
 
 const projectStats = [
@@ -111,7 +111,7 @@ export default function TopSkillsShowcase() {
                 </div>
                 <div>
                   <span className="inline-block px-3 py-1 bg-[#ffe135] text-[#1a1a1a] text-xs font-bold rounded-full mb-1">
-                    快速掌握新技术
+                    Quick to Master New Tech
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a]">
                     Fast Learner
@@ -131,9 +131,9 @@ export default function TopSkillsShowcase() {
                 className="p-4 bg-[#ffe135]/30 border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] mb-6"
               >
                 <p className="text-sm text-gray-700">
-                  <strong>不是「学完再做」，而是「边做边学」。</strong>
+                  <strong>Not &quot;learn then do&quot; — but &quot;learn by doing&quot;.</strong>
                   <br />
-                  当我遇到新技术时，我会找一个真实的问题，然后在解决问题的过程中学习需要的技能。
+                  When I encounter new tech, I find a real problem to solve, then learn the skills I need along the way.
                 </p>
               </motion.div>
 
@@ -220,7 +220,7 @@ export default function TopSkillsShowcase() {
                 </div>
                 <div>
                   <span className="inline-block px-3 py-1 bg-[#87ceeb] text-[#1a1a1a] text-xs font-bold rounded-full mb-1">
-                    把复杂的东西变简单
+                    Making Complex Things Simple
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a]">
                     Complexity → Clarity
@@ -317,7 +317,7 @@ export default function TopSkillsShowcase() {
                 </div>
                 <div>
                   <span className="inline-block px-3 py-1 bg-[#ff6b9d] text-white text-xs font-bold rounded-full mb-1">
-                    从想法到产品，全程落地
+                    From Idea to Product, End-to-End
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a]">
                     End-to-End Builder
@@ -336,7 +336,7 @@ export default function TopSkillsShowcase() {
                 viewport={{ once: true }}
                 className="p-4 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] mb-6"
               >
-                <p className="text-sm font-bold text-[#1a1a1a] mb-3">VectorPaths 项目数据</p>
+                <p className="text-sm font-bold text-[#1a1a1a] mb-3">VectorPaths Project Stats</p>
                 <div className="flex justify-around">
                   {projectStats.map((stat) => (
                     <div key={stat.label} className="text-center">

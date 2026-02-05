@@ -15,14 +15,14 @@ export default function AboutMe() {
       >
         {/* Main intro */}
         <p className="text-gray-700 leading-relaxed">
-          我出生于 2000 年 5 月，在墨尔本大学读书，Finance & Business Analytics 专业。家庭环境比较自由，家人都不会对我的选择做过多干涉。这导致我在肆意生长的过程中，拥有了很多复杂的成分。
+          I&apos;m currently studying <strong>Finance & Business Analytics</strong> at the University of Melbourne.
         </p>
 
         <p className="text-lg font-medium text-gray-800">
-          Anyway，欢迎来到 Zijin 的世界！
+          Welcome to Zijin&apos;s world!
         </p>
 
-        {/* 高精力死宅 */}
+        {/* AI & Tech Passion */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,17 +31,17 @@ export default function AboutMe() {
           className="bg-[#ffe135] border-2 border-[#1a1a1a] rounded-xl p-4 shadow-[3px_3px_0_#1a1a1a]"
         >
           <p className="font-bold text-[#1a1a1a] mb-2">
-            我是一只 <span className="highlight-pink px-1">高精力死宅</span>
+            Passionate about <span className="highlight-pink px-1">AI & Emerging Tech</span>
           </p>
           <p className="text-sm text-gray-700">
-            对出去游山玩水无感，但精力异常旺盛，脑子里 idea 疯狂溢出。
+            Self-taught in <strong>AI prompting, prompt engineering, AI workflows, and agentic systems</strong>.
           </p>
           <p className="text-sm text-gray-700">
-            现实中轻微社恐，但在网络上结交了一群素未谋面的电子好友！
+            Always exploring how these tools can reshape the way we work and learn.
           </p>
         </motion.div>
 
-        {/* Quote */}
+        {/* Philosophy */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,20 +50,17 @@ export default function AboutMe() {
           className="bg-[#fef9f3] border-2 border-[#1a1a1a] rounded-xl p-4 shadow-[3px_3px_0_#1a1a1a]"
         >
           <p className="text-lg font-semibold text-[#1a1a1a] italic mb-3">
-            &ldquo;每一个大多数人看起来离经叛道的选择都让我很兴奋&rdquo;
+            &ldquo;Always curious. Always building.&rdquo;
           </p>
           <p className="text-sm text-gray-600">
-            我正在朝着自己喜欢的方向前进！
-          </p>
-          <p className="text-sm text-gray-500">
-            不知道 3年 5年 10年后的我会成为什么样的人，过上什么样的生活呢？
+            I love exploring unconventional solutions and turning ideas into reality.
           </p>
         </motion.div>
 
         {/* Current status */}
         <div className="space-y-2 text-sm text-gray-600">
-          <p>目前在 Commonwealth Bank 做 Customer Banking Specialist</p>
-          <p>同时也是 VectorPaths 的创始人，用 AI 帮学生智能刷题</p>
+          <p><strong>Commonwealth Bank</strong> — Customer Banking Specialist</p>
+          <p><strong>VectorPaths</strong> — Founder, AI-powered adaptive learning platform</p>
         </div>
       </motion.div>
 
