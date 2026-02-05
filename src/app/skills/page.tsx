@@ -184,45 +184,52 @@ export default function SkillsPage() {
             viewport={{ once: true }}
             className="mb-8 p-8 bg-gradient-to-r from-[#ff6b9d]/20 to-[#87ceeb]/20 border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-20 h-20 bg-white rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/skills/photography.png"
-                  alt="Photography"
-                  width={80}
-                  height={80}
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-[#1a1a1a]">Photography × K-Pop</h3>
-            </div>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Left: Content */}
+              <div>
+                <h3 className="text-xl font-bold text-[#1a1a1a] mb-6">Photography × K-Pop</h3>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#ff6b9d] rounded-full flex items-center justify-center text-white font-bold">1</div>
-                <p className="text-gray-700">Started with a passion for <strong>K-pop culture</strong></p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#87ceeb] rounded-full flex items-center justify-center text-white font-bold">2</div>
-                <p className="text-gray-700">Picked up <strong>photography</strong> to capture concerts & events</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#ffe135] rounded-full flex items-center justify-center text-[#1a1a1a] font-bold">3</div>
-                <p className="text-gray-700">Built skills and portfolio through practice</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#98d4bb] rounded-full flex items-center justify-center text-white font-bold">4</div>
-                <p className="text-gray-700">Turned it into a <strong>side business</strong></p>
-              </div>
-            </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#ff6b9d] rounded-full flex items-center justify-center text-white font-bold">1</div>
+                    <p className="text-gray-700">Started with a passion for <strong>K-pop culture</strong></p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#87ceeb] rounded-full flex items-center justify-center text-white font-bold">2</div>
+                    <p className="text-gray-700">Picked up <strong>photography</strong> to capture concerts & events</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#ffe135] rounded-full flex items-center justify-center text-[#1a1a1a] font-bold">3</div>
+                    <p className="text-gray-700">Built skills and portfolio through practice</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#98d4bb] rounded-full flex items-center justify-center text-white font-bold">4</div>
+                    <p className="text-gray-700">Turned it into a <strong>side business</strong></p>
+                  </div>
+                </div>
 
-            <div className="mt-6 p-4 bg-white/60 rounded-lg border border-[#1a1a1a]/20">
-              <p className="text-sm text-gray-600 italic text-center">
-                &quot;I don&apos;t just have hobbies—I <span className="highlight-yellow">build things</span> from them.&quot;
-              </p>
-              <p className="text-xs text-gray-500 text-center mt-2">
-                This is my &quot;End-to-End Builder&quot; mindset in action outside of tech!
-              </p>
+                <div className="mt-6 p-4 bg-white/60 rounded-lg border border-[#1a1a1a]/20">
+                  <p className="text-sm text-gray-600 italic text-center">
+                    &quot;I don&apos;t just have hobbies—I <span className="highlight-yellow">build things</span> from them.&quot;
+                  </p>
+                  <p className="text-xs text-gray-500 text-center mt-2">
+                    This is my &quot;End-to-End Builder&quot; mindset in action outside of tech!
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Image */}
+              <div className="flex justify-center">
+                <div className="w-48 h-48 md:w-64 md:h-64 bg-white rounded-2xl border-2 border-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/skills/photography.png"
+                    alt="Photography"
+                    width={240}
+                    height={240}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
             </div>
           </motion.div>
 
