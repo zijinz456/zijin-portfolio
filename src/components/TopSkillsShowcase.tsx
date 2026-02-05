@@ -32,27 +32,27 @@ const clarityPrinciples = [
 // Skill 2: Fast Learner
 const learningExamples = [
   {
-    title: "LLM Engineering",
-    description: "Self-taught prompt design, schema constraints, and AI agents from scratch",
+    title: "AI Tools Mastery",
+    description: "Learned Figma, Pencil, n8n and various AI-powered design & automation tools",
+    icon: "🎨",
+  },
+  {
+    title: "LLM Evaluation",
+    description: "Tested Claude, GPT-4, Gemini, DeepSeek — understanding each model's strengths and weaknesses",
     icon: "🤖",
   },
   {
-    title: "VectorPaths Full Stack",
-    description: "Independently built everything from database design to frontend interactions",
+    title: "Full-Stack in 1 Month",
+    description: "Learned frontend, backend, testing, and deployment from scratch",
     icon: "💻",
-  },
-  {
-    title: "Vibe Coding",
-    description: "Quickly adapted to AI-assisted development workflows",
-    icon: "🎵",
   },
 ];
 
 const learningTimeline = [
-  { period: "2025 Q1", event: "Started exploring LLMs, learning prompt engineering" },
-  { period: "2025 Q2", event: "Mastered LangChain, Schema constraints" },
-  { period: "2025 Q3", event: "Deep dive into AI Agents, automated extraction of 3000+ questions" },
-  { period: "2025 Q4", event: "Exploring Vibe Coding, n8n workflows, agentic systems" },
+  { period: "Month 1", event: "Explored AI tools: Figma, Pencil; Started comparing different LLMs" },
+  { period: "Month 2", event: "Designed complete VectorPaths system architecture" },
+  { period: "Month 3-4", event: "Learned full-stack development: React, Node.js, PostgreSQL, CI/CD" },
+  { period: "Now", event: "Building n8n workflows and iterating on VectorPaths" },
 ];
 
 // Skill 3: End-to-End Builder
@@ -100,12 +100,12 @@ export default function TopSkillsShowcase() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-[#ffe135] rounded-full border-4 border-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center">
+                <div className="w-24 h-24 bg-[#ffe135]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                   <Image
                     src="/skills/fast-learner.png"
                     alt="Fast Learner"
-                    width={60}
-                    height={60}
+                    width={90}
+                    height={90}
                     className="object-contain"
                   />
                 </div>
@@ -120,7 +120,7 @@ export default function TopSkillsShowcase() {
               </div>
 
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                I pick up new tools and concepts quickly, adapting to ambiguous environments with ease.
+                Designed a complete system in one month. Learned full-stack development in another. I immerse myself in tools to truly understand them.
               </p>
 
               {/* Philosophy Quote */}
@@ -131,9 +131,9 @@ export default function TopSkillsShowcase() {
                 className="p-4 bg-[#ffe135]/30 border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] mb-6"
               >
                 <p className="text-sm text-gray-700">
-                  <strong>Not &quot;learn then do&quot; — but &quot;learn by doing&quot;.</strong>
+                  <strong>Not just reading docs — but hands-on testing everything.</strong>
                   <br />
-                  When I encounter new tech, I find a real problem to solve, then learn the skills I need along the way.
+                  I tested multiple LLMs to know when to use each. I learned full-stack by building, not by watching tutorials.
                 </p>
               </motion.div>
 
@@ -209,12 +209,12 @@ export default function TopSkillsShowcase() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-[#87ceeb] rounded-full border-4 border-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center">
+                <div className="w-24 h-24 bg-[#87ceeb]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                   <Image
                     src="/skills/clarity.png"
                     alt="Complexity to Clarity"
-                    width={60}
-                    height={60}
+                    width={90}
+                    height={90}
                     className="object-contain"
                   />
                 </div>
@@ -306,12 +306,12 @@ export default function TopSkillsShowcase() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 bg-[#ff6b9d] rounded-full border-4 border-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center">
+                <div className="w-24 h-24 bg-[#ff6b9d]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                   <Image
                     src="/skills/end-to-end.png"
                     alt="End-to-End Builder"
-                    width={60}
-                    height={60}
+                    width={90}
+                    height={90}
                     className="object-contain"
                   />
                 </div>
@@ -355,7 +355,7 @@ export default function TopSkillsShowcase() {
                 className="p-4 bg-[#ff6b9d]/10 border-2 border-[#1a1a1a] rounded-xl shadow-[2px_2px_0_#1a1a1a]"
               >
                 <p className="text-sm text-gray-700">
-                  真正的问题往往出现在<strong>交接的地方</strong>——设计和开发之间、前端和后端之间。当你能从头到尾负责整个项目时，你会看到这些缝隙，然后你会去修补它们。
+                  Real problems often emerge at <strong>the handoffs</strong> — between design and development, between frontend and backend. When you own the entire project end-to-end, you see these gaps, and you fix them.
                 </p>
               </motion.div>
             </motion.div>

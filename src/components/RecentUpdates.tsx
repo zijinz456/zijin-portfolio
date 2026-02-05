@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Update {
   label: string;
   content: string;
   description?: string;
   color: string;
+  image?: string;
 }
 
 const updates: Update[] = [
@@ -27,6 +29,7 @@ const updates: Update[] = [
     content: "Photography",
     description: "Helping others capture moments",
     color: "#87ceeb",
+    image: "/skills/photography.png",
   },
 ];
 
@@ -57,13 +60,25 @@ export default function RecentUpdates() {
             whileHover={{ y: -4 }}
             className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] hover:shadow-[2px_2px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
           >
-            {/* Number Badge */}
-            <span
-              className="inline-block w-8 h-8 border-2 border-[#1a1a1a] rounded-lg mb-4 text-center leading-7 font-bold text-sm"
-              style={{ backgroundColor: update.color, color: update.color === "#ff6b9d" ? "white" : "#1a1a1a" }}
-            >
-              {String(index + 1).padStart(2, "0")}
-            </span>
+            {/* Image or Number Badge */}
+            {update.image ? (
+              <div className="w-16 h-16 mb-4 relative">
+                <Image
+                  src={update.image}
+                  alt={update.content}
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                />
+              </div>
+            ) : (
+              <span
+                className="inline-block w-8 h-8 border-2 border-[#1a1a1a] rounded-lg mb-4 text-center leading-7 font-bold text-sm"
+                style={{ backgroundColor: update.color, color: update.color === "#ff6b9d" ? "white" : "#1a1a1a" }}
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            )}
 
             {/* Label */}
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">
