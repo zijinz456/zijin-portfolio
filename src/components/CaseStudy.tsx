@@ -11,6 +11,7 @@ interface CaseStudyProps {
   subtitle: string;
   avatarScene?: AvatarScene;
   customImage?: string;
+  externalUrl?: string;
   challenge: string;
   sections: {
     title: string;
@@ -33,6 +34,7 @@ export default function CaseStudy({
   subtitle,
   avatarScene,
   customImage,
+  externalUrl,
   challenge,
   sections,
   color = "yellow",
@@ -66,10 +68,21 @@ export default function CaseStudy({
           ) : (
             avatarScene && <Avatar scene={avatarScene} size="md" />
           )}
-          <div>
+          <div className="flex-1">
             <h3 className="text-2xl font-bold text-[#1a1a1a]">{title}</h3>
             <p className="text-gray-700">{subtitle}</p>
           </div>
+          {externalUrl && (
+            <a
+              href={externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-white border-2 border-[#1a1a1a] rounded-lg font-medium text-sm shadow-[2px_2px_0_#1a1a1a] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all flex items-center gap-2"
+            >
+              Visit Website
+              <span>↗</span>
+            </a>
+          )}
         </div>
       </div>
 

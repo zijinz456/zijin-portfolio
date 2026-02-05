@@ -43,6 +43,7 @@ export default function ExperiencePage() {
             title="VectorPaths"
             subtitle="AI-Powered Adaptive Learning Platform"
             customImage="/skills/coding.png"
+            externalUrl="https://vectorpaths.com"
             color="yellow"
             challenge="Students don't know which questions to practice. Teachers' judgment relies on experience—it doesn't scale."
             sections={[
