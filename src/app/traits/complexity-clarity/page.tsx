@@ -5,44 +5,44 @@ import Link from "next/link";
 
 const transformations = [
   {
-    before: "10+ 维度的题目分类（难度、知识点、题型、易错点...）",
-    after: "「这是下一道最适合你的题」",
-    context: "VectorPaths 学习系统",
+    before: "10+ dimensions of question classification (difficulty, knowledge points, question type, common mistakes...)",
+    after: "\"Here's the next best question for you\"",
+    context: "VectorPaths Learning System",
   },
   {
-    before: "用户说「我要转账」",
-    after: "理解真实需求：「我不确定怎么操作 app」",
-    context: "CBA 客户服务",
+    before: "User says \"I want to transfer money\"",
+    after: "Understanding real need: \"I'm not sure how to use the app\"",
+    context: "CBA Customer Service",
   },
   {
-    before: "3000+ 道题目的原始数据",
-    after: "结构化的知识图谱 + ROI 排序算法",
-    context: "LLM + Schema 数据提取",
+    before: "3000+ raw question data",
+    after: "Structured knowledge graph + ROI ranking algorithm",
+    context: "LLM + Schema Data Extraction",
   },
 ];
 
 const principles = [
   {
     title: "Hide complexity, surface simplicity",
-    description: "用户不需要知道背后有多复杂，他们只需要一个简单的答案。",
+    description: "Users don't need to know how complex things are behind the scenes. They just need a simple answer.",
     icon: "🎭",
     color: "#87ceeb",
   },
   {
     title: "Progressive disclosure",
-    description: "先给结论，想了解更多再展开。就像这个网站的设计一样。",
+    description: "Give the conclusion first, expand only if they want more. Just like this website's design.",
     icon: "📚",
     color: "#ffe135",
   },
   {
     title: "Context-aware responses",
-    description: "同样的问题，不同的用户背景，需要不同的回答方式。",
+    description: "Same question, different user backgrounds — different responses needed.",
     icon: "🎯",
     color: "#ff6b9d",
   },
   {
     title: "Design for the frustrated user",
-    description: "如果对困惑的用户有效，对所有人都有效。",
+    description: "If it works for someone who's confused, it'll work for everyone.",
     icon: "💪",
     color: "#98d4bb",
   },
@@ -198,7 +198,7 @@ export default function ComplexityClarityPage() {
                 </div>
                 <div>
                   <p className="font-medium text-[#1a1a1a]">Collected 10+ dimensions per question</p>
-                  <p className="text-sm text-gray-600">难度、知识点、题型、易错点、时间估计、关联概念...</p>
+                  <p className="text-sm text-gray-600">Difficulty, knowledge points, question type, common mistakes, time estimate, related concepts...</p>
                 </div>
               </div>
 
@@ -208,7 +208,7 @@ export default function ComplexityClarityPage() {
                 </div>
                 <div>
                   <p className="font-medium text-[#1a1a1a]">Built ROI calculation algorithm</p>
-                  <p className="text-sm text-gray-600">根据用户目标分数和当前水平，计算每道题的「投资回报率」</p>
+                  <p className="text-sm text-gray-600">Based on user&apos;s target score and current level, calculate the &quot;return on investment&quot; for each question</p>
                 </div>
               </div>
 
@@ -218,7 +218,7 @@ export default function ComplexityClarityPage() {
                 </div>
                 <div>
                   <p className="font-medium text-[#1a1a1a]">Surfaced one simple output</p>
-                  <p className="text-sm text-gray-600">用户只看到：「这是你现在最应该练的一道题」</p>
+                  <p className="text-sm text-gray-600">Users only see: &quot;This is the question you should practice right now&quot;</p>
                 </div>
               </div>
             </div>

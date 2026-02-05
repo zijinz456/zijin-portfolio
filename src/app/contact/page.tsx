@@ -45,9 +45,9 @@ export default function ContactPage() {
               Let&apos;s <span className="highlight-yellow">Connect!</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              想聊聊 AI 产品、对话设计，或者只是 say hi？
+              Want to chat about AI products, conversation design, or just say hi?
               <br />
-              欢迎随时联系我！
+              Feel free to reach out anytime!
             </p>
           </motion.div>
         </div>
@@ -99,13 +99,13 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#1a1a1a]">Quick Questions?</h3>
-                <p className="text-sm text-gray-500">我可以帮你快速了解我的工作</p>
+                <p className="text-sm text-gray-500">I can help you learn about my work quickly</p>
               </div>
             </div>
 
             {/* Preset Questions */}
             <div className="space-y-3">
-              <p className="text-sm text-gray-400 mb-4">常见问题：</p>
+              <p className="text-sm text-gray-400 mb-4">Common questions:</p>
               <div className="flex flex-wrap gap-2">
                 {[
                   { text: "What's VectorPaths?", href: "/experience#vectorpaths-case" },
@@ -128,7 +128,7 @@ export default function ContactPage() {
 
             <div className="mt-6 pt-6 border-t-2 border-dashed border-gray-200">
               <p className="text-xs text-gray-400 text-center">
-                Full chatbot coming soon... 现在可以通过这些快捷链接了解更多！
+                Full chatbot coming soon... For now, use these quick links to learn more!
               </p>
             </div>
           </motion.div>

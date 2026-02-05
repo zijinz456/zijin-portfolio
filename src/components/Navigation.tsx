@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 const navItems = [
-  { href: "/", label: "首页", icon: "🏠" },
-  { href: "/experience", label: "经历", icon: "📋" },
-  { href: "/skills", label: "技能", icon: "⚡" },
-  { href: "/contact", label: "联系", icon: "✉️" },
+  { href: "/", label: "Home", icon: "🏠" },
+  { href: "/experience", label: "Experience", icon: "📋" },
+  { href: "/skills", label: "Skills", icon: "⚡" },
+  { href: "/contact", label: "Contact", icon: "✉️" },
 ];
 
 export default function Navigation() {

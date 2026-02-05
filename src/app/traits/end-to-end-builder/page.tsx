@@ -6,7 +6,7 @@ import Link from "next/link";
 const projects = [
   {
     title: "VectorPaths",
-    subtitle: "AI 自适应学习平台",
+    subtitle: "AI-Powered Adaptive Learning Platform",
     stats: [
       { label: "Questions Processed", value: "3,000+" },
       { label: "Test Cases", value: "2,100+" },
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: "K-Pop Photography",
-    subtitle: "从爱好到副业",
+    subtitle: "From Hobby to Side Business",
     stats: [
       { label: "Started", value: "Hobby" },
       { label: "Built", value: "Portfolio" },
@@ -45,22 +45,22 @@ const projects = [
 const mindset = [
   {
     title: "Ownership",
-    description: "不等别人来解决问题。如果我看到问题，我就去修。",
+    description: "Don't wait for someone else to solve it. If I see a problem, I fix it.",
     icon: "🔧",
   },
   {
     title: "Iteration",
-    description: "先 ship 一个 MVP，然后根据反馈快速迭代。",
+    description: "Ship an MVP first, then iterate fast based on feedback.",
     icon: "🔄",
   },
   {
     title: "Full Stack Thinking",
-    description: "不只是做前端或后端，而是理解整个系统如何运作。",
+    description: "Not just frontend or backend — understanding how the whole system works.",
     icon: "🧠",
   },
   {
     title: "Ship > Perfect",
-    description: "完美是进步的敌人。先让它工作，再让它更好。",
+    description: "Perfect is the enemy of progress. Make it work first, then make it better.",
     icon: "🚢",
   },
 ];
@@ -234,16 +234,16 @@ export default function EndToEndBuilderPage() {
             </h2>
             <div className="space-y-4 text-gray-700 max-w-2xl mx-auto">
               <p>
-                很多人只做自己那部分：设计师只做设计，开发者只写代码。
+                Many people only do their part: designers just design, developers just code.
               </p>
               <p>
-                但真正的问题往往出现在<strong>交接的地方</strong>——设计和开发之间、前端和后端之间、产品和用户之间。
+                But real problems often emerge at <strong>the handoffs</strong> — between design and development, between frontend and backend, between product and user.
               </p>
               <p>
-                当你能从头到尾负责整个项目时，你会看到这些缝隙，然后你会去修补它们。
+                When you own the entire project end-to-end, you see these gaps, and you fix them.
               </p>
               <p className="font-bold text-[#1a1a1a]">
-                这就是为什么我不只是「做」——我「ship」。
+                That&apos;s why I don&apos;t just &quot;do&quot; — I ship.
               </p>
             </div>
           </motion.div>

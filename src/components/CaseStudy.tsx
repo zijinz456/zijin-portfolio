@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 import Avatar from "./Avatar";
 import { AvatarScene } from "./Avatar";
+import Image from "next/image";
 
 interface CaseStudyProps {
   id: string;
   title: string;
   subtitle: string;
-  avatarScene: AvatarScene;
+  avatarScene?: AvatarScene;
+  customImage?: string;
   challenge: string;
   sections: {
     title: string;
@@ -30,6 +32,7 @@ export default function CaseStudy({
   title,
   subtitle,
   avatarScene,
+  customImage,
   challenge,
   sections,
   color = "yellow",
@@ -50,7 +53,19 @@ export default function CaseStudy({
         style={{ backgroundColor: colors.bg }}
       >
         <div className="flex items-center gap-4">
-          <Avatar scene={avatarScene} size="md" />
+          {customImage ? (
+            <div className="w-20 h-20 rounded-xl overflow-hidden border-2 border-[#1a1a1a] bg-white flex items-center justify-center">
+              <Image
+                src={customImage}
+                alt={title}
+                width={80}
+                height={80}
+                className="object-contain"
+              />
+            </div>
+          ) : (
+            avatarScene && <Avatar scene={avatarScene} size="md" />
+          )}
           <div>
             <h3 className="text-2xl font-bold text-[#1a1a1a]">{title}</h3>
             <p className="text-gray-700">{subtitle}</p>

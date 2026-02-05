@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const skillCategories = [
   {
@@ -95,7 +96,7 @@ export default function SkillsPage() {
             animate={{ opacity: 1 }}
             className="text-xl font-bold text-[#1a1a1a] mb-8 text-center"
           >
-            <span className="highlight-blue">Conversation Design 能力</span>
+            <span className="highlight-blue">Conversation Design Skills</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -105,12 +106,12 @@ export default function SkillsPage() {
               className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
             >
               <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>🎯</span> 设计多轮对话旅程
+                <span>🎯</span> Multi-turn Conversation Design
               </h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• 定义上下文收集和使用方式</li>
-                <li>• 设计分支、排序和决策点</li>
-                <li>• 规划 fallback 和 escalation 路径</li>
+                <li>• Define context collection and usage patterns</li>
+                <li>• Design branching, sequencing, and decision points</li>
+                <li>• Plan fallback and escalation paths</li>
               </ul>
             </motion.div>
 
@@ -120,12 +121,12 @@ export default function SkillsPage() {
               className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
             >
               <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>🤖</span> 理解 LLM 行为
+                <span>🤖</span> Understanding LLM Behavior
               </h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• 通过 patterns、examples 和 guardrails 影响输出</li>
-                <li>• 了解 LLM 的优势和局限</li>
-                <li>• 使用 Schema constraints 确保输出稳定性</li>
+                <li>• Influence outputs through patterns, examples, and guardrails</li>
+                <li>• Understand LLM strengths and limitations</li>
+                <li>• Use Schema constraints to ensure output stability</li>
               </ul>
             </motion.div>
 
@@ -136,12 +137,12 @@ export default function SkillsPage() {
               className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
             >
               <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>🧪</span> 实验和迭代
+                <span>🧪</span> Experimentation & Iteration
               </h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• 形成假设并设计测试</li>
-                <li>• 基于用户行为数据迭代</li>
-                <li>• R² 相关性验证设计决策</li>
+                <li>• Form hypotheses and design tests</li>
+                <li>• Iterate based on user behavior data</li>
+                <li>• R² correlation to validate design decisions</li>
               </ul>
             </motion.div>
 
@@ -152,12 +153,12 @@ export default function SkillsPage() {
               className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
             >
               <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>💬</span> 适应性沟通
+                <span>💬</span> Adaptive Communication
               </h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• 根据用户需求调整语气和节奏</li>
-                <li>• 识别真实意图 vs 字面请求</li>
-                <li>• De-escalation 和 handoff 设计</li>
+                <li>• Adjust tone and pace based on user needs</li>
+                <li>• Identify real intent vs. literal requests</li>
+                <li>• De-escalation and handoff design</li>
               </ul>
             </motion.div>
           </div>
@@ -183,11 +184,17 @@ export default function SkillsPage() {
             viewport={{ once: true }}
             className="mb-8 p-8 bg-gradient-to-r from-[#ff6b9d]/20 to-[#87ceeb]/20 border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">📷</span>
-              <span className="text-2xl">×</span>
-              <span className="text-3xl">🎵</span>
-              <h3 className="text-xl font-bold text-[#1a1a1a] ml-2">Photography × K-Pop</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-20 h-20 bg-white rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/skills/photography.png"
+                  alt="Photography"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#1a1a1a]">Photography × K-Pop</h3>
             </div>
 
             <div className="space-y-4">
@@ -220,37 +227,35 @@ export default function SkillsPage() {
           </motion.div>
 
           {/* Other Hobbies */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="p-6 bg-[#fff5f7] border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl">🧁</span>
-                <h3 className="text-lg font-bold text-[#1a1a1a]">Baking</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-8 bg-[#fff5f7] border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-20 h-20 bg-white rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/skills/baking.png"
+                  alt="Baking"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
               </div>
-              <p className="text-sm text-gray-600">
-                Creative experiments in the kitchen. I love the precision and creativity involved in baking.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="p-6 bg-[#f0f9ff] border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl">🎵</span>
-                <h3 className="text-lg font-bold text-[#1a1a1a]">K-Pop</h3>
-              </div>
-              <p className="text-sm text-gray-600">
-                Music & culture enthusiast. Following my favorite artists and attending concerts!
-              </p>
-            </motion.div>
-          </div>
+              <h3 className="text-xl font-bold text-[#1a1a1a]">Baking</h3>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Creative experiments in the kitchen. I love the precision and creativity involved in baking —
+              it&apos;s like coding, but delicious!
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cakes</span>
+              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cookies</span>
+              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Bread</span>
+              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Pastries</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 

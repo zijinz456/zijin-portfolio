@@ -100,12 +100,12 @@ export default function TopSkillsShowcase() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-24 h-24 bg-[#ffe135]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                <div className="w-28 h-28 bg-[#ffe135]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                   <Image
                     src="/skills/fast-learner.png"
                     alt="Fast Learner"
-                    width={90}
-                    height={90}
+                    width={110}
+                    height={110}
                     className="object-contain"
                   />
                 </div>
@@ -209,12 +209,12 @@ export default function TopSkillsShowcase() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-24 h-24 bg-[#87ceeb]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                <div className="w-28 h-28 bg-[#87ceeb]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                   <Image
                     src="/skills/clarity.png"
                     alt="Complexity to Clarity"
-                    width={90}
-                    height={90}
+                    width={110}
+                    height={110}
                     className="object-contain"
                   />
                 </div>
@@ -306,12 +306,12 @@ export default function TopSkillsShowcase() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-24 h-24 bg-[#ff6b9d]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                <div className="w-28 h-28 bg-[#ff6b9d]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
                   <Image
                     src="/skills/end-to-end.png"
                     alt="End-to-End Builder"
-                    width={90}
-                    height={90}
+                    width={110}
+                    height={110}
                     className="object-contain"
                   />
                 </div>

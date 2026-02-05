@@ -6,30 +6,43 @@ import Avatar from "@/components/Avatar";
 
 const examples = [
   {
-    title: "LLM Engineering",
-    description: "从零开始学习 LLM 工程，快速掌握 prompt design、schema constraints、AI agents",
-    icon: "🤖",
+    title: "AI Design Tools",
+    description: "Mastered Figma, Pencil, and various AI-powered design tools to create product mockups and prototypes",
+    icon: "🎨",
     color: "#e8d4f8",
   },
   {
-    title: "VectorPaths 全栈开发",
-    description: "独立完成从数据库设计到前端交互的完整开发流程",
-    icon: "💻",
+    title: "LLM Comparison & Evaluation",
+    description: "Tested Claude, GPT-4, Gemini, DeepSeek and more — understanding each model's strengths, weaknesses, and optimal use cases",
+    icon: "🤖",
     color: "#87ceeb",
   },
   {
-    title: "Vibe Coding",
-    description: "快速适应 AI-assisted development 工作流，提高开发效率",
-    icon: "🎵",
+    title: "VectorPaths System Design",
+    description: "Designed the entire VectorPaths architecture in one month — from knowledge graph structure to learning path algorithms",
+    icon: "📐",
     color: "#98d4bb",
+  },
+  {
+    title: "Full-Stack Development",
+    description: "Learned the complete dev workflow in one month — frontend, backend, database, testing, and deployment",
+    icon: "💻",
+    color: "#ffe135",
+  },
+  {
+    title: "Workflow Automation",
+    description: "Built automated workflows with n8n, connecting AI agents with external services for intelligent data processing",
+    icon: "⚙️",
+    color: "#ff6b9d",
   },
 ];
 
 const timeline = [
-  { period: "2024 Q1", event: "开始接触 LLM，学习 prompt engineering" },
-  { period: "2024 Q2", event: "掌握 LangChain、Schema constraints，开发 VectorPaths" },
-  { period: "2024 Q3", event: "深入 AI Agents，实现 3000+ 题目自动化提取" },
-  { period: "2025", event: "探索 Vibe Coding、n8n workflow、本地 LLM 训练" },
+  { period: "Month 1", event: "Explored AI tools: Figma, Pencil, various design software; Started comparing different LLMs" },
+  { period: "Month 2", event: "Designed the complete VectorPaths system architecture — knowledge graphs, learning algorithms, user experience flow" },
+  { period: "Month 3", event: "Intensive full-stack learning: React/Next.js frontend, Node.js backend, PostgreSQL database design" },
+  { period: "Month 4", event: "Mastered testing, CI/CD, deployment pipelines; Built n8n automation workflows with AI agents" },
+  { period: "Now", event: "Continuously iterating on VectorPaths while exploring new AI capabilities and tools" },
 ];
 
 export default function FastLearnerPage() {
@@ -64,9 +77,9 @@ export default function FastLearnerPage() {
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed tracking-wide">
-              I pick up new tech fast and adapt to ambiguity.
+              Designed a complete system in one month. Learned full-stack development in another.
               <br />
-              Learning is not just consuming—it&apos;s building.
+              Learning is not just consuming—it&apos;s building and comparing.
             </p>
           </motion.div>
         </div>
@@ -86,13 +99,16 @@ export default function FastLearnerPage() {
             </h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                <strong>不是「学完再做」，而是「边做边学」。</strong>
+                <strong>Not &quot;learn then do&quot; — but &quot;learn by doing&quot;.</strong>
               </p>
               <p>
-                当我遇到新技术时，我不会花几周时间看教程。我会找一个真实的问题，然后在解决问题的过程中学习需要的技能。
+                I don&apos;t just read documentation — I immerse myself in tools. From Figma to n8n, from Claude to GPT-4, I&apos;ve hands-on tested every major AI tool to truly understand their capabilities and limitations.
               </p>
               <p>
-                VectorPaths 就是这样诞生的——我不是先学会了所有 LLM 知识才开始做，而是带着「如何让学习更个性化」这个问题，一边探索一边构建。
+                With VectorPaths, I spent one month designing the complete system architecture before writing a single line of code. Then in the next month, I taught myself the entire development stack — frontend, backend, testing, deployment. Not from courses, but from building.
+              </p>
+              <p>
+                <strong>Understanding the landscape matters.</strong> By testing multiple LLMs, I know when to use Claude for nuanced reasoning, when GPT excels, and where open-source models fit. This breadth enables better decisions.
               </p>
             </div>
           </motion.div>

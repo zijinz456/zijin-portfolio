@@ -30,12 +30,12 @@ export default function Home() {
 
               <div className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed tracking-wide max-w-lg space-y-2">
                 <p>
-                  白天在银行上班，晚上用 AI 做了个{" "}
-                  <a href="https://vectorpaths.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#1a1a1a] transition-colors">教育平台</a>{" "}
-                  帮学生刷题。
+                  By day, I work at a bank. By night, I build with AI — including an{" "}
+                  <a href="https://vectorpaths.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#1a1a1a] transition-colors">education platform</a>{" "}
+                  that helps students practice smarter.
                 </p>
                 <p>
-                  喜欢用 AI 解决实际问题。
+                  I love using AI to solve real-world problems.
                 </p>
               </div>
 
@@ -91,7 +91,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-2xl md:text-3xl font-bold text-center mb-12 tracking-wide"
           >
-            Welcome to <span className="highlight-yellow">Zijin 的世界！</span>
+            Welcome to <span className="highlight-yellow">Zijin&apos;s World!</span>
           </motion.h2>
 
           {/* About Me Section */}
@@ -180,7 +180,7 @@ export default function Home() {
               Let&apos;s <span className="text-[#ffe135]">Build</span> Together
             </h2>
             <p className="text-gray-300 mb-10 tracking-wide">
-              想聊聊 AI 或者有什么好玩的项目？
+              Want to chat about AI or have an interesting project idea?
             </p>
             <motion.a
               href="/contact"

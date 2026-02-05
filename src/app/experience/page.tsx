@@ -42,7 +42,7 @@ export default function ExperiencePage() {
             id="vectorpaths-case"
             title="VectorPaths"
             subtitle="AI-Powered Adaptive Learning Platform"
-            avatarScene="coding"
+            customImage="/skills/coding.png"
             color="yellow"
             challenge="Students don't know which questions to practice. Teachers' judgment relies on experience—it doesn't scale."
             sections={[
@@ -169,7 +169,7 @@ export default function ExperiencePage() {
             id="cba-case"
             title="CBA Customer Service"
             subtitle="Real Customer Interactions → Design Insights"
-            avatarScene="working"
+            customImage="/skills/cba.png"
             color="green"
             challenge="How do you design AI assistants that actually help real customers with messy, emotional, and often unclear requests?"
             sections={[
