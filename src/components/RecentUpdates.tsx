@@ -3,28 +3,30 @@
 import { motion } from "framer-motion";
 
 interface Update {
-  icon: string;
   label: string;
   content: string;
-  platform?: string;
+  description?: string;
+  color: string;
 }
 
 const updates: Update[] = [
   {
-    icon: "🚀",
     label: "Building",
     content: "Finishing VectorPaths",
-    platform: "1st AI Vibe Coding Project",
+    description: "My first AI vibe coding project",
+    color: "#ffe135",
   },
   {
-    icon: "🤖",
     label: "Learning",
-    content: "AI Model Local Deployment & Training",
+    content: "AI Model Deployment",
+    description: "Local deployment & training workflows",
+    color: "#ff6b9d",
   },
   {
-    icon: "📷",
     label: "Creating",
-    content: "Photography for Others",
+    content: "Photography",
+    description: "Helping others capture moments",
+    color: "#87ceeb",
   },
 ];
 
@@ -37,56 +39,48 @@ export default function RecentUpdates() {
       className="relative"
     >
       {/* Title */}
-      <div className="text-center mb-8">
-        <h3 className="inline-block text-xl font-bold">
-          <span className="highlight-pink px-3 py-1">Recent Life</span>
-        </h3>
+      <div className="text-center mb-10">
+        <h2 className="text-2xl font-bold text-[#1a1a1a]">
+          <span className="highlight-pink">Recent Updates</span>
+        </h2>
       </div>
 
-      {/* 更新卡片 - 手绘风格连接 */}
-      <div className="relative flex flex-wrap justify-center gap-6">
-        {/* 装饰性元素 */}
-        <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 border-t-2 border-dashed border-gray-300" />
-
+      {/* Update Cards */}
+      <div className="grid md:grid-cols-3 gap-6">
         {updates.map((update, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.15 }}
-            whileHover={{ y: -5, rotate: index % 2 === 0 ? 2 : -2 }}
-            className="relative bg-white border-2 border-[#1a1a1a] rounded-xl p-4 shadow-[3px_3px_0_#1a1a1a] w-full md:w-48"
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ y: -4 }}
+            className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] hover:shadow-[2px_2px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
           >
-            {/* 平台标签 */}
-            {update.platform && (
-              <div className="absolute -top-2 -right-2 bg-[#4a90d9] text-white text-xs px-2 py-0.5 rounded border border-[#1a1a1a]">
-                {update.platform}
-              </div>
+            {/* Number Badge */}
+            <span
+              className="inline-block w-8 h-8 border-2 border-[#1a1a1a] rounded-lg mb-4 text-center leading-7 font-bold text-sm"
+              style={{ backgroundColor: update.color, color: update.color === "#ff6b9d" ? "white" : "#1a1a1a" }}
+            >
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            {/* Label */}
+            <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">
+              {update.label}
+            </p>
+
+            {/* Content */}
+            <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">
+              {update.content}
+            </h3>
+
+            {/* Description */}
+            {update.description && (
+              <p className="text-sm text-gray-600">{update.description}</p>
             )}
-
-            {/* 图标和标签 */}
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-xl">{update.icon}</span>
-              <span className="text-sm font-medium text-gray-500">{update.label}</span>
-            </div>
-
-            {/* 内容 */}
-            <p className="text-base font-semibold text-[#1a1a1a]">{update.content}</p>
-
-            {/* 装饰性箭头 */}
-            <div className="hidden md:block absolute -bottom-4 left-1/2 -translate-x-1/2 text-gray-400">
-              ↓
-            </div>
           </motion.div>
         ))}
-      </div>
-
-      {/* 装饰性元素 */}
-      <div className="flex justify-center mt-8 gap-2">
-        <span className="w-2 h-2 bg-[#ff6b9d] rounded-full" />
-        <span className="w-2 h-2 bg-[#ffe135] rounded-full" />
-        <span className="w-2 h-2 bg-[#4a90d9] rounded-full" />
       </div>
     </motion.div>
   );
