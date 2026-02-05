@@ -1,83 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CaseStudy, { ValidationStats } from "@/components/CaseStudy";
+import Timeline from "@/components/Timeline";
+import RecentUpdates from "@/components/RecentUpdates";
+import CaseStudy, { FlowDiagram, ValidationStats } from "@/components/CaseStudy";
 
 export default function ExperiencePage() {
   return (
     <div className="min-h-screen bg-[#fef9f3] pt-24">
-      {/* Overview Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <h1 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">
-              Experience
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              I build products that turn complex systems into simple experiences.
-            </p>
-          </motion.div>
+      {/* Recent Updates Section */}
+      <section className="py-12 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <RecentUpdates />
         </div>
       </section>
 
-      {/* Background Section */}
-      <section className="py-12 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <h2 className="text-xl font-bold text-[#1a1a1a] mb-6">Background</h2>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              {/* Current Work */}
-              <div className="p-5 border-2 border-[#1a1a1a] rounded-xl bg-[#fff9e6] shadow-[3px_3px_0_#1a1a1a]">
-                <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Current</span>
-                <div className="mt-3 space-y-3">
-                  <div className="flex items-start gap-3">
-                    <span className="text-lg">🚀</span>
-                    <div>
-                      <p className="font-semibold text-[#1a1a1a]">VectorPaths</p>
-                      <p className="text-sm text-gray-600">Founder & Product Lead</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-lg">🏦</span>
-                    <div>
-                      <p className="font-semibold text-[#1a1a1a]">Commonwealth Bank</p>
-                      <p className="text-sm text-gray-600">Customer Banking Specialist</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Education */}
-              <div className="p-5 border-2 border-[#1a1a1a] rounded-xl bg-[#f0f9ff] shadow-[3px_3px_0_#1a1a1a]">
-                <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Education</span>
-                <div className="mt-3">
-                  <div className="flex items-start gap-3">
-                    <span className="text-lg">🎓</span>
-                    <div>
-                      <p className="font-semibold text-[#1a1a1a]">University of Melbourne</p>
-                      <p className="text-sm text-gray-600">B.Com — Finance & Economics</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Now Learning */}
-            <div className="mt-4 p-4 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50">
-              <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Currently Learning</span>
-              <p className="mt-2 text-sm text-gray-600">
-                AI deployment workflows · Vibe coding · Local model training
-              </p>
-            </div>
-          </motion.div>
+      {/* Timeline Section */}
+      <section className="py-12 px-6">
+        <div className="max-w-5xl mx-auto">
+          <Timeline />
         </div>
       </section>
 
@@ -87,11 +28,13 @@ export default function ExperiencePage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-12"
+            transition={{ delay: 0.3 }}
+            className="text-center mb-12"
           >
-            <h2 className="text-xl font-bold text-[#1a1a1a] mb-2">Case Studies</h2>
-            <p className="text-gray-600">How I think through problems</p>
+            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">
+              <span className="highlight-pink">Case Studies</span>
+            </h2>
+            <p className="text-gray-600">Deep dive into my projects</p>
           </motion.div>
 
           {/* VectorPaths Case Study */}
