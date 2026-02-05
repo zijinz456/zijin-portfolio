@@ -233,34 +233,57 @@ export default function SkillsPage() {
             </div>
           </motion.div>
 
-          {/* Other Hobbies */}
+          {/* Baking Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="p-8 bg-[#fff5f7] border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-20 h-20 bg-white rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/skills/baking.png"
-                  alt="Baking"
-                  width={80}
-                  height={80}
-                  className="object-contain"
-                />
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Left: Content */}
+              <div>
+                <h3 className="text-xl font-bold text-[#1a1a1a] mb-6">Baking</h3>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#ff6b9d] rounded-full flex items-center justify-center text-white font-bold">1</div>
+                    <p className="text-gray-700"><strong>Precision meets creativity</strong> — like coding, but delicious</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#ffe135] rounded-full flex items-center justify-center text-[#1a1a1a] font-bold">2</div>
+                    <p className="text-gray-700">Follow the <strong>recipe</strong>, then experiment with flavors</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#87ceeb] rounded-full flex items-center justify-center text-white font-bold">3</div>
+                    <p className="text-gray-700">Debug failures — <strong>iterate</strong> until perfect</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#98d4bb] rounded-full flex items-center justify-center text-white font-bold">4</div>
+                    <p className="text-gray-700">Share the results — <strong>joy delivered</strong></p>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cakes</span>
+                  <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cookies</span>
+                  <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Bread</span>
+                  <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Pastries</span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#1a1a1a]">Baking</h3>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Creative experiments in the kitchen. I love the precision and creativity involved in baking —
-              it&apos;s like coding, but delicious!
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cakes</span>
-              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cookies</span>
-              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Bread</span>
-              <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Pastries</span>
+
+              {/* Right: Image */}
+              <div className="flex justify-center">
+                <div className="w-48 h-48 md:w-64 md:h-64 bg-white rounded-2xl border-2 border-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/skills/baking.png"
+                    alt="Baking"
+                    width={240}
+                    height={240}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

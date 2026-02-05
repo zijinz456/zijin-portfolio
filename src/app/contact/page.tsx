@@ -97,10 +97,7 @@ export default function ContactPage() {
               <div className="w-12 h-12 bg-[#ff6b9d] border-2 border-[#1a1a1a] rounded-full flex items-center justify-center">
                 <span className="text-white text-xl">🎯</span>
               </div>
-              <div>
-                <h3 className="font-semibold text-[#1a1a1a]">Questions to Me</h3>
-                <p className="text-sm text-gray-500">Common interview questions — answered in one click</p>
-              </div>
+              <h3 className="font-semibold text-[#1a1a1a]">Questions to Me</h3>
             </div>
 
             {/* Interview Questions */}
