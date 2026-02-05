@@ -95,40 +95,47 @@ export default function ContactPage() {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-[#ff6b9d] border-2 border-[#1a1a1a] rounded-full flex items-center justify-center">
-                <span className="text-white text-xl">💬</span>
+                <span className="text-white text-xl">🎯</span>
               </div>
               <div>
-                <h3 className="font-semibold text-[#1a1a1a]">Quick Questions?</h3>
-                <p className="text-sm text-gray-500">I can help you learn about my work quickly</p>
+                <h3 className="font-semibold text-[#1a1a1a]">Interview Quick Links</h3>
+                <p className="text-sm text-gray-500">Questions HR might ask — answered in one click</p>
               </div>
             </div>
 
-            {/* Preset Questions */}
+            {/* Interview Questions */}
             <div className="space-y-3">
-              <p className="text-sm text-gray-400 mb-4">Common questions:</p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { text: "What's VectorPaths?", href: "/experience#vectorpaths-case" },
-                  { text: "Your experience?", href: "/experience" },
-                  { text: "Tech stack?", href: "/skills" },
-                  { text: "Available for work?", href: "mailto:zijinz456@gmail.com" },
-                ].map((question) => (
-                  <motion.a
-                    key={question.text}
-                    href={question.href}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2 bg-[#fef9f3] border-2 border-[#1a1a1a] rounded-lg text-sm text-[#1a1a1a] hover:bg-[#ffe135] transition-colors"
+              {[
+                { text: "Tell me about yourself", href: "/#about-me", color: "#ffe135" },
+                { text: "Walk me through your biggest project", href: "/experience#vectorpaths-case", color: "#87ceeb" },
+                { text: "What are your key strengths?", href: "/#top-skills", color: "#ff6b9d" },
+                { text: "What's your technical background?", href: "/skills#technical-skills", color: "#98d4bb" },
+                { text: "What makes you unique?", href: "/skills#beyond-work", color: "#e8d4f8" },
+              ].map((question, index) => (
+                <motion.a
+                  key={question.text}
+                  href={question.href}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 + index * 0.1 }}
+                  whileHover={{ x: 4 }}
+                  className="flex items-center gap-3 p-3 bg-white border-2 border-[#1a1a1a] rounded-lg hover:shadow-[2px_2px_0_#1a1a1a] transition-all group"
+                >
+                  <span
+                    className="w-8 h-8 rounded-full border-2 border-[#1a1a1a] flex items-center justify-center text-xs font-bold"
+                    style={{ backgroundColor: question.color }}
                   >
-                    {question.text}
-                  </motion.a>
-                ))}
-              </div>
+                    {index + 1}
+                  </span>
+                  <span className="text-sm text-[#1a1a1a] font-medium">{question.text}</span>
+                  <span className="ml-auto text-gray-400 group-hover:text-[#1a1a1a] transition-colors">→</span>
+                </motion.a>
+              ))}
             </div>
 
             <div className="mt-6 pt-6 border-t-2 border-dashed border-gray-200">
               <p className="text-xs text-gray-400 text-center">
-                Full chatbot coming soon... For now, use these quick links to learn more!
+                Click any question to jump to the answer
               </p>
             </div>
           </motion.div>
@@ -146,7 +153,7 @@ export default function ContactPage() {
             <p className="text-gray-400 mb-2">
               Built with Next.js, Tailwind CSS, and Framer Motion
             </p>
-            <p className="text-sm text-gray-500">© 2025 Zijin Zhang</p>
+            <p className="text-sm text-gray-500">© 2026 Zijin Zhang</p>
             <div className="flex justify-center gap-2 mt-4">
               <span className="w-2 h-2 bg-[#ff6b9d] rounded-full" />
               <span className="w-2 h-2 bg-[#ffe135] rounded-full" />
