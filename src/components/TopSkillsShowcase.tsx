@@ -48,13 +48,6 @@ const learningExamples = [
   },
 ];
 
-const learningTimeline = [
-  { period: "Month 1", event: "Explored AI tools: Figma, Pencil; Started comparing different LLMs" },
-  { period: "Month 2", event: "Designed complete VectorPaths system architecture" },
-  { period: "Month 3-4", event: "Learned full-stack development: React, Node.js, PostgreSQL, CI/CD" },
-  { period: "Now", event: "Building n8n workflows and iterating on VectorPaths" },
-];
-
 // Skill 3: End-to-End Builder
 const builderMindset = [
   { title: "Ownership", description: "Don't wait for someone else to solve it. If I see a problem, I fix it.", icon: "🔧" },
@@ -91,105 +84,68 @@ export default function TopSkillsShowcase() {
         viewport={{ once: true }}
         className="py-16 px-6 bg-gradient-to-r from-[#ffe135]/10 to-[#ffe135]/5 border-y-2 border-[#1a1a1a]/10"
       >
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left: Hero Info */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-28 h-28 bg-[#ffe135]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
-                  <Image
-                    src="/skills/fast-learner.png"
-                    alt="Fast Learner"
-                    width={110}
-                    height={110}
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <span className="inline-block px-3 py-1 bg-[#ffe135] text-[#1a1a1a] text-xs font-bold rounded-full mb-1">
-                    Quick to Master New Tech
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a]">
-                    Fast Learner
-                  </h3>
-                </div>
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-28 h-28 bg-[#ffe135]/20 rounded-2xl border-2 border-[#1a1a1a] shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/skills/fast-learner.png"
+                  alt="Fast Learner"
+                  width={110}
+                  height={110}
+                  className="object-contain"
+                />
               </div>
+              <div>
+                <span className="inline-block px-3 py-1 bg-[#ffe135] text-[#1a1a1a] text-xs font-bold rounded-full mb-1">
+                  Quick to Master New Tech
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a]">
+                  Fast Learner
+                </h3>
+              </div>
+            </div>
 
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Designed a complete system in one month. Learned full-stack development in another. I immerse myself in tools to truly understand them.
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              Designed a complete system in one month. Learned full-stack development in another. I immerse myself in tools to truly understand them.
+            </p>
+
+            {/* Philosophy Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-4 bg-[#ffe135]/30 border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] mb-6"
+            >
+              <p className="text-sm text-gray-700">
+                <strong>Not just reading docs — but hands-on testing everything.</strong>
+                <br />
+                I tested multiple LLMs to know when to use each. I learned full-stack by building, not by watching tutorials.
               </p>
-
-              {/* Philosophy Quote */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="p-4 bg-[#ffe135]/30 border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] mb-6"
-              >
-                <p className="text-sm text-gray-700">
-                  <strong>Not just reading docs — but hands-on testing everything.</strong>
-                  <br />
-                  I tested multiple LLMs to know when to use each. I learned full-stack by building, not by watching tutorials.
-                </p>
-              </motion.div>
-
-              {/* Learning Examples */}
-              <div className="space-y-3">
-                {learningExamples.map((item, index) => (
-                  <motion.div
-                    key={item.title}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-3 p-3 bg-white border-2 border-[#1a1a1a] rounded-lg shadow-[2px_2px_0_#1a1a1a]"
-                  >
-                    <span className="text-2xl">{item.icon}</span>
-                    <div>
-                      <p className="font-bold text-sm text-[#1a1a1a]">{item.title}</p>
-                      <p className="text-xs text-gray-600">{item.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
             </motion.div>
 
-            {/* Right: Timeline */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-6">
-                Learning Timeline
-              </h4>
-              <div className="relative">
-                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-[#1a1a1a]/20" />
-                {learningTimeline.map((item, index) => (
-                  <motion.div
-                    key={item.period}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.15 }}
-                    className="relative flex items-start gap-4 mb-6"
-                  >
-                    <div className="w-8 h-8 bg-[#ffe135] rounded-full border-2 border-[#1a1a1a] flex items-center justify-center text-xs font-bold z-10 flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div className="flex-1 p-4 bg-white border-2 border-[#1a1a1a] rounded-lg shadow-[2px_2px_0_#1a1a1a]">
-                      <span className="text-xs font-bold text-[#ff6b9d]">{item.period}</span>
-                      <p className="text-sm text-gray-700 mt-1">{item.event}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+            {/* Learning Examples */}
+            <div className="grid md:grid-cols-3 gap-4">
+              {learningExamples.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-4 bg-white border-2 border-[#1a1a1a] rounded-lg shadow-[2px_2px_0_#1a1a1a]"
+                >
+                  <span className="text-2xl mb-2 block">{item.icon}</span>
+                  <p className="font-bold text-sm text-[#1a1a1a]">{item.title}</p>
+                  <p className="text-xs text-gray-600 mt-1">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </motion.section>
 
