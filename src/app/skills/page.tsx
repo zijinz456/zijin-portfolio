@@ -40,7 +40,7 @@ export default function SkillsPage() {
               Skills & <span className="highlight-yellow">Capabilities</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              What I bring to the table as a Conversation Designer
+              What I bring to the table as a Product Builder
             </p>
           </motion.div>
         </div>

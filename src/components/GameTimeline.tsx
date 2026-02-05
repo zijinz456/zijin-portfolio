@@ -26,8 +26,8 @@ const mainQuests: TimelineItem[] = [
     color: "#ffe135",
   },
   {
-    date: "毕业",
-    title: "墨尔本大学 商学学士 (Finance & Economics)",
+    date: "2024",
+    title: "墨尔本大学 商学学士 (Finance & Business Analytics) 在读",
     type: "main",
     icon: "🎓",
     color: "#98d4bb",
@@ -35,13 +35,6 @@ const mainQuests: TimelineItem[] = [
 ];
 
 const sideQuests: TimelineItem[] = [
-  {
-    date: "2025",
-    title: "申请 Bankwest Conversation Designer",
-    type: "side",
-    icon: "🎯",
-    color: "#ff6b9d",
-  },
   {
     date: "2024",
     title: "LLM + Schema 数据提取: 3,000+ 题目结构化",

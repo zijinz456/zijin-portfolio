@@ -15,7 +15,7 @@ export default function AboutMe() {
       >
         {/* Main intro */}
         <p className="text-gray-700 leading-relaxed">
-          我出生于 2000 年 5 月，在上海读大学，电气工程专业。家庭环境比较自由，家人都不会对我的选择做过多干涉。这导致我在肆意生长的过程中，拥有了很多复杂的成分。
+          我出生于 2000 年 5 月，在墨尔本大学读书，Finance & Business Analytics 专业。家庭环境比较自由，家人都不会对我的选择做过多干涉。这导致我在肆意生长的过程中，拥有了很多复杂的成分。
         </p>
 
         <p className="text-lg font-medium text-gray-800">
@@ -62,9 +62,8 @@ export default function AboutMe() {
 
         {/* Current status */}
         <div className="space-y-2 text-sm text-gray-600">
-          <p>目前在一家 995 的 toB 软件公司做产品经理</p>
-          <p>同时也是一名 B站小 up 主</p>
-          <p>还偶尔经营了一家女生情趣用品小店（尽管我观念还是比较传统，哎呀）</p>
+          <p>目前在 Commonwealth Bank 做 Customer Banking Specialist</p>
+          <p>同时也是 VectorPaths 的创始人，用 AI 帮学生智能刷题</p>
         </div>
       </motion.div>
 

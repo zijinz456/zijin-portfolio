@@ -34,23 +34,15 @@ const mainQuests: TimelineEvent[] = [
   },
   {
     id: "unimelb",
-    year: "毕业",
-    title: "墨尔本大学 商学学士 (Finance & Economics)",
+    year: "2024",
+    title: "墨尔本大学 商学学士 (Finance & Business Analytics) 在读",
     type: "main",
-    status: "completed",
+    status: "in-progress",
     icon: "🎓",
   },
 ];
 
 const sideQuests: TimelineEvent[] = [
-  {
-    id: "bankwest",
-    year: "2025",
-    title: "申请 Bankwest Conversation Designer",
-    type: "side",
-    status: "in-progress",
-    icon: "💼",
-  },
   {
     id: "llm",
     year: "2024",

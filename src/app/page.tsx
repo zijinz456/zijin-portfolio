@@ -24,18 +24,20 @@ export default function Home() {
                 Hi, I&apos;m <span className="highlight-pink">Zijin</span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-700 mb-2 tracking-wide">
-                Conversation Designer
-              </p>
-              <p className="text-xl md:text-2xl text-gray-700 mb-8 tracking-wide">
-                & <span className="highlight-yellow">AI Product Builder</span>
+              <p className="text-lg md:text-xl text-gray-700 mb-6 tracking-wide">
+                Product Builder & <span className="highlight-yellow">Banking Specialist</span>
               </p>
 
-              <p className="text-lg text-gray-600 mb-10 leading-relaxed tracking-wide max-w-md">
-                I design dialogue experiences that make
-                <br />
-                <strong>complex things simple</strong>.
-              </p>
+              <div className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed tracking-wide max-w-lg space-y-2">
+                <p>
+                  白天在银行上班，晚上用 AI 做了个{" "}
+                  <a href="https://vectorpaths.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#1a1a1a] transition-colors">教育平台</a>{" "}
+                  帮学生刷题。
+                </p>
+                <p>
+                  喜欢用 AI 解决实际问题。
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -123,7 +125,7 @@ export default function Home() {
                 href="/experience"
                 className="block p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
               >
-                <span className="text-3xl mb-3 block">📋</span>
+                <span className="inline-block w-8 h-8 bg-[#ffe135] border-2 border-[#1a1a1a] rounded-lg mb-3 text-center leading-7 font-bold text-sm">01</span>
                 <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">Experience</h3>
                 <p className="text-sm text-gray-600">Case studies & timeline</p>
               </Link>
@@ -140,9 +142,9 @@ export default function Home() {
                 href="/skills"
                 className="block p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
               >
-                <span className="text-3xl mb-3 block">⚡</span>
+                <span className="inline-block w-8 h-8 bg-[#ff6b9d] border-2 border-[#1a1a1a] rounded-lg mb-3 text-center leading-7 font-bold text-sm text-white">02</span>
                 <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">Skills</h3>
-                <p className="text-sm text-gray-600">Tech stack & hobbies</p>
+                <p className="text-sm text-gray-600">Tech stack & capabilities</p>
               </Link>
             </motion.div>
 
@@ -157,7 +159,7 @@ export default function Home() {
                 href="/contact"
                 className="block p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
               >
-                <span className="text-3xl mb-3 block">✉️</span>
+                <span className="inline-block w-8 h-8 bg-[#87ceeb] border-2 border-[#1a1a1a] rounded-lg mb-3 text-center leading-7 font-bold text-sm">03</span>
                 <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">Contact</h3>
                 <p className="text-sm text-gray-600">Let&apos;s connect</p>
               </Link>
@@ -178,7 +180,7 @@ export default function Home() {
               Let&apos;s <span className="text-[#ffe135]">Build</span> Together
             </h2>
             <p className="text-gray-300 mb-10 tracking-wide">
-              Looking for a conversation designer who ships?
+              想聊聊 AI 或者有什么好玩的项目？
             </p>
             <motion.a
               href="/contact"

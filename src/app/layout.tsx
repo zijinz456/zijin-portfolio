@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Zijin Zhang | Conversation Designer & AI Product Builder",
-  description: "I design dialogue experiences that make complex things simple.",
-  keywords: ["Conversation Design", "AI", "LLM", "Product Design", "UX"],
+  title: "Zijin Zhang | Product Builder & Banking Specialist",
+  description: "I build AI-powered products and deliver excellent customer experiences.",
+  keywords: ["Product Design", "AI", "LLM", "Banking", "VectorPaths"],
   authors: [{ name: "Zijin Zhang" }],
   openGraph: {
-    title: "Zijin Zhang | Conversation Designer & AI Product Builder",
-    description: "I design dialogue experiences that make complex things simple.",
+    title: "Zijin Zhang | Product Builder & Banking Specialist",
+    description: "I build AI-powered products and deliver excellent customer experiences.",
     type: "website",
   },
 };

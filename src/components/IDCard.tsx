@@ -40,12 +40,12 @@ export default function IDCard({ className = "" }: IDCardProps) {
 
             <div className="flex items-center gap-2">
               <span className="text-gray-500 text-xs w-14">MAJOR</span>
-              <span className="text-gray-700 text-xs">Finance & Economics</span>
+              <span className="text-gray-700 text-xs">Finance & Business Analytics</span>
             </div>
 
             <div className="flex items-center gap-2">
               <span className="text-gray-500 text-xs w-14">ROLE</span>
-              <span className="text-gray-700 text-xs">Conversation Designer</span>
+              <span className="text-gray-700 text-xs">Product Builder</span>
             </div>
 
             <div className="flex items-center gap-2">
