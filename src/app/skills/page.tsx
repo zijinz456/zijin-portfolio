@@ -88,7 +88,7 @@ export default function SkillsPage() {
         </div>
       </section>
 
-      {/* Conversation Design Skills */}
+      {/* How I Work */}
       <section className="py-12 px-6 bg-[#fff9e6]">
         <div className="max-w-5xl mx-auto">
           <motion.h2
@@ -96,70 +96,91 @@ export default function SkillsPage() {
             animate={{ opacity: 1 }}
             className="text-xl font-bold text-[#1a1a1a] mb-8 text-center"
           >
-            <span className="highlight-blue">Conversation Design Skills</span>
+            <span className="highlight-blue">How I Work</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] overflow-hidden"
             >
-              <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>🎯</span> Multi-turn Conversation Design
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Define context collection and usage patterns</li>
-                <li>• Design branching, sequencing, and decision points</li>
-                <li>• Plan fallback and escalation paths</li>
-              </ul>
+              <div className="h-2 bg-[#87ceeb]" />
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-10 h-10 bg-[#87ceeb] border-2 border-[#1a1a1a] rounded-lg flex items-center justify-center text-xl">🧠</span>
+                  <h3 className="font-bold text-[#1a1a1a] text-lg">Systems Thinking</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  I like to understand how things connect before building. When designing VectorPaths, I mapped out how user data, question selection, and feedback loops all work together.
+                </p>
+                <span className="inline-block px-3 py-1 bg-[#87ceeb]/20 border border-[#87ceeb] rounded-full text-xs text-[#1a1a1a]">
+                  Developed through: Product Design, Data Modeling
+                </span>
+              </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
-            >
-              <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>🤖</span> Understanding LLM Behavior
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Influence outputs through patterns, examples, and guardrails</li>
-                <li>• Understand LLM strengths and limitations</li>
-                <li>• Use Schema constraints to ensure output stability</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
+              className="bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] overflow-hidden"
             >
-              <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>🧪</span> Experimentation & Iteration
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Form hypotheses and design tests</li>
-                <li>• Iterate based on user behavior data</li>
-                <li>• R² correlation to validate design decisions</li>
-              </ul>
+              <div className="h-2 bg-[#ff6b9d]" />
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-10 h-10 bg-[#ff6b9d] border-2 border-[#1a1a1a] rounded-lg flex items-center justify-center text-xl">🚀</span>
+                  <h3 className="font-bold text-[#1a1a1a] text-lg">End-to-End Execution</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  I ship complete products, not just prototypes. From designing the system architecture to deploying and iterating — I handle the full journey from idea to live product.
+                </p>
+                <span className="inline-block px-3 py-1 bg-[#ff6b9d]/20 border border-[#ff6b9d] rounded-full text-xs text-[#1a1a1a]">
+                  Developed through: VectorPaths, Personal Projects
+                </span>
+              </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.1 }}
-              className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] overflow-hidden"
             >
-              <h3 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                <span>💬</span> Adaptive Communication
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Adjust tone and pace based on user needs</li>
-                <li>• Identify real intent vs. literal requests</li>
-                <li>• De-escalation and handoff design</li>
-              </ul>
+              <div className="h-2 bg-[#ffe135]" />
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-10 h-10 bg-[#ffe135] border-2 border-[#1a1a1a] rounded-lg flex items-center justify-center text-xl">💬</span>
+                  <h3 className="font-bold text-[#1a1a1a] text-lg">Understanding Users</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Working at CBA taught me that what people ask for isn&apos;t always what they need. I&apos;ve learned to listen carefully, identify the real problem, and guide toward the right solution.
+                </p>
+                <span className="inline-block px-3 py-1 bg-[#ffe135]/30 border border-[#ffe135] rounded-full text-xs text-[#1a1a1a]">
+                  Developed through: CBA Banking, User Research
+                </span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] overflow-hidden"
+            >
+              <div className="h-2 bg-[#98d4bb]" />
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-10 h-10 bg-[#98d4bb] border-2 border-[#1a1a1a] rounded-lg flex items-center justify-center text-xl">🧪</span>
+                  <h3 className="font-bold text-[#1a1a1a] text-lg">Data-Driven Iteration</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  I don&apos;t guess — I test. When building the question ranking system, I validated the algorithm with 2,100+ test cases and measured R² correlation to make sure it actually worked.
+                </p>
+                <span className="inline-block px-3 py-1 bg-[#98d4bb]/30 border border-[#98d4bb] rounded-full text-xs text-[#1a1a1a]">
+                  Developed through: Algorithm Design, A/B Testing
+                </span>
+              </div>
             </motion.div>
           </div>
         </div>

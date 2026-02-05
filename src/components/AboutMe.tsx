@@ -18,10 +18,6 @@ export default function AboutMe() {
           I&apos;m currently studying <strong>Finance & Business Analytics</strong> at the University of Melbourne.
         </p>
 
-        <p className="text-lg font-medium text-gray-800">
-          Welcome to Zijin&apos;s world!
-        </p>
-
         {/* AI & Tech Passion */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}

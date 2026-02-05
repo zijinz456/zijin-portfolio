@@ -86,7 +86,7 @@ export default function Avatar({ scene = "default", size = "lg", className = "" 
     >
       {/* 头像容器 */}
       <motion.div
-        className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg bg-gradient-to-br from-blue-50 to-pink-50"
+        className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg bg-gradient-to-br from-blue-50 to-pink-50"
         animate={wobbleAnimation}
         transition={
           prefersReducedMotion
@@ -98,11 +98,12 @@ export default function Avatar({ scene = "default", size = "lg", className = "" 
               }
         }
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={sceneImages[scene]}
           alt={sceneDescriptions[scene]}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       </motion.div>
 

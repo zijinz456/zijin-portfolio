@@ -5,6 +5,7 @@ import Link from "next/link";
 import AvatarWithBubbles from "@/components/AvatarWithBubbles";
 import AboutMe from "@/components/AboutMe";
 import TopSkillsShowcase from "@/components/TopSkillsShowcase";
+import { WordRotate } from "@/components/ui/word-rotate";
 
 export default function Home() {
   return (
@@ -24,9 +25,20 @@ export default function Home() {
                 Hi, I&apos;m <span className="highlight-pink">Zijin</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-700 mb-6 tracking-wide">
-                Product Builder & <span className="highlight-yellow">AI Enthusiast</span>
-              </p>
+              <div className="text-lg md:text-xl text-gray-700 mb-6 tracking-wide flex items-center gap-2 justify-center md:justify-start">
+                <span>I&apos;m a</span>
+                <WordRotate
+                  words={[
+                    "Product Builder",
+                    "AI Enthusiast",
+                    "Banking Specialist",
+                    "Fast Learner",
+                    "Problem Solver",
+                  ]}
+                  className="highlight-yellow font-semibold"
+                  duration={2000}
+                />
+              </div>
 
               <div className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed tracking-wide max-w-lg space-y-2">
                 <p>
