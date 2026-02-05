@@ -1,65 +1,197 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import AvatarWithBubbles from "@/components/AvatarWithBubbles";
+import AboutMe from "@/components/AboutMe";
+import TopSkillsShowcase from "@/components/TopSkillsShowcase";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="min-h-screen bg-[#fef9f3]">
+      {/* Hero Section */}
+      <section className="pt-28 pb-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+            {/* Left - Intro Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center md:text-left"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] mb-6 leading-relaxed tracking-wide">
+                Hi, I&apos;m <span className="highlight-pink">Zijin</span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-gray-700 mb-2 tracking-wide">
+                Conversation Designer
+              </p>
+              <p className="text-xl md:text-2xl text-gray-700 mb-8 tracking-wide">
+                & <span className="highlight-yellow">AI Product Builder</span>
+              </p>
+
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed tracking-wide max-w-md">
+                I design dialogue experiences that make
+                <br />
+                <strong>complex things simple</strong>.
+              </p>
+
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <Link
+                    href="/experience"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#ffe135] border-2 border-[#1a1a1a] rounded-lg font-medium shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all tracking-wide"
+                  >
+                    View My Work →
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-[#1a1a1a] rounded-lg font-medium shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all tracking-wide"
+                  >
+                    Say Hello
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Right - Avatar with Trait Bubbles */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex-shrink-0"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+              <AvatarWithBubbles />
+            </motion.div>
+          </div>
+
+          {/* Hint text */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+            className="text-center text-sm text-gray-400 mt-4 tracking-wide"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Click the bubbles to explore
+          </motion.p>
         </div>
-      </main>
+      </section>
+
+      {/* Welcome Section */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-bold text-center mb-12 tracking-wide"
+          >
+            Welcome to <span className="highlight-yellow">Zijin 的世界！</span>
+          </motion.h2>
+
+          {/* About Me Section */}
+          <AboutMe />
+
+          {/* My Top 3 Skills */}
+          <TopSkillsShowcase />
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-20 px-6 bg-[#fff9e6]">
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl font-bold text-center mb-12 tracking-wide"
+          >
+            Explore <span className="highlight-pink">More</span>
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -4 }}
+            >
+              <Link
+                href="/experience"
+                className="block p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+              >
+                <span className="text-3xl mb-3 block">📋</span>
+                <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">Experience</h3>
+                <p className="text-sm text-gray-600">Case studies & timeline</p>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ y: -4 }}
+            >
+              <Link
+                href="/skills"
+                className="block p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+              >
+                <span className="text-3xl mb-3 block">⚡</span>
+                <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">Skills</h3>
+                <p className="text-sm text-gray-600">Tech stack & hobbies</p>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ y: -4 }}
+            >
+              <Link
+                href="/contact"
+                className="block p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a] hover:shadow-[1px_1px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+              >
+                <span className="text-3xl mb-3 block">✉️</span>
+                <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">Contact</h3>
+                <p className="text-sm text-gray-600">Let&apos;s connect</p>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer CTA */}
+      <section className="py-20 px-6 bg-[#1a1a1a] text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold mb-6 tracking-wide">
+              Let&apos;s <span className="text-[#ffe135]">Build</span> Together
+            </h2>
+            <p className="text-gray-300 mb-10 tracking-wide">
+              Looking for a conversation designer who ships?
+            </p>
+            <motion.a
+              href="/contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-10 py-4 bg-[#ffe135] text-[#1a1a1a] rounded-full font-semibold hover:bg-[#fff59d] transition-colors tracking-wide"
+            >
+              Get in Touch
+              <span>→</span>
+            </motion.a>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }

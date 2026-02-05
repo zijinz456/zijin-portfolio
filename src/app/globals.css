@@ -1,26 +1,135 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 西门风格配色 */
+  --background: #fef9f3;
+  --foreground: #1a1a1a;
+  --cream: #fef9f3;
+  --yellow: #ffe135;
+  --yellow-light: #fff59d;
+  --pink: #ff6b9d;
+  --pink-light: #ffb6c1;
+  --blue: #4a90d9;
+  --blue-light: #87ceeb;
+  --mint: #98d4bb;
+  --border: #1a1a1a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background: var(--yellow);
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 西门风格高亮标题 - 黄色 */
+.highlight-yellow {
+  display: inline;
+  background: var(--yellow);
+  padding: 0.1em 0.3em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* 西门风格高亮标题 - 粉色 */
+.highlight-pink {
+  display: inline;
+  background: var(--pink);
+  color: white;
+  padding: 0.1em 0.3em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* 西门风格高亮标题 - 蓝色 */
+.highlight-blue {
+  display: inline;
+  background: var(--blue);
+  color: white;
+  padding: 0.1em 0.3em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* 手绘风格边框 */
+.sketch-border {
+  border: 2px solid var(--border);
+  border-radius: 4px;
+}
+
+/* 虚线连接线 */
+.dashed-line {
+  border: none;
+  border-top: 2px dashed var(--border);
+}
+
+/* 胶囊形状 */
+.pill {
+  border-radius: 9999px;
+}
+
+/* 卡片悬浮效果 */
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 0 var(--border);
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  background: white;
+}
+
+.tag-yellow {
+  background: var(--yellow);
+}
+
+.tag-pink {
+  background: var(--pink);
+  color: white;
+}
+
+.tag-blue {
+  background: var(--blue);
+  color: white;
+}
+
+.tag-mint {
+  background: var(--mint);
 }
