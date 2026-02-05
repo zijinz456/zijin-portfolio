@@ -60,7 +60,7 @@ export default function IDCard({ className = "" }: IDCardProps) {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs text-gray-400">PLAYER ID</p>
-              <p className="text-sm font-mono font-semibold">ZJ-UNIMELB-2025</p>
+              <p className="text-sm font-mono font-semibold">ZJ-UNIMELB-2026</p>
             </div>
             <div className="text-right">
               <div className="flex items-center gap-1">

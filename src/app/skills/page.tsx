@@ -243,28 +243,11 @@ export default function SkillsPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left: Content */}
               <div>
-                <h3 className="text-xl font-bold text-[#1a1a1a] mb-6">Baking</h3>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-[#ff6b9d] rounded-full flex items-center justify-center text-white font-bold">1</div>
-                    <p className="text-gray-700"><strong>Precision meets creativity</strong> — like coding, but delicious</p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-[#ffe135] rounded-full flex items-center justify-center text-[#1a1a1a] font-bold">2</div>
-                    <p className="text-gray-700">Follow the <strong>recipe</strong>, then experiment with flavors</p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-[#87ceeb] rounded-full flex items-center justify-center text-white font-bold">3</div>
-                    <p className="text-gray-700">Debug failures — <strong>iterate</strong> until perfect</p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-[#98d4bb] rounded-full flex items-center justify-center text-white font-bold">4</div>
-                    <p className="text-gray-700">Share the results — <strong>joy delivered</strong></p>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-2">
+                <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Baking</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  I love baking in my free time. There&apos;s something satisfying about following a recipe and watching it come together.
+                </p>
+                <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cakes</span>
                   <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Cookies</span>
                   <span className="px-3 py-1 bg-white border-2 border-[#1a1a1a] rounded-lg text-sm">Bread</span>
