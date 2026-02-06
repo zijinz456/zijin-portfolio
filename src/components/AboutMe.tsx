@@ -54,11 +54,6 @@ export default function AboutMe() {
           </p>
         </motion.div>
 
-        {/* Current status */}
-        <div className="space-y-2 text-sm text-gray-600">
-          <p><strong>Commonwealth Bank</strong> — Customer Banking Specialist</p>
-          <p><strong>VectorPaths</strong> — Founder, AI-powered adaptive learning platform</p>
-        </div>
       </motion.div>
 
       {/* Right - ID Card */}
