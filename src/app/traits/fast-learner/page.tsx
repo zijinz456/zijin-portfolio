@@ -97,7 +97,7 @@ export default function FastLearnerPage() {
 
       {/* The Story — Output-oriented Timeline */}
       <section className="py-12 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto emphasis-underline-blue">
           <FadeInView y={0}>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 tracking-wide">
               What I <span className="highlight-pink">Shipped</span> Each Month
@@ -157,7 +157,7 @@ export default function FastLearnerPage() {
         </div>
       </section>
 
-      <ValuePropsSection items={valueProps} />
+      <ValuePropsSection items={valueProps} className="emphasis-pill-yellow" />
 
       <TraitCTA
         message={

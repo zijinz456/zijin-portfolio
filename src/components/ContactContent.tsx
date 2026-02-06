@@ -33,6 +33,8 @@ const questions = [
   { text: "What are your key strengths?", href: "/#top-skills", color: "var(--pink)" },
   { text: "What's your technical background?", href: "/skills#technical-skills", color: "var(--mint)" },
   { text: "What makes you unique?", href: "/skills#beyond-work", color: "var(--purple)" },
+  { text: "How do you prioritize features?", href: "/skills#how-i-work", color: "var(--yellow)" },
+  { text: "Describe a product you built from scratch", href: "/projects/vectorpaths", color: "var(--blue-light)" },
 ];
 
 function getLinkProps(href: string) {

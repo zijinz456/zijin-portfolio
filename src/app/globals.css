@@ -107,6 +107,70 @@ li strong {
   font-weight: 600;
 }
 
+/* Variant: Pink marker */
+.emphasis-marker-pink p strong,
+.emphasis-marker-pink li strong {
+  background: linear-gradient(to bottom, transparent 55%, color-mix(in srgb, var(--pink) 35%, transparent) 55%);
+}
+
+/* Method 2: Solid Underline */
+.emphasis-underline-pink p strong,
+.emphasis-underline-pink li strong {
+  background: none;
+  text-decoration: underline;
+  text-decoration-color: var(--pink);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.emphasis-underline-blue p strong,
+.emphasis-underline-blue li strong {
+  background: none;
+  text-decoration: underline;
+  text-decoration-color: var(--blue-light);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* Method 3: Soft Pill */
+.emphasis-pill-yellow p strong,
+.emphasis-pill-yellow li strong {
+  background: color-mix(in srgb, var(--yellow) 30%, transparent);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.emphasis-pill-blue p strong,
+.emphasis-pill-blue li strong {
+  background: color-mix(in srgb, var(--blue-light) 25%, transparent);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.emphasis-pill-pink p strong,
+.emphasis-pill-pink li strong {
+  background: color-mix(in srgb, var(--pink) 20%, transparent);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.emphasis-pill-mint p strong,
+.emphasis-pill-mint li strong {
+  background: color-mix(in srgb, var(--mint) 25%, transparent);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Method 4: Dotted Underline */
+.emphasis-dotted-mint p strong,
+.emphasis-dotted-mint li strong {
+  background: none;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--mint);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 /* Sketch-style shadows */
 .shadow-sketch-lg {
   box-shadow: 4px 4px 0 var(--border);

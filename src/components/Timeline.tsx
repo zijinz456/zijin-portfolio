@@ -83,7 +83,7 @@ export default function Timeline() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold tracking-wide text-foreground mb-2">
-            Earth Online <span className="highlight-pink">Game Progress</span>
+            Career <span className="highlight-pink">Journey</span>
           </h2>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function Timeline() {
           >
             {/* Main Quest Header */}
             <h3 className="inline-block text-lg font-bold mb-6">
-              <span className="highlight-pink px-2 py-1">Main Quests</span>
+              <span className="highlight-pink px-2 py-1">Key Experiences</span>
             </h3>
 
             {/* Timeline */}
@@ -123,7 +123,7 @@ export default function Timeline() {
           >
             {/* Side Quest Header */}
             <h3 className="inline-block text-lg font-bold mb-6">
-              <span className="highlight-pink px-2 py-1">Side Quests</span>
+              <span className="highlight-pink px-2 py-1">Projects & Explorations</span>
             </h3>
 
             {/* Timeline */}

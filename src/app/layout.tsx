@@ -14,15 +14,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://zijinzhangprofile.com'),
   title: {
-    default: "Zijin Zhang | AI Product Builder & Banking Specialist",
+    default: "Zijin Zhang | AI Product Manager — Banking × AI | Melbourne",
     template: "%s | Zijin Zhang"
   },
   description: "I build AI-powered products and deliver excellent customer experiences. Founder of VectorPaths, an adaptive learning platform. Experienced in AI/LLM engineering, product strategy, and banking operations at Commonwealth Bank.",
-  keywords: ["Zijin Zhang", "AI Product Manager", "Product Builder", "Machine Learning", "LLM Engineering", "Banking Specialist", "Melbourne", "Australia", "VectorPaths", "Adaptive Learning", "Data-Driven Product", "AI Strategy", "Product Roadmap", "User Experience", "Commonwealth Bank"],
+  keywords: ["Zijin Zhang", "AI Product Manager", "Product Manager Australia", "AI PM Melbourne", "Product Builder", "Machine Learning", "LLM Engineering", "Banking Specialist", "Melbourne", "Australia", "VectorPaths", "Adaptive Learning", "VCE EdTech", "Data-Driven Product", "AI Strategy", "Product Roadmap", "User Experience", "Commonwealth Bank"],
   authors: [{ name: "Zijin Zhang", url: "https://zijinzhangprofile.com" }],
   creator: "Zijin Zhang",
   openGraph: {
-    title: "Zijin Zhang | AI Product Builder & Banking Specialist",
+    title: "Zijin Zhang | AI Product Manager — Banking × AI | Melbourne",
     description: "I build AI-powered products and deliver excellent customer experiences. Founder of VectorPaths. Banking specialist at Commonwealth Bank.",
     url: "https://zijinzhangprofile.com",
     siteName: "Zijin Zhang Portfolio",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zijin Zhang | AI Product Builder & Banking Specialist",
+    title: "Zijin Zhang | AI Product Manager — Banking × AI | Melbourne",
     description: "I build AI-powered products and deliver excellent customer experiences. Founder of VectorPaths. Banking specialist at Commonwealth Bank.",
   },
   robots: {
@@ -56,7 +56,7 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Zijin Zhang',
   url: 'https://zijinzhangprofile.com',
-  jobTitle: 'AI Product Builder & Banking Specialist',
+  jobTitle: 'AI Product Manager — Banking × AI',
   description: 'I build AI-powered products and deliver excellent customer experiences. Founder of VectorPaths, an adaptive learning platform.',
   knowsAbout: ['AI Product Management', 'Machine Learning', 'LLM Engineering', 'Product Strategy', 'Data Analysis', 'User Experience', 'Adaptive Learning Systems', 'Banking Operations', 'Agile Development'],
   alumniOf: {

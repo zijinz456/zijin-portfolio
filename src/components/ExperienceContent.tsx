@@ -75,7 +75,7 @@ export default function ExperienceContent() {
 
           <div className="space-y-8">
             {/* VectorPaths Case Study */}
-            <div id="vectorpaths-case">
+            <div id="vectorpaths-case" className="emphasis-underline-pink">
               <CaseStudyCard
                 title="VectorPaths"
               subtitle="Founder & Product Lead — Product Strategy, Algorithm Design, Full-Stack Dev"
@@ -102,7 +102,7 @@ export default function ExperienceContent() {
             </div>
 
             {/* CBA Case Study */}
-            <div id="cba-case">
+            <div id="cba-case" className="emphasis-underline-pink">
               <CaseStudyCard
                 title="Commonwealth Bank"
                 subtitle="Customer Banking Specialist — User Research, Process Optimization"

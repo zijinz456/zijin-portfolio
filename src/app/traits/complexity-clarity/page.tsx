@@ -188,7 +188,7 @@ export default function ComplexityClarityPage() {
         </div>
       </section>
 
-      <ValuePropsSection items={valueProps} />
+      <ValuePropsSection items={valueProps} className="emphasis-pill-blue" />
 
       <TraitCTA
         message={

@@ -162,7 +162,7 @@ export default function VectorPathsPage() {
           </div>
 
           <FadeInView
-            className="p-6 bg-pink/10 border-2 border-foreground rounded-xl"
+            className="emphasis-underline-pink p-6 bg-pink/10 border-2 border-foreground rounded-xl"
           >
             <p className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">
               Real Example
@@ -178,7 +178,7 @@ export default function VectorPathsPage() {
 
       {/* Solution Approach Section — merged Insight + Architecture */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto emphasis-underline-blue">
           <FadeInView
             y={0}
             className="text-2xl md:text-3xl font-bold text-center mb-4 tracking-wide"
@@ -381,7 +381,7 @@ export default function VectorPathsPage() {
 
       {/* Learnings Section */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto emphasis-dotted-mint">
           <FadeInView
             y={0}
             className="text-2xl md:text-3xl font-bold text-center mb-12 tracking-wide"

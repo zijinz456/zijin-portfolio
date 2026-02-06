@@ -46,7 +46,7 @@ export default function IDCard({ className = "" }: IDCardProps) {
 
             <div className="flex items-center gap-2">
               <span className="text-gray-500 text-xs w-14">ROLE</span>
-              <span className="text-gray-700 text-xs">Product Builder</span>
+              <span className="text-gray-700 text-xs">AI Product Manager</span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -60,13 +60,13 @@ export default function IDCard({ className = "" }: IDCardProps) {
         <div className="mt-4 pt-3 border-t-2 border-dashed border-gray-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-xs text-gray-500">PLAYER ID</p>
-              <p className="text-sm font-mono font-semibold">ZJ-UNIMELB-2026</p>
+              <p className="text-xs text-gray-500">ID</p>
+              <p className="text-sm font-mono font-semibold">UNIMELB-2026</p>
             </div>
             <div className="text-right">
               <div className="flex items-center gap-1">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-xs text-gray-500">BUILDING</span>
+                <span className="text-xs text-gray-500">OPEN TO WORK</span>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function IDCard({ className = "" }: IDCardProps) {
 
         {/* Decorative stamp */}
         <div className="absolute top-16 right-4 w-12 h-12 border-2 border-pink rounded-full flex items-center justify-center rotate-12 opacity-60">
-          <span className="text-pink text-[8px] font-bold text-center leading-tight">AI<br/>BUILDER</span>
+          <span className="text-pink text-[8px] font-bold text-center leading-tight">AI<br/>PRODUCT</span>
         </div>
       </div>
 

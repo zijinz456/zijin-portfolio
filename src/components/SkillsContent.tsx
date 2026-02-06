@@ -127,7 +127,7 @@ export default function SkillsContent() {
 
       {/* How I Work */}
       <section className="py-16 px-6 bg-warm">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto emphasis-pill-mint">
           <FadeIn y={0}>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-wide mb-8 text-center">
               <span className="highlight-blue">How I Work</span>
@@ -173,23 +173,23 @@ export default function SkillsContent() {
           <FadeInView className="mb-8 p-8 bg-gradient-to-r from-pink/20 to-blue-light/20 border-2 border-foreground rounded-xl shadow-sketch-lg">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-6">Photography x K-Pop</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">Photography & Visual Storytelling</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-pink rounded-full flex items-center justify-center text-white font-bold">1</div>
-                    <p className="text-gray-700">Started with a passion for <strong>K-pop culture</strong></p>
+                    <p className="text-gray-700">What started as <strong>concert photography</strong> grew into a creative pursuit</p>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-blue-light rounded-full flex items-center justify-center text-white font-bold">2</div>
-                    <p className="text-gray-700">Picked up <strong>photography</strong> to capture concerts & events</p>
+                    <p className="text-gray-700">Shot <strong>events and live performances</strong>, learning to deliver under pressure</p>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-yellow rounded-full flex items-center justify-center text-foreground font-bold">3</div>
-                    <p className="text-gray-700">Built skills and portfolio through practice</p>
+                    <p className="text-gray-700">Built a <strong>portfolio</strong> and refined my visual storytelling skills</p>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-mint rounded-full flex items-center justify-center text-white font-bold">4</div>
-                    <p className="text-gray-700">Turned it into a <strong>side business</strong></p>
+                    <p className="text-gray-700">Turned it into a <strong>freelance business</strong></p>
                   </div>
                 </div>
                 <div className="mt-6 p-4 bg-white/60 rounded-lg border border-foreground/20">
@@ -203,7 +203,7 @@ export default function SkillsContent() {
               </div>
               <div className="flex justify-center">
                 <div className="w-48 h-48 md:w-64 md:h-64 bg-white rounded-xl border-2 border-foreground shadow-sketch-lg flex items-center justify-center overflow-hidden">
-                  <Image src="/skills/photography.webp" alt="Zijin's K-pop concert photography work" width={240} height={240} className="object-contain" />
+                  <Image src="/skills/photography.webp" alt="Zijin's concert and event photography work" width={240} height={240} className="object-contain" />
                 </div>
               </div>
             </div>

@@ -128,7 +128,7 @@ export default function EndToEndBuilderPage() {
             ))}
           </div>
 
-          <FadeInView y={0} className="mt-8 p-6 bg-cream border-2 border-foreground rounded-xl shadow-sketch-sm">
+          <FadeInView y={0} className="emphasis-marker-pink mt-8 p-6 bg-cream border-2 border-foreground rounded-xl shadow-sketch-sm">
             <p className="text-sm text-gray-700 leading-relaxed italic">
               &ldquo;Most teams have separate people for data engineering,
               ML, backend, frontend, and design. I built all four layers of
@@ -172,7 +172,7 @@ export default function EndToEndBuilderPage() {
         </div>
       </section>
 
-      <ValuePropsSection items={valueProps} className="bg-warm" />
+      <ValuePropsSection items={valueProps} className="bg-warm emphasis-pill-pink" />
 
       <TraitCTA
         message={

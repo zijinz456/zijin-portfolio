@@ -13,7 +13,7 @@ const updates: Update[] = [
   {
     label: "Building",
     content: "Finishing VectorPaths",
-    description: "My first AI vibe coding project",
+    description: "AI-powered adaptive learning platform",
     color: "var(--yellow)",
   },
   {
