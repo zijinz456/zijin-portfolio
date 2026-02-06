@@ -23,8 +23,10 @@ export default function HomeContent() {
             {/* Left - Intro Text */}
             <FadeIn duration={0.6} className="text-center md:text-left">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-relaxed tracking-wide">
-                Hi, I&apos;m <span className="highlight-blue text-white">Zijin</span>
+                Hi, I&apos;m <span className="highlight-pink">Zijin</span>
               </h1>
+
+              <p className="text-base text-gray-500 mb-4">You can also call me Angela</p>
 
               <div className="text-lg md:text-xl text-gray-700 mb-6 flex items-baseline gap-2 justify-center md:justify-start flex-wrap">
                 <span>I&apos;m a</span>
@@ -55,7 +57,7 @@ export default function HomeContent() {
                 <HoverScale>
                   <Link
                     href="/experience"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue text-white border-2 border-foreground rounded-lg font-medium shadow-sketch-md hover-sketch"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-yellow border-2 border-foreground rounded-lg font-medium shadow-sketch-md hover-sketch"
                   >
                     Explore My Projects →
                   </Link>

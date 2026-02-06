@@ -64,10 +64,8 @@ export default function IDCard({ className = "" }: IDCardProps) {
               <p className="text-sm font-mono font-semibold">UNIMELB-2026</p>
             </div>
             <div className="text-right">
-              <div className="flex items-center gap-1">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-xs text-gray-500">OPEN TO WORK</span>
-              </div>
+              <p className="text-xs text-gray-500">STATUS</p>
+              <p className="text-xs font-mono font-semibold">ACTIVE</p>
             </div>
           </div>
         </div>
