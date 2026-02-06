@@ -57,7 +57,7 @@ export default function ContactContent() {
               Let&apos;s <span className="highlight-yellow">Connect!</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
-              Want to chat about AI products, conversation design, or just say hi?
+              Want to chat about AI products, product design, or just say hi?
               <br />
               Feel free to reach out anytime!
             </p>

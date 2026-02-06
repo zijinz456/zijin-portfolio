@@ -34,16 +34,22 @@ export function WordRotate({
   }, [words, duration])
 
   return (
-    <div className="overflow-hidden py-1" role="status" aria-live="polite" aria-atomic="true">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={words[index]}
-          className={cn(className)}
-          {...motionProps}
-        >
-          {words[index]}
-        </motion.span>
-      </AnimatePresence>
+    <div className="relative overflow-hidden py-1" role="status" aria-live="polite" aria-atomic="true">
+      {/* Invisible longest word to reserve stable width */}
+      <span className={cn(className, "invisible")} aria-hidden="true">
+        {words.reduce((a, b) => (a.length >= b.length ? a : b))}
+      </span>
+      <div className="absolute inset-0 flex items-center">
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={words[index]}
+            className={cn(className)}
+            {...motionProps}
+          >
+            {words[index]}
+          </motion.span>
+        </AnimatePresence>
+      </div>
     </div>
   )
 }

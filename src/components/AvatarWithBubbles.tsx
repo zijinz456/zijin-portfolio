@@ -79,15 +79,20 @@ export default function AvatarWithBubbles() {
         <Avatar size="xl" priority />
       </motion.div>
 
-      {/* Label */}
-      <motion.p
+      {/* Label + Hint */}
+      <motion.div
         initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={prefersReducedMotion ? { duration: 0 } : { delay: 0.6 }}
-        className="mt-6 text-base font-bold text-foreground tracking-widest uppercase"
+        className="mt-6 text-center"
       >
-        MY TOP 3 SKILLS
-      </motion.p>
+        <p className="text-base font-bold text-foreground tracking-widest uppercase">
+          MY TOP 3 SKILLS
+        </p>
+        <p className="text-sm text-gray-500 mt-1">
+          Click the bubbles to explore
+        </p>
+      </motion.div>
     </div>
   );
 }

@@ -9,9 +9,9 @@ export default function AboutMe() {
       {/* Left - Personal Intro */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0, transition: { delay: 3, duration: 0.6 } }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "100px 0px" }}
+        viewport={{ once: true, margin: "-50px 0px" }}
+        transition={{ duration: 0.6 }}
         className="space-y-6"
       >
         {/* Main intro */}
@@ -23,10 +23,9 @@ export default function AboutMe() {
         {/* AI & Tech Passion */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 3.1, duration: 0.6 } }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "100px 0px" }}
-          transition={{ delay: 0.1 }}
+          viewport={{ once: true, margin: "-50px 0px" }}
+          transition={{ delay: 0.1, duration: 0.6 }}
           className="bg-yellow border-2 border-foreground rounded-xl p-4 shadow-sketch-md"
         >
           <p className="font-bold text-foreground mb-2">
@@ -43,10 +42,9 @@ export default function AboutMe() {
         {/* Philosophy */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 3.2, duration: 0.6 } }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "100px 0px" }}
-          transition={{ delay: 0.2 }}
+          viewport={{ once: true, margin: "-50px 0px" }}
+          transition={{ delay: 0.2, duration: 0.6 }}
           className="bg-cream border-2 border-foreground rounded-xl p-4 shadow-sketch-md"
         >
           <p className="text-lg font-semibold text-foreground italic mb-3">
@@ -67,10 +65,9 @@ export default function AboutMe() {
       {/* Right - ID Card */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0, transition: { delay: 3.2, duration: 0.6 } }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "100px 0px" }}
-        transition={{ delay: 0.2 }}
+        viewport={{ once: true, margin: "-50px 0px" }}
+        transition={{ delay: 0.2, duration: 0.6 }}
         className="flex justify-center md:justify-end"
       >
         <IDCard className="w-full max-w-sm" />

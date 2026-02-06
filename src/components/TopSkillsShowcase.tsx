@@ -9,7 +9,8 @@ const skills = [
     title: "Fast Learner",
     tag: "Adaptability",
     color: "bg-yellow",
-    borderColor: "border-yellow",
+    metricBg: "bg-yellow/20",
+    metricBorder: "border-yellow/30",
     hook: "Zero to shipped product in 4 months",
     metrics: [
       { value: "4", label: "months" },
@@ -21,7 +22,8 @@ const skills = [
     title: "Complexity → Clarity",
     tag: "Problem Solving",
     color: "bg-blue-light",
-    borderColor: "border-blue-light",
+    metricBg: "bg-blue-light/20",
+    metricBorder: "border-blue-light/30",
     hook: "I turn chaos into systems",
     metrics: [
       { value: "2,138+", label: "questions structured" },
@@ -33,7 +35,8 @@ const skills = [
     title: "End-to-End Ownership",
     tag: "Execution",
     color: "bg-pink",
-    borderColor: "border-pink",
+    metricBg: "bg-pink/20",
+    metricBorder: "border-pink/30",
     hook: "Idea to shipped product, alone",
     metrics: [
       { value: "0.87", label: "R² accuracy" },
@@ -87,7 +90,7 @@ export default function TopSkillsShowcase() {
                   {skill.metrics.map((metric) => (
                     <div
                       key={metric.label}
-                      className={`flex-1 p-3 ${skill.color}/20 border-2 ${skill.borderColor}/30 rounded-lg text-center`}
+                      className={`flex-1 p-3 ${skill.metricBg} border-2 ${skill.metricBorder} rounded-lg text-center`}
                     >
                       <p className="text-xl font-bold text-foreground">
                         {metric.value}

@@ -32,7 +32,7 @@ export default function Avatar({ size = "lg", className = "", priority = false }
       role="img"
       aria-label="Zijin smiling warmly"
     >
-      <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg bg-gradient-to-br from-blue-50 to-pink-50">
+      <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-foreground shadow-sketch-sm bg-gradient-to-br from-blue-50 to-pink-50">
         <Image
           src="/avatars/default.webp"
           alt="Zijin smiling warmly"

@@ -57,12 +57,12 @@ export default function CaseStudyCard({
         >
           {/* Custom image if provided */}
           {customImage && (
-            <div className="w-32 h-32 bg-white rounded-xl border-2 border-foreground flex items-center justify-center overflow-hidden mb-2">
+            <div className="w-48 h-48 md:w-56 md:h-56 bg-white rounded-xl border-2 border-foreground flex items-center justify-center overflow-hidden mb-2">
               <Image
                 src={customImage}
                 alt={title}
-                width={120}
-                height={120}
+                width={220}
+                height={220}
                 className="object-contain"
               />
             </div>

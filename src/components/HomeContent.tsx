@@ -8,9 +8,9 @@ import FadeInView from "@/components/motion/FadeInView";
 import HoverScale from "@/components/motion/HoverScale";
 
 const quickLinks = [
-  { href: "/experience", num: "01", label: "Experience", desc: "Case studies & timeline", color: "bg-yellow" },
-  { href: "/skills", num: "02", label: "Skills", desc: "Tech stack & capabilities", color: "bg-pink text-white" },
-  { href: "/contact", num: "03", label: "Contact", desc: "Let's connect", color: "bg-blue-light" },
+  { href: "/experience", num: "01", label: "Experience", desc: "CBA, VectorPaths & more — real projects with real impact", color: "bg-yellow" },
+  { href: "/skills", num: "02", label: "Skills", desc: "From Python & LLMs to product strategy — my full toolkit", color: "bg-pink text-white" },
+  { href: "/contact", num: "03", label: "Contact", desc: "Open to AI roles, collabs, or just a good conversation", color: "bg-blue-light" },
 ];
 
 export default function HomeContent() {
@@ -26,7 +26,7 @@ export default function HomeContent() {
                 Hi, I&apos;m <span className="highlight-pink">Zijin</span>
               </h1>
 
-              <div className="text-lg md:text-xl text-gray-700 mb-6 flex items-center gap-2 justify-center md:justify-start">
+              <div className="text-lg md:text-xl text-gray-700 mb-6 flex items-baseline gap-2 justify-center md:justify-start flex-wrap">
                 <span>I&apos;m a</span>
                 <WordRotate
                   words={[
@@ -35,7 +35,7 @@ export default function HomeContent() {
                     "End-to-End Shipper",
                     "Banking × AI Specialist",
                   ]}
-                  className="highlight-yellow font-semibold"
+                  className="highlight-yellow font-semibold whitespace-nowrap"
                   duration={2000}
                 />
               </div>
@@ -77,12 +77,6 @@ export default function HomeContent() {
             </FadeIn>
           </div>
 
-          {/* Hint text */}
-          <FadeIn delay={0.6} y={0}>
-            <p className="text-center text-sm text-gray-500 mt-4">
-              Click the bubbles to explore
-            </p>
-          </FadeIn>
         </div>
       </section>
 
@@ -136,20 +130,33 @@ export default function HomeContent() {
         <div className="max-w-4xl mx-auto text-center">
           <FadeInView>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-wide text-foreground">
-              Let&apos;s <span className="highlight-yellow">Build</span> Together
+              Happy to <span className="highlight-yellow">Connect</span>
             </h2>
             <p className="text-gray-600 mb-10">
-              Want to chat about AI or have an interesting project idea?
+              If you&apos;re into AI, product design, or have an interesting idea to share — feel free to say hi.
             </p>
-            <HoverScale scaleHover={1.05} scaleTap={0.95} className="inline-block">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-4 bg-yellow text-foreground border-2 border-foreground rounded-full font-semibold shadow-sketch-md hover-sketch"
-              >
-                Get in Touch
-                <span>→</span>
-              </Link>
-            </HoverScale>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <HoverScale scaleHover={1.05} scaleTap={0.95} className="inline-block">
+                <a
+                  href="/Zijin_Zhang_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-10 py-4 bg-yellow text-foreground border-2 border-foreground rounded-full font-semibold shadow-sketch-md hover-sketch"
+                >
+                  View My Resume
+                  <span>📄</span>
+                </a>
+              </HoverScale>
+              <HoverScale scaleHover={1.05} scaleTap={0.95} className="inline-block">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-10 py-4 bg-white text-foreground border-2 border-foreground rounded-full font-semibold shadow-sketch-md hover-sketch"
+                >
+                  Get in Touch
+                  <span>→</span>
+                </Link>
+              </HoverScale>
+            </div>
           </FadeInView>
         </div>
       </section>

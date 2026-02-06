@@ -12,7 +12,8 @@ export default function IDCard({ className = "" }: IDCardProps) {
     <motion.div
       className={`relative bg-yellow-light border-2 border-foreground rounded-xl overflow-hidden shadow-sketch-lg ${className}`}
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       whileHover={{ rotate: 1 }}
       transition={{ duration: 0.3 }}
     >
