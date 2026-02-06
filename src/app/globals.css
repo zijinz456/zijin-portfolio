@@ -99,6 +99,14 @@ html {
   -webkit-box-decoration-break: clone;
 }
 
+/* Body text marker highlight — subtle highlighter pen effect for <strong> in paragraphs */
+p strong,
+li strong {
+  background: linear-gradient(to bottom, transparent 55%, color-mix(in srgb, var(--yellow) 35%, transparent) 55%);
+  padding: 0 0.15em;
+  font-weight: 600;
+}
+
 /* Sketch-style shadows */
 .shadow-sketch-lg {
   box-shadow: 4px 4px 0 var(--border);

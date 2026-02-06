@@ -48,22 +48,22 @@ const learnings = [
   {
     title: "LLM output is only as good as your schema",
     description:
-      "Raw LLM output varies every run. I designed 9 annotation tables with strict schemas and validation layers — turning unreliable extraction into a repeatable pipeline across 2,138+ questions. The lesson: AI is powerful, but without structured constraints, it's useless at scale.",
+      <>Raw LLM output varies every run. I designed <strong>9 annotation tables with strict schemas and validation layers</strong> — turning unreliable extraction into a repeatable pipeline across 2,138+ questions. The lesson: AI is powerful, but <strong>without structured constraints, it&apos;s useless at scale</strong>.</>,
   },
   {
     title: "Edge cases are the real product",
     description:
-      "Multi-concept questions, nested logic chains, trap-type risks that look routine — these edge cases broke the early pipeline constantly. Handling them is what separates a demo from a system students actually trust.",
+      <>Multi-concept questions, nested logic chains, trap-type risks that look routine — these edge cases broke the early pipeline constantly. <strong>Handling them is what separates a demo from a system students actually trust.</strong></>,
   },
   {
     title: "Interpretability > accuracy in education",
     description:
-      "I chose a weighted statistical model over a black-box ML approach. Teachers need to see why a concept is ranked high and trust the recommendation enough to use it in their classroom. In education, a model people understand beats a model that's 5% more accurate.",
+      <>I chose a <strong>weighted statistical model over a black-box ML approach</strong>. Teachers need to see why a concept is ranked high and trust the recommendation enough to use it in their classroom. In education, <strong>a model people understand beats a model that&apos;s 5% more accurate</strong>.</>,
   },
   {
     title: "Building for two audiences at once",
     description:
-      "Students want a simple, intuitive experience — just show me what to study next. Teachers want transparency — why is this concept ranked high? The same system serves both, which means every design decision is a tradeoff between simplicity and explainability.",
+      <>Students want a simple, intuitive experience — just show me what to study next. Teachers want transparency — why is this concept ranked high? The same system serves both, which means <strong>every design decision is a tradeoff between simplicity and explainability</strong>.</>,
   },
 ];
 

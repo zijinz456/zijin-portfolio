@@ -37,7 +37,7 @@ const transformations = [
       ],
     },
     story:
-      "The hardest part wasn't extraction — it was building trust in the output. LLMs don't follow your taxonomy perfectly. Math content breaks formatting. Years of exam data have gaps and inconsistencies. So I built a systematic quality pipeline: every error gets logged into a living document, cross-referenced against known issues, solved with a documented approach, and locked in with an automated test. The system gets smarter with every edge case it encounters.",
+      <>The hardest part wasn&apos;t extraction — it was <strong>building trust in the output</strong>. LLMs don&apos;t follow your taxonomy perfectly. Math content breaks formatting. Years of exam data have gaps and inconsistencies. So I built a <strong>systematic quality pipeline</strong>: every error gets logged into a living document, cross-referenced against known issues, solved with a documented approach, and locked in with an automated test. The system gets smarter with every edge case it encounters.</>,
   },
   {
     context: "CBA — Customer Service",
@@ -59,7 +59,7 @@ const transformations = [
       ],
     },
     story:
-      "At Commonwealth Bank, I noticed a pattern: elderly customers weren't rejecting technology — they were overwhelmed by a multi-step process designed for power users. The real problem wasn't \"how to transfer money\" but \"how to navigate 8 screens without getting lost.\" I simplified the flow into clear, numbered steps and created take-home guides. The shift: from solving the stated request to solving the actual need.",
+      <>At Commonwealth Bank, I noticed a pattern: elderly customers weren&apos;t rejecting technology — they were <strong>overwhelmed by a multi-step process designed for power users</strong>. The real problem wasn&apos;t &quot;how to transfer money&quot; but &quot;how to navigate 8 screens without getting lost.&quot; I simplified the flow into clear, numbered steps and created take-home guides. The shift: <strong>from solving the stated request to solving the actual need</strong>.</>,
   },
   {
     context: "VectorPaths — Decision Model",
@@ -81,7 +81,7 @@ const transformations = [
       ],
     },
     story:
-      "Every VCE Methods teacher has opinions on \"what's important.\" But opinions don't scale, and they can't be verified. I turned 20 years of exam data into a frequency-based weight model, so \"important\" became measurable. When the model disagreed with expert intuition, we could check — and the data was usually right.",
+      <>Every VCE Methods teacher has opinions on &quot;what&apos;s important.&quot; But <strong>opinions don&apos;t scale, and they can&apos;t be verified</strong>. I turned 20 years of exam data into a frequency-based weight model, so &quot;important&quot; became measurable. When the model disagreed with expert intuition, we could check — and <strong>the data was usually right</strong>.</>,
   },
 ];
 

@@ -19,7 +19,7 @@ const timeline = [
     month: "Month 1",
     deliverable: "AI Tool Evaluation + Product Prototypes",
     details:
-      "Hands-on tested Claude, GPT-4, Gemini, DeepSeek — not just prompting, but systematic comparison of strengths, weaknesses, and optimal use cases. Mastered Figma and AI design tools to create product mockups.",
+      <>Hands-on tested Claude, GPT-4, Gemini, DeepSeek — not just prompting, but <strong>systematic comparison of strengths, weaknesses, and optimal use cases</strong>. Mastered Figma and AI design tools to create product mockups.</>,
     skills: ["LLM Evaluation", "AI Design Tools", "Figma", "Product Thinking"],
     color: "var(--purple)",
   },
@@ -27,7 +27,7 @@ const timeline = [
     month: "Month 2",
     deliverable: "Complete System Architecture for VectorPaths",
     details:
-      "Designed the full architecture from scratch: knowledge graph structure, learning path algorithms, topic weighting model, user experience flows. All documented before writing a single line of code.",
+      <>Designed the full architecture from scratch: knowledge graph structure, learning path algorithms, topic weighting model, user experience flows. <strong>All documented before writing a single line of code.</strong></>,
     skills: [
       "System Design",
       "Knowledge Graphs",
@@ -40,7 +40,7 @@ const timeline = [
     month: "Month 3",
     deliverable: "Working Full-Stack Web Application",
     details:
-      "Built VectorPaths from zero — React/Next.js frontend, Node.js backend, PostgreSQL database. Learned the entire stack by building, not by watching tutorials. Every feature shipped to production.",
+      <>Built VectorPaths from zero — React/Next.js frontend, Node.js backend, PostgreSQL database. <strong>Learned the entire stack by building</strong>, not by watching tutorials. Every feature shipped to production.</>,
     skills: [
       "React/Next.js",
       "Node.js",
@@ -53,7 +53,7 @@ const timeline = [
     month: "Month 4",
     deliverable: "Automation Pipelines + This Portfolio Website",
     details:
-      "Built CI/CD pipelines, n8n workflow automation with AI agents, and this entire portfolio site — designed, developed, and deployed independently. The learning never stopped producing output.",
+      <>Built CI/CD pipelines, n8n workflow automation with AI agents, and this entire portfolio site — designed, developed, and deployed independently. <strong>The learning never stopped producing output.</strong></>,
     skills: [
       "CI/CD",
       "n8n Automation",

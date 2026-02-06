@@ -133,11 +133,11 @@ export default function EndToEndBuilderPage() {
               &ldquo;Most teams have separate people for data engineering,
               ML, backend, frontend, and design. I built all four layers of
               VectorPaths myself — not because I had to, but because
-              understanding the full stack means I catch the gaps that appear at
-              handoffs. The data layer informs the weight model, the weights
+              <strong>understanding the full stack means I catch the gaps that appear at
+              handoffs</strong>. The data layer informs the weight model, the weights
               shape the content recommendations, and the UI makes it all feel
-              effortless. When one person sees the whole picture, nothing falls
-              through the cracks.&rdquo;
+              effortless. <strong>When one person sees the whole picture, nothing falls
+              through the cracks.</strong>&rdquo;
             </p>
           </FadeInView>
         </div>

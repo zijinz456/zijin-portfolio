@@ -9,10 +9,10 @@ import Image from "next/image";
 interface CaseStudyCardProps {
   title: string;
   subtitle: string;
-  description: string;
+  description: React.ReactNode;
   visual: React.ReactNode;
   stats?: { label: string; value: string }[];
-  insights?: string[];
+  insights?: React.ReactNode[];
   extraSections?: {
     title: string;
     items: { label: string; detail: string }[];
@@ -111,8 +111,8 @@ export default function CaseStudyCard({
                 Key Insights
               </p>
               <ul className="space-y-1">
-                {insights.map((insight) => (
-                  <li key={insight} className="text-sm text-gray-700 flex items-start gap-2">
+                {insights.map((insight, i) => (
+                  <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
                     <span className="text-foreground">•</span>
                     <span>{insight}</span>
                   </li>

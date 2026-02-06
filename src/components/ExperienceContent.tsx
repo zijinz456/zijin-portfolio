@@ -79,7 +79,7 @@ export default function ExperienceContent() {
               <CaseStudyCard
                 title="VectorPaths"
               subtitle="Founder & Product Lead — Product Strategy, Algorithm Design, Full-Stack Dev"
-              description="Students don't know what matters most on the exam, and teachers' expert judgment can't scale. I built an AI-powered learning platform from scratch — extracting and structuring real exam questions with a multi-stage LLM pipeline, designing a topic weight system backtested against 20 years of data, and shipping a full practice environment with progressive hints and goal-based learning paths."
+              description={<>Students don&apos;t know what matters most on the exam, and teachers&apos; expert judgment can&apos;t scale. I built an AI-powered learning platform from scratch — <strong>extracting and structuring real exam questions with a multi-stage LLM pipeline</strong>, designing a topic weight system backtested against 20 years of data, and shipping a full practice environment with progressive hints and goal-based learning paths.</>}
               customImage="/skills/coding.webp"
               externalUrl="https://vectorpaths.com"
               ctaLink="/projects/vectorpaths"
@@ -93,9 +93,9 @@ export default function ExperienceContent() {
                 { label: "R² Accuracy", value: "0.87" },
               ]}
               insights={[
-                "Designed a three-layer system: content experience → topic weight algorithm → LLM-powered data pipeline",
-                "Chose statistical model over ML for interpretability — teachers need to trust the recommendations",
-                "Currently building adaptive engine: step-level weakness tracking + personalized question ranking",
+                <>Designed a <strong>three-layer system</strong>: content experience → topic weight algorithm → LLM-powered data pipeline</>,
+                <>Chose <strong>statistical model over ML for interpretability</strong> — teachers need to trust the recommendations</>,
+                <>Currently building adaptive engine: <strong>step-level weakness tracking + personalized question ranking</strong></>,
               ]}
               footer={<ProgressFooter />}
               />
@@ -106,16 +106,16 @@ export default function ExperienceContent() {
               <CaseStudyCard
                 title="Commonwealth Bank"
                 subtitle="Customer Banking Specialist — User Research, Process Optimization"
-                description="Every day at the branch is unstructured user research. I serve distinct customer segments — elderly clients navigating digital transitions, ESL customers parsing complex financial language, small business owners with multi-product needs, and digital natives frustrated by in-branch requirements. I learned to separate what people ask for from what they actually need, map recurring friction to systemic design gaps, and identify where cross-team handoffs lose critical context."
+                description={<>Every day at the branch is <strong>unstructured user research</strong>. I serve distinct customer segments — elderly clients navigating digital transitions, ESL customers parsing complex financial language, small business owners with multi-product needs, and digital natives frustrated by in-branch requirements. I learned to <strong>separate what people ask for from what they actually need</strong>, map recurring friction to systemic design gaps, and identify where cross-team handoffs lose critical context.</>}
                 customImage="/skills/cba.webp"
                 color="green"
                 badge={<OngoingBadge size="sm" showBar={false} />}
                 visual={<CustomerSegmentDiagram />}
                 insights={[
-                  "Repeated confusion at the same steps = design gap, not user gap — if 5 people trip on the same stair, fix the stair",
-                  "What users ask for ≠ what they need — 'close my account' often means 'explain this fee I didn't expect'",
-                  "Cross-team handoffs lose context — customers re-explain their issue 2-3 times because systems don't carry state",
-                  "Frontline empathy reveals things surveys can't — tone, hesitation, and body language tell you where the real friction lives",
+                  <><strong>Repeated confusion at the same steps = design gap, not user gap</strong> — if 5 people trip on the same stair, fix the stair</>,
+                  <>What users ask for ≠ what they need — <strong>&apos;close my account&apos; often means &apos;explain this fee I didn&apos;t expect&apos;</strong></>,
+                  <><strong>Cross-team handoffs lose context</strong> — customers re-explain their issue 2-3 times because systems don&apos;t carry state</>,
+                  <>Frontline empathy reveals things surveys can&apos;t — <strong>tone, hesitation, and body language</strong> tell you where the real friction lives</>,
                 ]}
                 extraSections={[
                   {

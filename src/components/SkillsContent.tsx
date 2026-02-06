@@ -42,7 +42,7 @@ const howIWork = [
     title: "Systems Thinking",
     color: "blue-light",
     tagBg: "bg-blue-light/20",
-    description: "I like to understand how things connect before building. When designing VectorPaths, I mapped out how user data, question selection, and feedback loops all work together.",
+    description: <>I like to understand <strong>how things connect</strong> before building. When designing VectorPaths, I mapped out how user data, question selection, and feedback loops all work together.</>,
     tag: "Developed through: Product Design, Data Modeling",
   },
   {
@@ -50,7 +50,7 @@ const howIWork = [
     title: "End-to-End Execution",
     color: "pink",
     tagBg: "bg-pink/20",
-    description: "I ship complete products, not just prototypes. From designing the system architecture to deploying and iterating \u2014 I handle the full journey from idea to live product.",
+    description: <>I ship <strong>complete products, not just prototypes</strong>. From designing the system architecture to deploying and iterating — I handle the full journey from idea to live product.</>,
     tag: "Developed through: VectorPaths, Personal Projects",
   },
   {
@@ -58,7 +58,7 @@ const howIWork = [
     title: "Understanding Users",
     color: "yellow",
     tagBg: "bg-yellow/30",
-    description: "Working at CBA taught me that what people ask for isn\u2019t always what they need. I\u2019ve learned to listen carefully, identify the real problem, and guide toward the right solution.",
+    description: <>Working at CBA taught me that <strong>what people ask for isn&apos;t always what they need</strong>. I&apos;ve learned to listen carefully, identify the real problem, and guide toward the right solution.</>,
     tag: "Developed through: CBA Banking, User Research",
   },
   {
@@ -66,7 +66,7 @@ const howIWork = [
     title: "Data-Driven Iteration",
     color: "mint",
     tagBg: "bg-mint/30",
-    description: "I don\u2019t guess \u2014 I test. When building the question ranking system, I validated the algorithm with 2,100+ test cases and measured R\u00B2 correlation to make sure it actually worked.",
+    description: <>I don&apos;t guess — I test. When building the question ranking system, I <strong>validated the algorithm with 2,100+ test cases</strong> and measured R² correlation to make sure it actually worked.</>,
     tag: "Developed through: Algorithm Design, A/B Testing",
   },
 ];
