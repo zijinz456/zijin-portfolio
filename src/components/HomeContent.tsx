@@ -26,7 +26,7 @@ export default function HomeContent() {
                 Hi, I&apos;m <span className="highlight-pink">Zijin</span>
               </h1>
 
-              <p className="text-base text-gray-500 mb-4">You can also call me Angela</p>
+              <p className="text-lg text-gray-600 mb-4">You can also call me <span className="highlight-yellow font-semibold">Angela</span></p>
 
               <div className="text-lg md:text-xl text-gray-700 mb-6 flex items-baseline gap-2 justify-center md:justify-start flex-wrap">
                 <span>I&apos;m a</span>
