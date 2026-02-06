@@ -59,15 +59,19 @@ const thisWebsite = {
 const valueProps = [
   {
     icon: "🔗",
-    text: "I've shipped the full pipeline: from data extraction to AI model to user-facing product. I understand every layer, so I can spot gaps before they become problems",
+    text: "Having built the full pipeline — from data extraction to AI model to user-facing product — I've developed an intuition for where gaps tend to appear between layers",
   },
   {
     icon: "🚀",
-    text: "In AI product work, the gap between 'cool demo' and 'shipped product' is huge. I bridge it — from messy data to deployed, validated system",
+    text: "In AI product work, the gap between a 'cool demo' and a shipped product is often larger than expected. I've navigated that gap — from messy data all the way to a deployed, validated system",
   },
   {
     icon: "🔧",
-    text: "I don't hand off problems or wait to be unblocked. I own the outcome from user research to deployed feature",
+    text: "I prefer to take ownership of the full outcome rather than handing off pieces — from understanding user needs to shipping the final feature",
+  },
+  {
+    icon: "🤝",
+    text: "Because I've worked across every layer, I can communicate naturally with different teams — whether it's explaining requirements to engineers, discussing design trade-offs, or building a quick demo to help stakeholders align",
   },
 ];
 
@@ -80,8 +84,8 @@ export default function EndToEndBuilderPage() {
         title={<>End-to-End <span className="highlight-pink">Ownership</span></>}
         subtitle="Not just designs. Not just code. The whole thing — shipped and validated."
         metrics={[
-          { value: "0.87", label: "R² accuracy" },
-          { value: "4", label: "layers owned" },
+          { value: "0 → 1", label: "solo-shipped product" },
+          { value: "5", label: "areas owned" },
         ]}
         imageSrc="/skills/end-to-end.webp"
         imageAlt="End-to-End Builder illustration"

@@ -88,15 +88,15 @@ const transformations = [
 const valueProps = [
   {
     icon: "📋",
-    text: "When your team faces ambiguous user needs or messy data, I frame it into a structured, actionable product spec",
+    text: "I enjoy turning ambiguous requirements or messy data into structured, actionable specs that make the next steps clearer for everyone",
   },
   {
     icon: "🧠",
-    text: "I design AI products where complexity lives in the system, not the user experience — users get simplicity, the model handles the hard parts",
+    text: "I care about keeping complexity in the system, not the user experience — so users get a simple interface while the model handles the hard parts",
   },
   {
     icon: "📊",
-    text: "I turn 'gut feeling' product decisions into data-backed frameworks that the whole team can align on",
+    text: "I like grounding product decisions in data rather than gut feeling — building frameworks that help the team align on a shared understanding",
   },
 ];
 
@@ -109,8 +109,8 @@ export default function ComplexityClarityPage() {
         title={<>Complexity → <span className="highlight-blue">Clarity</span></>}
         subtitle="I don't simplify problems — I find the structure hidden inside them."
         metrics={[
-          { value: "2,138+", label: "questions structured" },
-          { value: "3", label: "real transformations" },
+          { value: "20 yrs", label: "of exam data structured" },
+          { value: "3", label: "source types integrated" },
         ]}
         imageSrc="/skills/clarity.webp"
         imageAlt="Complexity to Clarity illustration"

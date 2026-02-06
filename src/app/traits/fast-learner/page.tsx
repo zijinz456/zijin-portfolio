@@ -67,15 +67,15 @@ const timeline = [
 const valueProps = [
   {
     icon: "⚡",
-    text: "AI landscape moves weekly. I can evaluate new models and tools in days, not weeks — with comparative analysis, not just surface testing",
+    text: "The AI landscape moves fast. I enjoy evaluating new models and tools through hands-on comparative analysis — building with them, not just reading about them",
   },
   {
     icon: "🧠",
-    text: "I bridge product thinking and technical depth — I understand how the tech works, so I can design products that leverage it correctly",
+    text: "Having both product thinking and technical depth helps me understand what's feasible and design products that use AI capabilities effectively",
   },
   {
     icon: "📦",
-    text: "Every month of learning produces a shipped deliverable, not just knowledge. I learn by building, so my ramp-up always creates tangible value",
+    text: "I learn by building — each month of learning produces something shipped, not just notes. This means my ramp-up process naturally contributes deliverables along the way",
   },
 ];
 
