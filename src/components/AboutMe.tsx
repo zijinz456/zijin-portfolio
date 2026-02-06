@@ -16,7 +16,7 @@ export default function AboutMe() {
       >
         {/* Main intro */}
         <p className="text-gray-700 leading-relaxed">
-          I&apos;m a <strong>Finance & Business Analytics</strong> student at the University of Melbourne who builds AI-powered products — turning complex problems into clear, data-driven solutions.
+          I&apos;m a <strong>Finance & Business Analytics</strong> student at the University of Melbourne who builds AI-powered products — turning complex problems into clear, data-driven solutions. You can also call me <strong>Angela</strong>.
         </p>
 
         {/* AI & Tech Passion */}
