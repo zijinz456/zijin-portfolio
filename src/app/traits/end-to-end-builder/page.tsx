@@ -59,19 +59,19 @@ const thisWebsite = {
 const valueProps = [
   {
     icon: "🔗",
-    text: "Having built the full pipeline — from data extraction to AI model to user-facing product — I've developed an intuition for where gaps tend to appear between layers",
+    text: <>Having built the <strong>full pipeline</strong> — from data extraction to AI model to user-facing product — I've developed an intuition for where gaps tend to appear between layers</>,
   },
   {
     icon: "🚀",
-    text: "In AI product work, the gap between a 'cool demo' and a shipped product is often larger than expected. I've navigated that gap — from messy data all the way to a deployed, validated system",
+    text: <>In AI product work, the gap between a &apos;cool demo&apos; and a <strong>shipped product</strong> is often larger than expected. I've navigated that gap — from messy data all the way to a deployed, validated system</>,
   },
   {
     icon: "🔧",
-    text: "I prefer to take ownership of the full outcome rather than handing off pieces — from understanding user needs to shipping the final feature",
+    text: <>I prefer to take <strong>ownership of the full outcome</strong> rather than handing off pieces — from understanding user needs to shipping the final feature</>,
   },
   {
     icon: "🤝",
-    text: "Because I've worked across every layer, I can communicate naturally with different teams — whether it's explaining requirements to engineers, discussing design trade-offs, or building a quick demo to help stakeholders align",
+    text: <>Because I've worked across every layer, I can <strong>communicate naturally with different teams</strong> — whether it's explaining requirements to engineers, discussing design trade-offs, or building a quick demo to help stakeholders align</>,
   },
 ];
 

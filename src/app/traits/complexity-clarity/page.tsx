@@ -88,15 +88,15 @@ const transformations = [
 const valueProps = [
   {
     icon: "📋",
-    text: "I enjoy turning ambiguous requirements or messy data into structured, actionable specs that make the next steps clearer for everyone",
+    text: <>I enjoy turning <strong>ambiguous requirements or messy data</strong> into structured, actionable specs that make the next steps clearer for everyone</>,
   },
   {
     icon: "🧠",
-    text: "I care about keeping complexity in the system, not the user experience — so users get a simple interface while the model handles the hard parts",
+    text: <>I care about keeping <strong>complexity in the system</strong>, not the user experience — so users get a simple interface while the model handles the hard parts</>,
   },
   {
     icon: "📊",
-    text: "I like grounding product decisions in data rather than gut feeling — building frameworks that help the team align on a shared understanding",
+    text: <>I like grounding product decisions in <strong>data rather than gut feeling</strong> — building frameworks that help the team align on a shared understanding</>,
   },
 ];
 

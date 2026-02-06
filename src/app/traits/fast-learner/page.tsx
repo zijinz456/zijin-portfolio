@@ -67,15 +67,15 @@ const timeline = [
 const valueProps = [
   {
     icon: "⚡",
-    text: "The AI landscape moves fast. I enjoy evaluating new models and tools through hands-on comparative analysis — building with them, not just reading about them",
+    text: <>The AI landscape moves fast. I enjoy evaluating new models and tools through <strong>hands-on comparative analysis</strong> — building with them, not just reading about them</>,
   },
   {
     icon: "🧠",
-    text: "Having both product thinking and technical depth helps me understand what's feasible and design products that use AI capabilities effectively",
+    text: <>Having both <strong>product thinking and technical depth</strong> helps me understand what's feasible and design products that use AI capabilities effectively</>,
   },
   {
     icon: "📦",
-    text: "I learn by building — each month of learning produces something shipped, not just notes. This means my ramp-up process naturally contributes deliverables along the way",
+    text: <>I learn by building — each month of learning produces <strong>something shipped</strong>, not just notes. This means my ramp-up process naturally contributes deliverables along the way</>,
   },
 ];
 

@@ -2,7 +2,7 @@ import FadeInView from "@/components/motion/FadeInView";
 
 interface ValueProp {
   icon: string;
-  text: string;
+  text: React.ReactNode;
 }
 
 interface ValuePropsSectionProps {
@@ -27,7 +27,7 @@ export default function ValuePropsSection({
         <div className="space-y-4">
           {items.map((prop, index) => (
             <FadeInView
-              key={prop.text}
+              key={index}
               x={-20}
               y={0}
               delay={index * 0.1}
