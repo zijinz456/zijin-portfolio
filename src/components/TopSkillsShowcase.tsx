@@ -26,8 +26,8 @@ const skills = [
     metricBorder: "border-blue-light/30",
     hook: "I turn chaos into systems",
     metrics: [
-      { value: "2,138+", label: "questions structured" },
-      { value: "6", label: "core topics extracted" },
+      { value: "20 yrs", label: "of exam data" },
+      { value: "3", label: "source types" },
     ],
     href: "/traits/complexity-clarity",
   },
@@ -39,8 +39,8 @@ const skills = [
     metricBorder: "border-pink/30",
     hook: "Idea to shipped product, alone",
     metrics: [
-      { value: "0.87", label: "R² accuracy" },
-      { value: "Full", label: "stack ownership" },
+      { value: "Full-Stack", label: "ownership" },
+      { value: "5", label: "disciplines" },
     ],
     href: "/traits/end-to-end-builder",
   },
