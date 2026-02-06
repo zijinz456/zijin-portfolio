@@ -13,7 +13,7 @@ interface ValuePropsSectionProps {
 export default function ValuePropsSection({
   items,
   className = "",
-}: ValuePropsSectionProps) {
+}: ValuePropsSectionProps): React.ReactElement {
   return (
     <section className={`py-12 px-6 ${className}`}>
       <div className="max-w-4xl mx-auto">
@@ -27,7 +27,7 @@ export default function ValuePropsSection({
         <div className="space-y-4">
           {items.map((prop, index) => (
             <FadeInView
-              key={index}
+              key={prop.text}
               x={-20}
               y={0}
               delay={index * 0.1}

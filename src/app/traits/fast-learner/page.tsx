@@ -1,6 +1,18 @@
-import Link from "next/link";
-import FadeIn from "@/components/motion/FadeIn";
+import type { Metadata } from "next";
 import FadeInView from "@/components/motion/FadeInView";
+import TraitHero from "@/components/traits/TraitHero";
+import ValuePropsSection from "@/components/traits/ValuePropsSection";
+import TraitCTA from "@/components/traits/TraitCTA";
+
+export const metadata: Metadata = {
+  title: "Fast Learner",
+  description: "Zero to shipped product in 4 months. I build first and learn what I need along the way — every month produces a deliverable, not just knowledge.",
+  openGraph: {
+    title: "Fast Learner | Zijin Zhang",
+    description: "Zero to shipped product in 4 months. I build first and learn along the way.",
+    url: "https://zijinzhangprofile.com/traits/fast-learner",
+  },
+};
 
 const timeline = [
   {
@@ -70,44 +82,18 @@ const valueProps = [
 export default function FastLearnerPage() {
   return (
     <div className="min-h-screen bg-cream pt-24">
-      {/* Hero */}
-      <section className="py-12 px-6">
-        <div className="max-w-4xl mx-auto">
-          <FadeIn className="text-center">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 mb-8"
-            >
-              ← Back to Home
-            </Link>
-
-            <div className="w-16 h-2 bg-yellow mx-auto mb-6 rounded-full" />
-
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-wide">
-              Fast <span className="highlight-yellow">Learner</span>
-            </h1>
-
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-              I don&apos;t study first — I build first, and learn what I need
-              along the way.
-            </p>
-
-            {/* Hero metrics */}
-            <div className="flex justify-center gap-6">
-              <div className="px-6 py-4 bg-yellow/20 border-2 border-yellow/40 rounded-xl">
-                <p className="text-3xl font-bold text-foreground">4</p>
-                <p className="text-xs text-gray-500 font-medium">months</p>
-              </div>
-              <div className="px-6 py-4 bg-yellow/20 border-2 border-yellow/40 rounded-xl">
-                <p className="text-3xl font-bold text-foreground">0 → 1</p>
-                <p className="text-xs text-gray-500 font-medium">
-                  shipped product
-                </p>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <TraitHero
+        accentBarClass="bg-yellow"
+        metricBoxClass="bg-yellow/20 border-yellow/40"
+        title={<>Fast <span className="highlight-yellow">Learner</span></>}
+        subtitle="I don't study first — I build first, and learn what I need along the way."
+        metrics={[
+          { value: "4", label: "months" },
+          { value: "0 → 1", label: "shipped product" },
+        ]}
+        imageSrc="/skills/fast-learner.webp"
+        imageAlt="Fast Learner illustration"
+      />
 
       {/* The Story — Output-oriented Timeline */}
       <section className="py-12 px-6 bg-white">
@@ -121,11 +107,8 @@ export default function FastLearnerPage() {
             Not &quot;what I studied&quot; — what I delivered.
           </p>
 
-          {/* Vertical timeline */}
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-foreground/15" />
-
             <div className="space-y-8">
               {timeline.map((item, index) => (
                 <FadeInView
@@ -135,7 +118,6 @@ export default function FastLearnerPage() {
                   delay={index * 0.15}
                   className="relative flex gap-6"
                 >
-                  {/* Timeline dot */}
                   <div className="flex-shrink-0 relative z-10">
                     <div
                       className="w-12 h-12 md:w-16 md:h-16 rounded-full border-3 border-foreground flex items-center justify-center font-bold text-xs md:text-sm text-foreground"
@@ -144,28 +126,22 @@ export default function FastLearnerPage() {
                       {item.month.replace("Month ", "M")}
                     </div>
                   </div>
-
-                  {/* Content */}
                   <div className="flex-1 pb-2">
                     <div className="p-5 bg-white border-2 border-foreground rounded-xl shadow-sketch-sm">
-                      {/* Deliverable as headline */}
                       <h3 className="font-bold text-foreground mb-2">
                         {item.deliverable}
                       </h3>
-
                       <p className="text-sm text-gray-600 leading-relaxed mb-4">
                         {item.details}
                       </p>
-
-                      {/* Skills acquired */}
                       <div className="flex flex-wrap gap-2">
                         {item.skills.map((skill) => (
                           <span
                             key={skill}
                             className="px-2 py-1 text-[10px] font-medium rounded-md border"
                             style={{
-                              backgroundColor: `${item.color}33`,
-                              borderColor: `${item.color}66`,
+                              backgroundColor: `color-mix(in srgb, ${item.color} 20%, transparent)`,
+                              borderColor: `color-mix(in srgb, ${item.color} 40%, transparent)`,
                             }}
                           >
                             {skill}
@@ -181,59 +157,28 @@ export default function FastLearnerPage() {
         </div>
       </section>
 
-      {/* What This Means For Your Team */}
-      <section className="py-12 px-6">
-        <div className="max-w-4xl mx-auto">
-          <FadeInView y={0}>
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide">
-              What This Means{" "}
-              <span className="highlight-pink">For Your Team</span>
-            </h2>
-          </FadeInView>
+      <ValuePropsSection items={valueProps} />
 
-          <div className="space-y-4">
-            {valueProps.map((prop, index) => (
-              <FadeInView
-                key={index}
-                x={-20}
-                y={0}
-                delay={index * 0.1}
-                className="flex items-start gap-4 p-5 bg-white border-2 border-foreground rounded-xl shadow-sketch-sm"
-              >
-                <span className="text-2xl flex-shrink-0">{prop.icon}</span>
-                <p className="text-gray-700 leading-relaxed">{prop.text}</p>
-              </FadeInView>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-12 px-6 bg-foreground text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <FadeInView>
-            <p className="text-xl font-light mb-8 tracking-wide">
-              Give me a new domain. I&apos;ll be{" "}
-              <span className="text-yellow">productive</span> in weeks, not
-              months.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/projects/vectorpaths"
-                className="px-6 py-3 bg-yellow text-foreground rounded-lg font-medium hover:bg-yellow-light transition-colors"
-              >
-                See VectorPaths Case →
-              </Link>
-              <Link
-                href="/traits/complexity-clarity"
-                className="px-6 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-colors"
-              >
-                Next: Complexity → Clarity →
-              </Link>
-            </div>
-          </FadeInView>
-        </div>
-      </section>
+      <TraitCTA
+        message={
+          <>
+            Give me a new domain. I&apos;ll be{" "}
+            <span className="text-yellow">productive</span> in weeks, not months.
+          </>
+        }
+        links={[
+          {
+            href: "/projects/vectorpaths",
+            label: "See VectorPaths Case →",
+            primary: true,
+            className: "bg-yellow text-foreground hover:bg-yellow-light",
+          },
+          {
+            href: "/traits/complexity-clarity",
+            label: "Next: Complexity → Clarity →",
+          },
+        ]}
+      />
     </div>
   );
 }

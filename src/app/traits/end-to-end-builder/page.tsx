@@ -1,6 +1,18 @@
-import Link from "next/link";
-import FadeIn from "@/components/motion/FadeIn";
+import type { Metadata } from "next";
 import FadeInView from "@/components/motion/FadeInView";
+import TraitHero from "@/components/traits/TraitHero";
+import ValuePropsSection from "@/components/traits/ValuePropsSection";
+import TraitCTA from "@/components/traits/TraitCTA";
+
+export const metadata: Metadata = {
+  title: "End-to-End Builder",
+  description: "Not just designs. Not just code. The whole thing — shipped and validated. From data pipeline to AI model to user-facing product, all owned by one person.",
+  openGraph: {
+    title: "End-to-End Builder | Zijin Zhang",
+    description: "From data pipeline to AI model to deployed product — all owned and shipped by one person.",
+    url: "https://zijinzhangprofile.com/traits/end-to-end-builder",
+  },
+};
 
 const stackLayers = [
   {
@@ -15,7 +27,7 @@ const stackLayers = [
     tech: "Personalized recommendation engine",
     what: "Adaptive learning paths based on student goals, weak areas, and time budget",
     color: "var(--purple)",
-    lightColor: "#faf5ff",
+    lightColor: "var(--tint-purple)",
   },
   {
     name: "Weight Layer",
@@ -37,24 +49,10 @@ const thisWebsite = {
   title: "This Portfolio Website",
   subtitle: "Another end-to-end proof — you're looking at it right now.",
   layers: [
-    {
-      label: "Design",
-      detail:
-        "Custom sketch-style design system — colors, shadows, typography, all from scratch",
-    },
-    {
-      label: "Development",
-      detail: "Next.js 16 + React 19 + Tailwind v4 + Framer Motion",
-    },
-    {
-      label: "Deployment",
-      detail: "Vercel with analytics, SEO optimization, continuous iteration",
-    },
-    {
-      label: "Content",
-      detail:
-        "Every word, every case study, every layout decision — mine",
-    },
+    { label: "Design", detail: "Custom sketch-style design system — colors, shadows, typography, all from scratch" },
+    { label: "Development", detail: "Next.js 16 + React 19 + Tailwind v4 + Framer Motion" },
+    { label: "Deployment", detail: "Vercel with analytics, SEO optimization, continuous iteration" },
+    { label: "Content", detail: "Every word, every case study, every layout decision — mine" },
   ],
 };
 
@@ -76,46 +74,18 @@ const valueProps = [
 export default function EndToEndBuilderPage() {
   return (
     <div className="min-h-screen bg-cream pt-24">
-      {/* Hero */}
-      <section className="py-12 px-6">
-        <div className="max-w-4xl mx-auto">
-          <FadeIn className="text-center">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 mb-8"
-            >
-              ← Back to Home
-            </Link>
-
-            <div className="w-16 h-2 bg-pink mx-auto mb-6 rounded-full" />
-
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-wide">
-              End-to-End <span className="highlight-pink">Ownership</span>
-            </h1>
-
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-              Not just designs. Not just code. The whole thing — shipped and
-              validated.
-            </p>
-
-            {/* Hero metrics */}
-            <div className="flex justify-center gap-6">
-              <div className="px-6 py-4 bg-pink/20 border-2 border-pink/40 rounded-xl">
-                <p className="text-3xl font-bold text-foreground">0.87</p>
-                <p className="text-xs text-gray-500 font-medium">
-                  R² accuracy
-                </p>
-              </div>
-              <div className="px-6 py-4 bg-pink/20 border-2 border-pink/40 rounded-xl">
-                <p className="text-3xl font-bold text-foreground">4</p>
-                <p className="text-xs text-gray-500 font-medium">
-                  layers owned
-                </p>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <TraitHero
+        accentBarClass="bg-pink"
+        metricBoxClass="bg-pink/20 border-pink/40"
+        title={<>End-to-End <span className="highlight-pink">Ownership</span></>}
+        subtitle="Not just designs. Not just code. The whole thing — shipped and validated."
+        metrics={[
+          { value: "0.87", label: "R² accuracy" },
+          { value: "4", label: "layers owned" },
+        ]}
+        imageSrc="/skills/end-to-end.webp"
+        imageAlt="End-to-End Builder illustration"
+      />
 
       {/* The Story — Stacked Architecture */}
       <section className="py-12 px-6 bg-white">
@@ -130,34 +100,23 @@ export default function EndToEndBuilderPage() {
             Every layer — designed, built, tested, and shipped by one person.
           </p>
 
-          {/* Stacked layers - bottom to top */}
           <div className="space-y-0">
             {[...stackLayers].reverse().map((layer, index) => (
-              <FadeInView
-                key={layer.name}
-                delay={index * 0.15}
-                className="relative"
-              >
+              <FadeInView key={layer.name} delay={index * 0.15} className="relative">
                 <div
                   className="p-5 border-2 border-foreground first:rounded-t-xl last:rounded-b-xl -mt-[2px] first:mt-0"
                   style={{ backgroundColor: layer.lightColor }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center gap-3">
-                    {/* Layer badge */}
                     <div
                       className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border-2 border-foreground font-bold text-sm text-foreground flex-shrink-0 w-fit"
                       style={{ backgroundColor: layer.color }}
                     >
                       {layer.name}
                     </div>
-
                     <div className="flex-1">
-                      <p className="text-sm font-medium text-foreground">
-                        {layer.what}
-                      </p>
-                      <p className="text-xs text-gray-500 mt-1">
-                        {layer.tech}
-                      </p>
+                      <p className="text-sm font-medium text-foreground">{layer.what}</p>
+                      <p className="text-xs text-gray-500 mt-1">{layer.tech}</p>
                     </div>
                   </div>
                 </div>
@@ -165,11 +124,7 @@ export default function EndToEndBuilderPage() {
             ))}
           </div>
 
-          {/* Connecting narrative */}
-          <FadeInView
-            y={0}
-            className="mt-8 p-6 bg-cream border-2 border-foreground rounded-xl shadow-sketch-sm"
-          >
+          <FadeInView y={0} className="mt-8 p-6 bg-cream border-2 border-foreground rounded-xl shadow-sketch-sm">
             <p className="text-sm text-gray-700 leading-relaxed italic">
               &ldquo;Most teams have separate people for data engineering,
               ML, backend, frontend, and design. I built all four layers of
@@ -190,13 +145,9 @@ export default function EndToEndBuilderPage() {
           <FadeInView className="p-8 bg-white border-2 border-foreground rounded-xl shadow-sketch-lg">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-3 h-3 bg-pink rounded-full" />
-              <h3 className="text-xl font-bold text-foreground">
-                {thisWebsite.title}
-              </h3>
+              <h3 className="text-xl font-bold text-foreground">{thisWebsite.title}</h3>
             </div>
-            <p className="text-sm text-gray-500 mb-6">
-              {thisWebsite.subtitle}
-            </p>
+            <p className="text-sm text-gray-500 mb-6">{thisWebsite.subtitle}</p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {thisWebsite.layers.map((item, index) => (
@@ -209,9 +160,7 @@ export default function EndToEndBuilderPage() {
                   <p className="text-xs font-bold text-pink uppercase tracking-wider mb-2">
                     {item.label}
                   </p>
-                  <p className="text-xs text-gray-600 leading-relaxed">
-                    {item.detail}
-                  </p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.detail}</p>
                 </FadeInView>
               ))}
             </div>
@@ -219,59 +168,29 @@ export default function EndToEndBuilderPage() {
         </div>
       </section>
 
-      {/* What This Means For Your Team */}
-      <section className="py-12 px-6 bg-warm">
-        <div className="max-w-4xl mx-auto">
-          <FadeInView y={0}>
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide">
-              What This Means{" "}
-              <span className="highlight-pink">For Your Team</span>
-            </h2>
-          </FadeInView>
+      <ValuePropsSection items={valueProps} className="bg-warm" />
 
-          <div className="space-y-4">
-            {valueProps.map((prop, index) => (
-              <FadeInView
-                key={index}
-                x={-20}
-                y={0}
-                delay={index * 0.1}
-                className="flex items-start gap-4 p-5 bg-white border-2 border-foreground rounded-xl shadow-sketch-sm"
-              >
-                <span className="text-2xl flex-shrink-0">{prop.icon}</span>
-                <p className="text-gray-700 leading-relaxed">{prop.text}</p>
-              </FadeInView>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-12 px-6 bg-foreground text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <FadeInView>
-            <p className="text-xl font-light mb-8 tracking-wide">
-              The best way to learn is to{" "}
-              <span className="text-yellow">build</span>. The best way to grow
-              is to <span className="text-pink">ship</span>.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/projects/vectorpaths"
-                className="px-6 py-3 bg-pink text-white rounded-lg font-medium hover:bg-[#ff8fb3] transition-colors"
-              >
-                See VectorPaths Case Study →
-              </Link>
-              <Link
-                href="/traits/fast-learner"
-                className="px-6 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-colors"
-              >
-                Next: Fast Learner →
-              </Link>
-            </div>
-          </FadeInView>
-        </div>
-      </section>
+      <TraitCTA
+        message={
+          <>
+            The best way to learn is to{" "}
+            <span className="text-yellow">build</span>. The best way to grow
+            is to <span className="text-pink">ship</span>.
+          </>
+        }
+        links={[
+          {
+            href: "/projects/vectorpaths",
+            label: "See VectorPaths Case Study →",
+            primary: true,
+            className: "bg-pink text-white hover:bg-[#ff8fb3]",
+          },
+          {
+            href: "/traits/fast-learner",
+            label: "Next: Fast Learner →",
+          },
+        ]}
+      />
     </div>
   );
 }

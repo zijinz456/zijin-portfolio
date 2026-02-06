@@ -34,7 +34,7 @@ export default function VectorPathsLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}): React.ReactElement {
   return (
     <>
       <JsonLd data={jsonLd} />

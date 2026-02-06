@@ -17,7 +17,7 @@ export default function ContactLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}): React.ReactElement {
   return (
     <>
       <JsonLd data={jsonLd} />

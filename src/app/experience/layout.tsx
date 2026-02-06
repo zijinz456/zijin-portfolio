@@ -25,7 +25,7 @@ export default function ExperienceLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}): React.ReactElement {
   return (
     <>
       <JsonLd data={jsonLd} />

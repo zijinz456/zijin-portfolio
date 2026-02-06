@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -79,10 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en-AU">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={jsonLd} />
       </head>
       <body className={`${inter.variable} font-sans antialiased bg-cream`}>
         <Navigation />

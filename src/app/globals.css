@@ -22,6 +22,7 @@
   --tint-blue: #f0f9ff;
   --tint-pink: #fff5f7;
   --tint-green: #f0fdf4;
+  --tint-purple: #faf5ff;
 }
 
 @theme inline {
@@ -41,6 +42,7 @@
   --color-tint-blue: var(--tint-blue);
   --color-tint-pink: var(--tint-pink);
   --color-tint-green: var(--tint-green);
+  --color-tint-purple: var(--tint-purple);
   --font-sans: var(--font-inter);
 }
 

@@ -17,14 +17,13 @@ export default function FadeInView({
   delay = 0,
   x = 0,
   y = 20,
-}: FadeInViewProps) {
+}: FadeInViewProps): React.ReactElement {
   return (
     <motion.div
       initial={{ opacity: 0, y, x }}
-      animate={{ opacity: 1, y: 0, x: 0, transition: { delay, duration: 0.6 } }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
       viewport={{ once: true, margin: "100px 0px" }}
-      transition={{ delay }}
+      transition={{ delay, duration: 0.6 }}
       className={className}
     >
       {children}
