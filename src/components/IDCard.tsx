@@ -49,6 +49,10 @@ export default function IDCard({ className = "" }: IDCardProps) {
               <span className="text-gray-700 text-xs">Product Builder</span>
             </div>
 
+            <div className="flex items-center gap-2">
+              <span className="text-gray-500 text-xs w-14">NOW @</span>
+              <span className="text-gray-700 text-xs">Commonwealth Bank</span>
+            </div>
           </div>
         </div>
 
