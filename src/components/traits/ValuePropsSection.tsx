@@ -19,8 +19,8 @@ export default function ValuePropsSection({
       <div className="max-w-4xl mx-auto">
         <FadeInView y={0}>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide">
-            What This Means{" "}
-            <span className="highlight-pink">For Your Team</span>
+            What I Hope to{" "}
+            <span className="highlight-pink">Bring</span>
           </h2>
         </FadeInView>
 

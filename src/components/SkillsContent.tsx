@@ -82,7 +82,7 @@ export default function SkillsContent() {
               Skills & <span className="highlight-yellow">Capabilities</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              What I bring to the table as an AI Product Builder
+              Tools and skills I've been building with
             </p>
           </FadeIn>
         </div>

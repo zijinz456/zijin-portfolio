@@ -21,7 +21,7 @@ const transformations = [
     before: {
       title: "The Chaos",
       items: [
-        "2,138+ real CPA exam questions as raw PDF scans",
+        "2,138+ real VCE Methods exam questions as raw PDF scans",
         "20 years of exams — inconsistent formats, missing files, broken layouts",
         "10+ classification dimensions per question (difficulty, topic, type, prerequisites...)",
         "LLM extraction errors: wrong topics, math formatting issues, over/under-extraction",
@@ -81,7 +81,7 @@ const transformations = [
       ],
     },
     story:
-      "Every CPA teacher has opinions on \"what's important.\" But opinions don't scale, and they can't be verified. I turned 20 years of exam data into a frequency-based weight model, so \"important\" became measurable. When the model disagreed with expert intuition, we could check — and the data was usually right.",
+      "Every VCE Methods teacher has opinions on \"what's important.\" But opinions don't scale, and they can't be verified. I turned 20 years of exam data into a frequency-based weight model, so \"important\" became measurable. When the model disagreed with expert intuition, we could check — and the data was usually right.",
   },
 ];
 
