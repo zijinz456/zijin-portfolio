@@ -82,10 +82,10 @@ export default function EndToEndBuilderPage() {
         accentBarClass="bg-pink"
         metricBoxClass="bg-pink/20 border-pink/40"
         title={<>End-to-End <span className="highlight-pink">Ownership</span></>}
-        subtitle="Not just designs. Not just code. The whole thing — shipped and validated."
+        subtitle="Product Strategy, Architecture, Data Pipeline, UI/UX, and Deployment — the whole thing, shipped and validated."
         metrics={[
-          { value: "0 → 1", label: "solo-shipped product" },
-          { value: "5", label: "areas owned" },
+          { value: "Full-Stack", label: "ownership" },
+          { value: "5", label: "disciplines covered" },
         ]}
         imageSrc="/skills/end-to-end.webp"
         imageAlt="End-to-End Builder illustration"
