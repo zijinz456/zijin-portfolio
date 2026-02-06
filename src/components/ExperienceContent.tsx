@@ -79,7 +79,7 @@ export default function ExperienceContent() {
               <CaseStudyCard
                 title="VectorPaths"
               subtitle="Founder & Product Lead — Product Strategy, Algorithm Design, Full-Stack Dev"
-              description="Students don't know what matters most on the exam, and teachers' expert judgment can't scale. I built an AI-powered learning platform from scratch — structuring 2,138+ real exam questions with LLM extraction, designing a topic weight system backtested against 20 years of data, and shipping a full practice environment with progressive hints and goal-based learning paths."
+              description="Students don't know what matters most on the exam, and teachers' expert judgment can't scale. I built an AI-powered learning platform from scratch — extracting and structuring real exam questions with a multi-stage LLM pipeline, designing a topic weight system backtested against 20 years of data, and shipping a full practice environment with progressive hints and goal-based learning paths."
               customImage="/skills/coding.webp"
               externalUrl="https://vectorpaths.com"
               ctaLink="/projects/vectorpaths"

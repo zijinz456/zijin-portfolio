@@ -47,7 +47,7 @@ export default function HomeContent() {
                 <p>
                   As the founder of{" "}
                   <a href="https://vectorpaths.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors font-medium">VectorPaths</a>
-                  {" "}— an adaptive learning platform with 2,138+ real exam questions and <strong>0.87 R²</strong> accuracy — I bridge the gap between user needs and intelligent systems.
+                  , an AI-powered adaptive learning platform, I bridge the gap between user needs and intelligent systems.
                 </p>
               </div>
 

@@ -30,7 +30,7 @@ const mainQuests: TimelineEvent[] = [
     id: "vectorpaths",
     year: "2025",
     title: "VectorPaths — Founder & Product Lead",
-    impact: "Built AI-powered adaptive learning platform — 2,138+ real exam questions, 0.87 R\u00B2 accuracy",
+    impact: "Solo-built full-stack adaptive learning platform — from algorithm design to production",
     type: "main",
     linkTo: "/experience#vectorpaths-case",
     status: "in-progress",
@@ -50,7 +50,7 @@ const sideQuests: TimelineEvent[] = [
   {
     id: "llm",
     year: "2025",
-    title: "LLM + Schema Data Extraction: 2,138+ Questions Structured",
+    title: "Multi-Stage LLM Pipeline: PDF Scan → Structured Schema",
     type: "side",
     status: "completed",
     icon: "\u{1F916}",
