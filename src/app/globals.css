@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* 西门风格配色 */
+  /* Core palette */
   --background: #fef9f3;
   --foreground: #1a1a1a;
   --cream: #fef9f3;
@@ -13,11 +13,34 @@
   --blue-light: #87ceeb;
   --mint: #98d4bb;
   --border: #1a1a1a;
+
+  /* Section backgrounds */
+  --warm: #fff9e6;
+  --purple: #e8d4f8;
+
+  /* Card interior tints */
+  --tint-blue: #f0f9ff;
+  --tint-pink: #fff5f7;
+  --tint-green: #f0fdf4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-yellow: var(--yellow);
+  --color-yellow-light: var(--yellow-light);
+  --color-pink: var(--pink);
+  --color-pink-light: var(--pink-light);
+  --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
+  --color-mint: var(--mint);
+  --color-border: var(--border);
+  --color-warm: var(--warm);
+  --color-purple: var(--purple);
+  --color-tint-blue: var(--tint-blue);
+  --color-tint-pink: var(--tint-pink);
+  --color-tint-green: var(--tint-green);
   --font-sans: var(--font-inter);
 }
 
@@ -60,7 +83,6 @@ html {
 .highlight-pink {
   display: inline;
   background: var(--pink);
-  color: white;
   padding: 0.1em 0.3em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -70,37 +92,32 @@ html {
 .highlight-blue {
   display: inline;
   background: var(--blue);
-  color: white;
   padding: 0.1em 0.3em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
-/* 手绘风格边框 */
-.sketch-border {
-  border: 2px solid var(--border);
-  border-radius: 4px;
-}
-
-/* 虚线连接线 */
-.dashed-line {
-  border: none;
-  border-top: 2px dashed var(--border);
-}
-
-/* 胶囊形状 */
-.pill {
-  border-radius: 9999px;
-}
-
-/* 卡片悬浮效果 */
-.card-hover {
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card-hover:hover {
-  transform: translateY(-4px);
+/* Sketch-style shadows */
+.shadow-sketch-lg {
   box-shadow: 4px 4px 0 var(--border);
+}
+
+.shadow-sketch-md {
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.shadow-sketch-sm {
+  box-shadow: 2px 2px 0 var(--border);
+}
+
+/* Sketch-style hover: shadow shrinks + element shifts */
+.hover-sketch {
+  transition: all 0.2s;
+}
+
+.hover-sketch:hover {
+  box-shadow: 1px 1px 0 var(--border);
+  transform: translate(2px, 2px);
 }
 
 /* 标签样式 */
@@ -172,4 +189,31 @@ html {
 .animate-gradient {
   animation: gradient-move 3s ease infinite;
   background-size: 200% 200%;
+}
+
+/* Ongoing shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
 }

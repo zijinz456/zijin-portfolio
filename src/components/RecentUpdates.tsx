@@ -14,19 +14,19 @@ const updates: Update[] = [
     label: "Building",
     content: "Finishing VectorPaths",
     description: "My first AI vibe coding project",
-    color: "#ffe135",
+    color: "var(--yellow)",
   },
   {
     label: "Learning",
     content: "AI Model Deployment",
     description: "Local deployment & training workflows",
-    color: "#ff6b9d",
+    color: "var(--pink)",
   },
   {
     label: "Creating",
     content: "Photography",
     description: "Helping others capture moments",
-    color: "#87ceeb",
+    color: "var(--blue-light)",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function RecentUpdates() {
     >
       {/* Title */}
       <div className="text-center mb-10">
-        <h2 className="text-2xl font-bold text-[#1a1a1a]">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-wide">
           <span className="highlight-pink">Recent Updates</span>
         </h2>
       </div>
@@ -55,12 +55,12 @@ export default function RecentUpdates() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
             whileHover={{ y: -4 }}
-            className="p-6 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] hover:shadow-[2px_2px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+            className="p-6 bg-white border-2 border-foreground rounded-xl shadow-sketch-lg hover:shadow-sketch-sm hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
           >
             {/* Number Badge */}
             <span
-              className="inline-block w-8 h-8 border-2 border-[#1a1a1a] rounded-lg mb-4 text-center leading-7 font-bold text-sm"
-              style={{ backgroundColor: update.color, color: update.color === "#ff6b9d" ? "white" : "#1a1a1a" }}
+              className="inline-block w-8 h-8 border-2 border-foreground rounded-lg mb-4 text-center leading-7 font-bold text-sm"
+              style={{ backgroundColor: update.color, color: update.color === "var(--pink)" ? "white" : "var(--foreground)" }}
             >
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -71,7 +71,7 @@ export default function RecentUpdates() {
             </p>
 
             {/* Content */}
-            <h3 className="font-bold text-[#1a1a1a] mb-2 tracking-wide">
+            <h3 className="font-bold text-foreground mb-2">
               {update.content}
             </h3>
 

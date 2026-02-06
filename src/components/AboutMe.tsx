@@ -9,24 +9,27 @@ export default function AboutMe() {
       {/* Left - Personal Intro */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0, transition: { delay: 3, duration: 0.6 } }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "100px 0px" }}
         className="space-y-6"
       >
         {/* Main intro */}
         <p className="text-gray-700 leading-relaxed">
-          I&apos;m currently studying <strong>Finance & Business Analytics</strong> at the University of Melbourne.
+          I build AI-powered products that turn complex problems into clear, data-driven solutions.
+          Currently studying <strong>Finance & Business Analytics</strong> at the University of Melbourne.
         </p>
 
         {/* AI & Tech Passion */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 3.1, duration: 0.6 } }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "100px 0px" }}
           transition={{ delay: 0.1 }}
-          className="bg-[#ffe135] border-2 border-[#1a1a1a] rounded-xl p-4 shadow-[3px_3px_0_#1a1a1a]"
+          className="bg-yellow border-2 border-foreground rounded-xl p-4 shadow-sketch-md"
         >
-          <p className="font-bold text-[#1a1a1a] mb-2">
+          <p className="font-bold text-foreground mb-2">
             Passionate about <span className="highlight-pink px-1">AI & Emerging Tech</span>
           </p>
           <p className="text-sm text-gray-700">
@@ -40,12 +43,13 @@ export default function AboutMe() {
         {/* Philosophy */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 3.2, duration: 0.6 } }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "100px 0px" }}
           transition={{ delay: 0.2 }}
-          className="bg-[#fef9f3] border-2 border-[#1a1a1a] rounded-xl p-4 shadow-[3px_3px_0_#1a1a1a]"
+          className="bg-cream border-2 border-foreground rounded-xl p-4 shadow-sketch-md"
         >
-          <p className="text-lg font-semibold text-[#1a1a1a] italic mb-3">
+          <p className="text-lg font-semibold text-foreground italic mb-3">
             &ldquo;Always curious. Always building.&rdquo;
           </p>
           <p className="text-sm text-gray-600">
@@ -63,8 +67,9 @@ export default function AboutMe() {
       {/* Right - ID Card */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0, transition: { delay: 3.2, duration: 0.6 } }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "100px 0px" }}
         transition={{ delay: 0.2 }}
         className="flex justify-center md:justify-end"
       >

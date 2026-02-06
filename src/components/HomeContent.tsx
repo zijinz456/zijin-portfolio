@@ -1,0 +1,158 @@
+import Link from "next/link";
+import AvatarWithBubbles from "@/components/AvatarWithBubbles";
+import AboutMe from "@/components/AboutMe";
+import TopSkillsShowcase from "@/components/TopSkillsShowcase";
+import { WordRotate } from "@/components/ui/word-rotate";
+import FadeIn from "@/components/motion/FadeIn";
+import FadeInView from "@/components/motion/FadeInView";
+import HoverScale from "@/components/motion/HoverScale";
+
+const quickLinks = [
+  { href: "/experience", num: "01", label: "Experience", desc: "Case studies & timeline", color: "bg-yellow" },
+  { href: "/skills", num: "02", label: "Skills", desc: "Tech stack & capabilities", color: "bg-pink text-white" },
+  { href: "/contact", num: "03", label: "Contact", desc: "Let's connect", color: "bg-blue-light" },
+];
+
+export default function HomeContent() {
+  return (
+    <div className="min-h-screen bg-cream">
+      {/* Hero Section */}
+      <section className="pt-28 pb-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+            {/* Left - Intro Text */}
+            <FadeIn duration={0.6} className="text-center md:text-left">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-relaxed tracking-wide">
+                Hi, I&apos;m <span className="highlight-pink">Zijin</span>
+              </h1>
+
+              <div className="text-lg md:text-xl text-gray-700 mb-6 flex items-center gap-2 justify-center md:justify-start">
+                <span>I&apos;m a</span>
+                <WordRotate
+                  words={[
+                    "AI Product Builder",
+                    "Data-Driven Problem Solver",
+                    "End-to-End Shipper",
+                    "Banking × AI Specialist",
+                  ]}
+                  className="highlight-yellow font-semibold"
+                  duration={2000}
+                />
+              </div>
+
+              <div className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-lg space-y-2">
+                <p>
+                  I combine hands-on banking experience at <strong>Commonwealth Bank</strong> with a passion for building AI-powered products.
+                </p>
+                <p>
+                  As the founder of{" "}
+                  <a href="https://vectorpaths.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors font-medium">VectorPaths</a>
+                  {" "}— an adaptive learning platform with 2,138+ real exam questions and <strong>0.87 R²</strong> accuracy — I bridge the gap between user needs and intelligent systems.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                <HoverScale>
+                  <Link
+                    href="/experience"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-yellow border-2 border-foreground rounded-lg font-medium shadow-sketch-md hover-sketch"
+                  >
+                    Explore My Projects →
+                  </Link>
+                </HoverScale>
+                <HoverScale>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-foreground rounded-lg font-medium shadow-sketch-md hover-sketch"
+                  >
+                    Get In Touch
+                  </Link>
+                </HoverScale>
+              </div>
+            </FadeIn>
+
+            {/* Right - Avatar with Trait Bubbles */}
+            <FadeIn scale={0.9} y={0} delay={0.3} className="flex-shrink-0">
+              <AvatarWithBubbles />
+            </FadeIn>
+          </div>
+
+          {/* Hint text */}
+          <FadeIn delay={0.6} y={0}>
+            <p className="text-center text-sm text-gray-500 mt-4">
+              Click the bubbles to explore
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Welcome Section */}
+      <section id="about-me" className="py-16 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <FadeInView>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 tracking-wide">
+              About <span className="highlight-yellow">Me</span>
+            </h2>
+          </FadeInView>
+
+          {/* About Me Section */}
+          <AboutMe />
+
+          {/* My Top 3 Skills */}
+          <TopSkillsShowcase />
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-16 px-6 bg-warm">
+        <div className="max-w-5xl mx-auto">
+          <FadeInView>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 tracking-wide">
+              Explore <span className="highlight-pink">More</span>
+            </h2>
+          </FadeInView>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {quickLinks.map((link, index) => (
+              <FadeInView key={link.href} delay={index * 0.1}>
+                <Link
+                  href={link.href}
+                  className="block p-6 bg-white border-2 border-foreground rounded-xl shadow-sketch-md hover-sketch"
+                >
+                  <span className={`inline-block w-8 h-8 ${link.color} border-2 border-foreground rounded-lg mb-3 text-center leading-7 font-bold text-sm`}>
+                    {link.num}
+                  </span>
+                  <h3 className="font-bold text-foreground mb-2">{link.label}</h3>
+                  <p className="text-sm text-gray-600">{link.desc}</p>
+                </Link>
+              </FadeInView>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-6 bg-purple">
+        <div className="max-w-4xl mx-auto text-center">
+          <FadeInView>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-wide text-foreground">
+              Let&apos;s <span className="highlight-yellow">Build</span> Together
+            </h2>
+            <p className="text-gray-600 mb-10">
+              Want to chat about AI or have an interesting project idea?
+            </p>
+            <HoverScale scaleHover={1.05} scaleTap={0.95} className="inline-block">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-10 py-4 bg-yellow text-foreground border-2 border-foreground rounded-full font-semibold shadow-sketch-md hover-sketch"
+              >
+                Get in Touch
+                <span>→</span>
+              </Link>
+            </HoverScale>
+          </FadeInView>
+        </div>
+      </section>
+    </div>
+  );
+}

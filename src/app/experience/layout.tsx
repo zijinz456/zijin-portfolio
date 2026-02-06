@@ -1,13 +1,24 @@
-import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Experience",
-  description: "My professional journey including work at Commonwealth Bank of Australia and building VectorPaths - an AI-powered education platform.",
-  openGraph: {
-    title: "Experience | Zijin Zhang",
-    description: "My professional journey at CBA and building AI products.",
-    url: "https://zijinzhangprofile.com/experience",
-  },
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Professional Experience',
+  description: 'Zijin Zhang\'s professional journey — VectorPaths founder and Commonwealth Bank specialist.',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'VectorPaths — Founder & Product Lead',
+      description: 'AI-powered adaptive learning platform with 2,138+ real exam questions.',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Commonwealth Bank — Customer Banking Specialist',
+      description: 'Frontline banking experience identifying user friction and process gaps.',
+    },
+  ],
 };
 
 export default function ExperienceLayout({
@@ -15,5 +26,10 @@ export default function ExperienceLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={jsonLd} />
+      {children}
+    </>
+  );
 }

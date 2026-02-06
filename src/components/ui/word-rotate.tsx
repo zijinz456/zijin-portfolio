@@ -34,7 +34,7 @@ export function WordRotate({
   }, [words, duration])
 
   return (
-    <div className="overflow-hidden py-1">
+    <div className="overflow-hidden py-1" role="status" aria-live="polite" aria-atomic="true">
       <AnimatePresence mode="wait">
         <motion.span
           key={words[index]}

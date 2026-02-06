@@ -1,81 +1,85 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
+import FadeIn from "@/components/motion/FadeIn";
+import FadeInView from "@/components/motion/FadeInView";
 
-const projects = [
+const stackLayers = [
   {
-    title: "VectorPaths",
-    subtitle: "AI-Powered Adaptive Learning Platform",
-    stats: [
-      { label: "Questions Processed", value: "3,000+" },
-      { label: "Test Cases", value: "2,100+" },
-      { label: "R² Correlation", value: "0.87" },
-    ],
-    phases: [
-      "Problem identification",
-      "Data architecture design",
-      "LLM + Schema extraction",
-      "Algorithm development",
-      "Frontend implementation",
-      "Testing & validation",
-    ],
-    color: "#ffe135",
+    name: "UI Layer",
+    tech: "Next.js + Tailwind + Framer Motion",
+    what: "Responsive, accessible frontend with sketch-style design system",
+    color: "var(--pink)",
+    lightColor: "var(--tint-pink)",
   },
   {
-    title: "K-Pop Photography",
-    subtitle: "From Hobby to Side Business",
-    stats: [
-      { label: "Started", value: "Hobby" },
-      { label: "Built", value: "Portfolio" },
-      { label: "Became", value: "Business" },
-    ],
-    phases: [
-      "K-pop culture passion",
-      "Learned photography basics",
-      "Practiced at events",
-      "Built online presence",
-      "Started taking clients",
-      "Running side business",
-    ],
-    color: "#ff6b9d",
+    name: "Content Layer",
+    tech: "Personalized recommendation engine",
+    what: "Adaptive learning paths based on student goals, weak areas, and time budget",
+    color: "var(--purple)",
+    lightColor: "#faf5ff",
+  },
+  {
+    name: "Weight Layer",
+    tech: "Statistical analysis + Python",
+    what: "Topic importance derived from 20 years of real exam frequency data → ROI ranking",
+    color: "var(--blue-light)",
+    lightColor: "var(--tint-blue)",
+  },
+  {
+    name: "Data Layer",
+    tech: "LLM extraction + Quality pipeline",
+    what: "2,138+ PDF exam questions → structured schema with self-improving error handling",
+    color: "var(--yellow)",
+    lightColor: "var(--warm)",
   },
 ];
 
-const mindset = [
+const thisWebsite = {
+  title: "This Portfolio Website",
+  subtitle: "Another end-to-end proof — you're looking at it right now.",
+  layers: [
+    {
+      label: "Design",
+      detail:
+        "Custom sketch-style design system — colors, shadows, typography, all from scratch",
+    },
+    {
+      label: "Development",
+      detail: "Next.js 16 + React 19 + Tailwind v4 + Framer Motion",
+    },
+    {
+      label: "Deployment",
+      detail: "Vercel with analytics, SEO optimization, continuous iteration",
+    },
+    {
+      label: "Content",
+      detail:
+        "Every word, every case study, every layout decision — mine",
+    },
+  ],
+};
+
+const valueProps = [
   {
-    title: "Ownership",
-    description: "Don't wait for someone else to solve it. If I see a problem, I fix it.",
+    icon: "🔗",
+    text: "I've shipped the full pipeline: from data extraction to AI model to user-facing product. I understand every layer, so I can spot gaps before they become problems",
+  },
+  {
+    icon: "🚀",
+    text: "In AI product work, the gap between 'cool demo' and 'shipped product' is huge. I bridge it — from messy data to deployed, validated system",
+  },
+  {
     icon: "🔧",
-  },
-  {
-    title: "Iteration",
-    description: "Ship an MVP first, then iterate fast based on feedback.",
-    icon: "🔄",
-  },
-  {
-    title: "Full Stack Thinking",
-    description: "Not just frontend or backend — understanding how the whole system works.",
-    icon: "🧠",
-  },
-  {
-    title: "Ship > Perfect",
-    description: "Perfect is the enemy of progress. Make it work first, then make it better.",
-    icon: "🚢",
+    text: "I don't hand off problems or wait to be unblocked. I own the outcome from user research to deployed feature",
   },
 ];
 
 export default function EndToEndBuilderPage() {
   return (
-    <div className="min-h-screen bg-[#fef9f3] pt-24">
+    <div className="min-h-screen bg-cream pt-24">
       {/* Hero */}
-      <section className="py-16 px-6">
+      <section className="py-12 px-6">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
+          <FadeIn className="text-center">
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 mb-8"
@@ -83,199 +87,189 @@ export default function EndToEndBuilderPage() {
               ← Back to Home
             </Link>
 
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring" }}
-              className="w-24 h-24 mx-auto mb-6 bg-[#ff6b9d] rounded-full border-4 border-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center text-5xl"
-            >
-              🚀
-            </motion.div>
+            <div className="w-16 h-2 bg-pink mx-auto mb-6 rounded-full" />
 
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4 tracking-wide">
-              End-to-End <span className="highlight-pink">Builder</span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-wide">
+              End-to-End <span className="highlight-pink">Ownership</span>
             </h1>
 
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed tracking-wide">
-              I ship from idea to working product.
-              <br />
-              Not just designs. Not just code. The whole thing.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+              Not just designs. Not just code. The whole thing — shipped and
+              validated.
             </p>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Builder Mindset */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-2xl font-bold text-center mb-12 tracking-wide"
-          >
-            Builder <span className="highlight-yellow">Mindset</span>
-          </motion.h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {mindset.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-6 bg-[#fef9f3] border-2 border-[#1a1a1a] rounded-xl shadow-[3px_3px_0_#1a1a1a]"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">{item.icon}</span>
-                  <h3 className="font-bold text-[#1a1a1a]">{item.title}</h3>
-                </div>
-                <p className="text-sm text-gray-600">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Showcase */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-2xl font-bold text-center mb-12 tracking-wide"
-          >
-            From Idea to <span className="highlight-pink">Reality</span>
-          </motion.h2>
-
-          <div className="space-y-12">
-            {projects.map((project, projectIndex) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: projectIndex * 0.2 }}
-                className="p-8 border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
-                style={{ backgroundColor: `${project.color}20` }}
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-[#1a1a1a]">{project.title}</h3>
-                    <p className="text-gray-600">{project.subtitle}</p>
-                  </div>
-                  <div className="flex gap-4 mt-4 md:mt-0">
-                    {project.stats.map((stat) => (
-                      <div key={stat.label} className="text-center">
-                        <p className="text-xl font-bold" style={{ color: project.color === "#ffe135" ? "#1a1a1a" : project.color }}>
-                          {stat.value}
-                        </p>
-                        <p className="text-xs text-gray-500">{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Journey Timeline */}
-                <div className="relative">
-                  <div className="absolute top-4 left-0 right-0 h-0.5 bg-[#1a1a1a]/20" />
-                  <div className="flex justify-between relative">
-                    {project.phases.map((phase, phaseIndex) => (
-                      <motion.div
-                        key={phase}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 + phaseIndex * 0.1 }}
-                        className="flex flex-col items-center text-center flex-1"
-                      >
-                        <div
-                          className="w-8 h-8 rounded-full border-2 border-[#1a1a1a] flex items-center justify-center text-xs font-bold mb-2 z-10"
-                          style={{ backgroundColor: project.color }}
-                        >
-                          {phaseIndex + 1}
-                        </div>
-                        <p className="text-xs text-gray-600 hidden md:block max-w-[80px]">{phase}</p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Mobile phases list */}
-                <div className="md:hidden mt-6 space-y-2">
-                  {project.phases.map((phase, phaseIndex) => (
-                    <div key={phase} className="flex items-center gap-2 text-sm text-gray-600">
-                      <span className="font-bold" style={{ color: project.color === "#ffe135" ? "#1a1a1a" : project.color }}>
-                        {phaseIndex + 1}.
-                      </span>
-                      {phase}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy */}
-      <section className="py-16 px-6 bg-[#fff9e6]">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] text-center"
-          >
-            <h2 className="text-2xl font-bold mb-6 tracking-wide">
-              Why <span className="highlight-pink">End-to-End</span> Matters
-            </h2>
-            <div className="space-y-4 text-gray-700 max-w-2xl mx-auto">
-              <p>
-                Many people only do their part: designers just design, developers just code.
-              </p>
-              <p>
-                But real problems often emerge at <strong>the handoffs</strong> — between design and development, between frontend and backend, between product and user.
-              </p>
-              <p>
-                When you own the entire project end-to-end, you see these gaps, and you fix them.
-              </p>
-              <p className="font-bold text-[#1a1a1a]">
-                That&apos;s why I don&apos;t just &quot;do&quot; — I ship.
-              </p>
+            {/* Hero metrics */}
+            <div className="flex justify-center gap-6">
+              <div className="px-6 py-4 bg-pink/20 border-2 border-pink/40 rounded-xl">
+                <p className="text-3xl font-bold text-foreground">0.87</p>
+                <p className="text-xs text-gray-500 font-medium">
+                  R² accuracy
+                </p>
+              </div>
+              <div className="px-6 py-4 bg-pink/20 border-2 border-pink/40 rounded-xl">
+                <p className="text-3xl font-bold text-foreground">4</p>
+                <p className="text-xs text-gray-500 font-medium">
+                  layers owned
+                </p>
+              </div>
             </div>
-          </motion.div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* The Story — Stacked Architecture */}
+      <section className="py-12 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <FadeInView y={0}>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 tracking-wide">
+              VectorPaths: <span className="highlight-yellow">Full Stack</span>{" "}
+              Ownership
+            </h2>
+          </FadeInView>
+          <p className="text-center text-gray-500 mb-12">
+            Every layer — designed, built, tested, and shipped by one person.
+          </p>
+
+          {/* Stacked layers - bottom to top */}
+          <div className="space-y-0">
+            {[...stackLayers].reverse().map((layer, index) => (
+              <FadeInView
+                key={layer.name}
+                delay={index * 0.15}
+                className="relative"
+              >
+                <div
+                  className="p-5 border-2 border-foreground first:rounded-t-xl last:rounded-b-xl -mt-[2px] first:mt-0"
+                  style={{ backgroundColor: layer.lightColor }}
+                >
+                  <div className="flex flex-col md:flex-row md:items-center gap-3">
+                    {/* Layer badge */}
+                    <div
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border-2 border-foreground font-bold text-sm text-foreground flex-shrink-0 w-fit"
+                      style={{ backgroundColor: layer.color }}
+                    >
+                      {layer.name}
+                    </div>
+
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-foreground">
+                        {layer.what}
+                      </p>
+                      <p className="text-xs text-gray-500 mt-1">
+                        {layer.tech}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </FadeInView>
+            ))}
+          </div>
+
+          {/* Connecting narrative */}
+          <FadeInView
+            y={0}
+            className="mt-8 p-6 bg-cream border-2 border-foreground rounded-xl shadow-sketch-sm"
+          >
+            <p className="text-sm text-gray-700 leading-relaxed italic">
+              &ldquo;Most teams have separate people for data engineering,
+              ML, backend, frontend, and design. I built all four layers of
+              VectorPaths myself — not because I had to, but because
+              understanding the full stack means I catch the gaps that appear at
+              handoffs. The data layer informs the weight model, the weights
+              shape the content recommendations, and the UI makes it all feel
+              effortless. When one person sees the whole picture, nothing falls
+              through the cracks.&rdquo;
+            </p>
+          </FadeInView>
+        </div>
+      </section>
+
+      {/* Secondary proof: This Website */}
+      <section className="py-12 px-6">
+        <div className="max-w-4xl mx-auto">
+          <FadeInView className="p-8 bg-white border-2 border-foreground rounded-xl shadow-sketch-lg">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-3 h-3 bg-pink rounded-full" />
+              <h3 className="text-xl font-bold text-foreground">
+                {thisWebsite.title}
+              </h3>
+            </div>
+            <p className="text-sm text-gray-500 mb-6">
+              {thisWebsite.subtitle}
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {thisWebsite.layers.map((item, index) => (
+                <FadeInView
+                  key={item.label}
+                  y={10}
+                  delay={index * 0.1}
+                  className="p-4 bg-pink/10 border border-pink/30 rounded-lg"
+                >
+                  <p className="text-xs font-bold text-pink uppercase tracking-wider mb-2">
+                    {item.label}
+                  </p>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {item.detail}
+                  </p>
+                </FadeInView>
+              ))}
+            </div>
+          </FadeInView>
+        </div>
+      </section>
+
+      {/* What This Means For Your Team */}
+      <section className="py-12 px-6 bg-warm">
+        <div className="max-w-4xl mx-auto">
+          <FadeInView y={0}>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide">
+              What This Means{" "}
+              <span className="highlight-pink">For Your Team</span>
+            </h2>
+          </FadeInView>
+
+          <div className="space-y-4">
+            {valueProps.map((prop, index) => (
+              <FadeInView
+                key={index}
+                x={-20}
+                y={0}
+                delay={index * 0.1}
+                className="flex items-start gap-4 p-5 bg-white border-2 border-foreground rounded-xl shadow-sketch-sm"
+              >
+                <span className="text-2xl flex-shrink-0">{prop.icon}</span>
+                <p className="text-gray-700 leading-relaxed">{prop.text}</p>
+              </FadeInView>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-[#1a1a1a] text-white">
+      <section className="py-12 px-6 bg-foreground text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-2xl font-light mb-8 tracking-wide">
-              &quot;The best way to grow is to <span className="text-[#ff6b9d]">ship</span>.&quot;
+          <FadeInView>
+            <p className="text-xl font-light mb-8 tracking-wide">
+              The best way to learn is to{" "}
+              <span className="text-yellow">build</span>. The best way to grow
+              is to <span className="text-pink">ship</span>.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/skills#beyond-work"
-                className="px-6 py-3 bg-[#ff6b9d] text-white rounded-lg font-medium hover:bg-[#ff8fb3] transition-colors"
+                href="/projects/vectorpaths"
+                className="px-6 py-3 bg-pink text-white rounded-lg font-medium hover:bg-[#ff8fb3] transition-colors"
               >
-                See More Projects →
+                See VectorPaths Case Study →
               </Link>
               <Link
-                href="/contact"
+                href="/traits/fast-learner"
                 className="px-6 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-colors"
               >
-                Let&apos;s Build Together
+                Next: Fast Learner →
               </Link>
             </div>
-          </motion.div>
+          </FadeInView>
         </div>
       </section>
     </div>

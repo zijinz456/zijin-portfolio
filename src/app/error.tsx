@@ -15,18 +15,18 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen bg-[#fef9f3] flex items-center justify-center px-6">
+    <div className="min-h-screen bg-cream flex items-center justify-center px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-center max-w-md"
       >
-        <div className="w-20 h-20 mx-auto mb-6 bg-[#ff6b9d] border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center">
+        <div className="w-20 h-20 mx-auto mb-6 bg-pink border-2 border-foreground rounded-xl shadow-sketch-lg flex items-center justify-center">
           <span className="text-4xl">!</span>
         </div>
 
-        <h1 className="text-2xl font-bold text-[#1a1a1a] mb-4">
+        <h1 className="text-2xl font-bold text-foreground mb-4">
           Something went wrong
         </h1>
 
@@ -36,7 +36,7 @@ export default function Error({
 
         <button
           onClick={() => reset()}
-          className="px-6 py-3 bg-[#87ceeb] border-2 border-[#1a1a1a] rounded-xl font-semibold text-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] hover:shadow-[2px_2px_0_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+          className="px-6 py-3 bg-blue-light border-2 border-foreground rounded-xl font-semibold text-foreground shadow-sketch-lg hover:shadow-sketch-sm hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
         >
           Try Again
         </button>

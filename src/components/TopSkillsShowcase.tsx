@@ -1,309 +1,113 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { fadeInUpView } from "@/lib/animations";
+import Link from "next/link";
 
-// Skill 1: Complexity to Clarity
-const clarityTransformations = [
+const skills = [
   {
-    before: "10+ dimensions of question classification",
-    after: "\"Here's the next best question for you\"",
-    context: "VectorPaths",
+    title: "Fast Learner",
+    tag: "Adaptability",
+    color: "bg-yellow",
+    borderColor: "border-yellow",
+    hook: "Zero to shipped product in 4 months",
+    metrics: [
+      { value: "4", label: "months" },
+      { value: "0→1", label: "shipped product" },
+    ],
+    href: "/traits/fast-learner",
   },
   {
-    before: "\"I want to transfer money\"",
-    after: "Real need: \"I'm not sure how to use the app\"",
-    context: "CBA Service",
+    title: "Complexity → Clarity",
+    tag: "Problem Solving",
+    color: "bg-blue-light",
+    borderColor: "border-blue-light",
+    hook: "I turn chaos into systems",
+    metrics: [
+      { value: "2,138+", label: "questions structured" },
+      { value: "6", label: "core topics extracted" },
+    ],
+    href: "/traits/complexity-clarity",
   },
   {
-    before: "3000+ raw question data",
-    after: "Structured knowledge graph + ROI ranking",
-    context: "LLM Extraction",
+    title: "End-to-End Ownership",
+    tag: "Execution",
+    color: "bg-pink",
+    borderColor: "border-pink",
+    hook: "Idea to shipped product, alone",
+    metrics: [
+      { value: "0.87", label: "R² accuracy" },
+      { value: "Full", label: "stack ownership" },
+    ],
+    href: "/traits/end-to-end-builder",
   },
-];
-
-const clarityPrinciples = [
-  { text: "Hide complexity, surface simplicity", icon: "🎭" },
-  { text: "Progressive disclosure", icon: "📚" },
-  { text: "Context-aware responses", icon: "🎯" },
-  { text: "Design for frustrated users first", icon: "💪" },
-];
-
-// Skill 2: Fast Learner
-const learningExamples = [
-  {
-    title: "Zero to Portfolio in 3 Hours",
-    description: "Built this entire site from scratch with Next.js + Tailwind + Framer Motion",
-    icon: "🚀",
-  },
-  {
-    title: "AI Tools Mastery",
-    description: "Self-taught Figma, n8n, and various AI-powered design & automation tools",
-    icon: "🎨",
-  },
-  {
-    title: "Full-Stack in 1 Month",
-    description: "Learned React, Node.js, PostgreSQL, testing, CI/CD from zero",
-    icon: "💻",
-  },
-];
-
-// Skill 3: End-to-End Builder
-const builderMindset = [
-  { title: "Ownership", description: "If I see a problem, I fix it.", icon: "🔧" },
-  { title: "Iteration", description: "Ship MVP first, iterate based on feedback.", icon: "🔄" },
-  { title: "Full Stack Thinking", description: "Understand how the whole system works.", icon: "🧠" },
-  { title: "Ship > Perfect", description: "Make it work first, then make it better.", icon: "🚢" },
-];
-
-const projectStats = [
-  { label: "Questions Processed", value: "3,000+" },
-  { label: "Test Cases", value: "2,100+" },
-  { label: "R² Correlation", value: "0.87" },
 ];
 
 export default function TopSkillsShowcase() {
   return (
-    <div id="top-skills" className="mt-16 space-y-0">
-      {/* Section Title */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] tracking-wide">
+    <div id="top-skills" className="mt-16">
+      <motion.div {...fadeInUpView} className="text-center mb-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-wide">
           MY TOP 3 <span className="highlight-pink">SKILLS</span>
         </h2>
       </motion.div>
 
-      {/* ==================== Skill 1: Fast Learner ==================== */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 px-6 bg-[#fff9e6]"
-      >
-        <div className="max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6">
+        {skills.map((skill, index) => (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
+            key={skill.title}
+            {...fadeInUpView}
+            transition={{ delay: index * 0.1 }}
           >
-            {/* Header: Image + Title */}
-            <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
-              <div className="w-48 h-48 bg-[#ffe135] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden flex-shrink-0">
-                <Image
-                  src="/skills/fast-learner.png"
-                  alt="Fast Learner"
-                  width={180}
-                  height={180}
-                  className="object-contain"
-                />
-              </div>
-              <div className="text-center md:text-left">
-                <span className="inline-block px-3 py-1 bg-[#ffe135] border-2 border-[#1a1a1a] text-[#1a1a1a] text-xs font-bold rounded-full mb-2">
-                  Quick to Master New Tech
+            <Link
+              href={skill.href}
+              className="group block h-full bg-white border-2 border-foreground rounded-xl shadow-sketch-md hover-sketch overflow-hidden"
+            >
+              {/* Color accent bar */}
+              <div className={`h-2 ${skill.color}`} />
+
+              <div className="p-6">
+                {/* Tag */}
+                <span
+                  className={`inline-block px-3 py-1 ${skill.color} border-2 border-foreground text-foreground text-xs font-bold rounded-full mb-4`}
+                >
+                  {skill.tag}
                 </span>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-3">
-                  Fast Learner
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {skill.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed max-w-xl">
-                  I learn by building, not by watching tutorials. Designed a complete system architecture in one month, learned full-stack development in another.
-                </p>
-              </div>
-            </div>
 
-            {/* Philosophy */}
-            <div className="p-4 bg-[#ffe135] border-2 border-[#1a1a1a] rounded-lg mb-6">
-              <p className="text-sm text-[#1a1a1a]">
-                <strong>My approach:</strong> Hands-on testing everything. I tested Claude, GPT-4, Gemini, DeepSeek to understand when to use each — not just reading docs.
-              </p>
-            </div>
+                {/* Hook - one punchy line */}
+                <p className="text-sm text-gray-600 mb-6">{skill.hook}</p>
 
-            {/* Learning Examples */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {learningExamples.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="p-4 bg-[#fef9f3] border-2 border-[#1a1a1a] rounded-lg shadow-[2px_2px_0_#1a1a1a]"
-                >
-                  <span className="text-2xl mb-2 block">{item.icon}</span>
-                  <p className="font-bold text-[#1a1a1a] mb-1">{item.title}</p>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
+                {/* Metrics */}
+                <div className="flex gap-3 mb-5">
+                  {skill.metrics.map((metric) => (
+                    <div
+                      key={metric.label}
+                      className={`flex-1 p-3 ${skill.color}/20 border-2 ${skill.borderColor}/30 rounded-lg text-center`}
+                    >
+                      <p className="text-xl font-bold text-foreground">
+                        {metric.value}
+                      </p>
+                      <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">
+                        {metric.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
 
-      {/* ==================== Skill 2: Complexity to Clarity ==================== */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 px-6 bg-[#fef9f3]"
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
-          >
-            {/* Header: Image + Title */}
-            <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
-              <div className="w-48 h-48 bg-[#87ceeb] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden flex-shrink-0">
-                <Image
-                  src="/skills/clarity.png"
-                  alt="Complexity to Clarity"
-                  width={180}
-                  height={180}
-                  className="object-contain"
-                />
-              </div>
-              <div className="text-center md:text-left">
-                <span className="inline-block px-3 py-1 bg-[#87ceeb] border-2 border-[#1a1a1a] text-[#1a1a1a] text-xs font-bold rounded-full mb-2">
-                  Making Complex Things Simple
+                {/* Link indicator */}
+                <span className="text-sm font-semibold text-foreground group-hover:underline">
+                  Deep Dive →
                 </span>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-3">
-                  Complexity → Clarity
-                </h3>
-                <p className="text-gray-600 leading-relaxed max-w-xl">
-                  I turn messy data into clear flows. The goal is understanding, not information overload. Users shouldn&apos;t need to think — the system should think for them.
-                </p>
               </div>
-            </div>
-
-            {/* Design Principles */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-              {clarityPrinciples.map((item, index) => (
-                <motion.div
-                  key={item.text}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="p-3 bg-[#87ceeb] border-2 border-[#1a1a1a] rounded-lg text-center"
-                >
-                  <span className="text-xl">{item.icon}</span>
-                  <p className="text-xs font-medium text-[#1a1a1a] mt-1">{item.text}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Real Transformations */}
-            <p className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Real Transformations</p>
-            <div className="space-y-3">
-              {clarityTransformations.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="p-4 bg-[#f0f9ff] border-2 border-[#1a1a1a] rounded-lg"
-                >
-                  <span className="inline-block px-2 py-0.5 bg-[#87ceeb] border border-[#1a1a1a] text-[#1a1a1a] text-xs font-bold rounded mb-2">
-                    {item.context}
-                  </span>
-                  <div className="flex flex-col md:flex-row md:items-center gap-2 text-sm">
-                    <span className="flex-1 text-gray-600">{item.before}</span>
-                    <span className="text-[#1a1a1a] font-bold hidden md:block">→</span>
-                    <span className="text-[#1a1a1a] font-bold md:hidden">↓</span>
-                    <span className="flex-1 text-[#1a1a1a] font-medium">{item.after}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            </Link>
           </motion.div>
-        </div>
-      </motion.section>
-
-      {/* ==================== Skill 3: End-to-End Builder ==================== */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 px-6 bg-[#fff5f7]"
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a]"
-          >
-            {/* Header: Image + Title */}
-            <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
-              <div className="w-48 h-48 bg-[#ff6b9d] rounded-xl border-2 border-[#1a1a1a] shadow-[2px_2px_0_#1a1a1a] flex items-center justify-center overflow-hidden flex-shrink-0">
-                <Image
-                  src="/skills/end-to-end.png"
-                  alt="End-to-End Builder"
-                  width={180}
-                  height={180}
-                  className="object-contain"
-                />
-              </div>
-              <div className="text-center md:text-left">
-                <span className="inline-block px-3 py-1 bg-[#ff6b9d] border-2 border-[#1a1a1a] text-white text-xs font-bold rounded-full mb-2">
-                  From Idea to Product
-                </span>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-3">
-                  End-to-End Builder
-                </h3>
-                <p className="text-gray-600 leading-relaxed max-w-xl">
-                  I ship from idea to working product. Not just designs. Not just code. The whole thing — including deployment, testing, and iteration based on real user feedback.
-                </p>
-              </div>
-            </div>
-
-            {/* VectorPaths Stats */}
-            <div className="p-5 bg-[#ff6b9d] border-2 border-[#1a1a1a] rounded-lg shadow-[2px_2px_0_#1a1a1a] mb-6">
-              <p className="text-sm font-bold text-white mb-3">VectorPaths — Built from scratch</p>
-              <div className="flex justify-around">
-                {projectStats.map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <p className="text-2xl font-bold text-white">{stat.value}</p>
-                    <p className="text-xs text-white/80">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Builder Mindset */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              {builderMindset.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="p-4 bg-[#fef9f3] border-2 border-[#1a1a1a] rounded-lg shadow-[2px_2px_0_#1a1a1a]"
-                >
-                  <span className="text-2xl mb-2 block">{item.icon}</span>
-                  <h5 className="font-bold text-[#1a1a1a] mb-1">{item.title}</h5>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Quote */}
-            <div className="p-4 bg-[#1a1a1a] rounded-lg text-center">
-              <p className="text-white">
-                &quot;The best way to learn is to <span className="text-[#ffe135]">build</span>. The best way to grow is to <span className="text-[#ff6b9d]">ship</span>.&quot;
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
+        ))}
+      </div>
     </div>
   );
 }

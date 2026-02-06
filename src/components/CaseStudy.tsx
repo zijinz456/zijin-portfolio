@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { colorMap, type ColorKey } from "@/lib/colors";
 import Avatar from "./Avatar";
-import { AvatarScene } from "./Avatar";
 import Image from "next/image";
 
 interface CaseStudyProps {
   id: string;
   title: string;
   subtitle: string;
-  avatarScene?: AvatarScene;
+  avatarScene?: string;
   customImage?: string;
   externalUrl?: string;
   challenge: string;
@@ -17,16 +17,8 @@ interface CaseStudyProps {
     title: string;
     content: React.ReactNode;
   }[];
-  color?: "yellow" | "pink" | "blue" | "green" | "purple";
+  color?: ColorKey;
 }
-
-const colorMap = {
-  yellow: { bg: "#ffe135", light: "#fff9e6" },
-  pink: { bg: "#ff6b9d", light: "#fff5f7" },
-  blue: { bg: "#87ceeb", light: "#f0f9ff" },
-  green: { bg: "#98d4bb", light: "#f0fdf4" },
-  purple: { bg: "#e8d4f8", light: "#faf5ff" },
-};
 
 export default function CaseStudy({
   id,
@@ -51,12 +43,12 @@ export default function CaseStudy({
     >
       {/* Header Card */}
       <div
-        className="p-6 border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] mb-4"
+        className="p-6 border-2 border-foreground rounded-xl shadow-sketch-lg mb-4"
         style={{ backgroundColor: colors.bg }}
       >
         <div className="flex items-center gap-4">
           {customImage ? (
-            <div className="w-20 h-20 rounded-xl overflow-hidden border-2 border-[#1a1a1a] bg-white flex items-center justify-center">
+            <div className="w-20 h-20 rounded-xl overflow-hidden border-2 border-foreground bg-white flex items-center justify-center">
               <Image
                 src={customImage}
                 alt={title}
@@ -66,10 +58,10 @@ export default function CaseStudy({
               />
             </div>
           ) : (
-            avatarScene && <Avatar scene={avatarScene} size="md" />
+            avatarScene && <Avatar size="md" />
           )}
           <div className="flex-1">
-            <h3 className="text-2xl font-bold text-[#1a1a1a]">{title}</h3>
+            <h3 className="text-2xl font-bold text-foreground">{title}</h3>
             <p className="text-gray-700">{subtitle}</p>
           </div>
           {externalUrl && (
@@ -77,7 +69,7 @@ export default function CaseStudy({
               href={externalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-white border-2 border-[#1a1a1a] rounded-lg font-medium text-sm shadow-[2px_2px_0_#1a1a1a] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all flex items-center gap-2"
+              className="px-4 py-2 bg-white border-2 border-foreground rounded-lg font-medium text-sm shadow-sketch-sm hover-sketch flex items-center gap-2"
             >
               Visit Website
               <span>↗</span>
@@ -87,15 +79,15 @@ export default function CaseStudy({
       </div>
 
       {/* Content Card */}
-      <div className="bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[4px_4px_0_#1a1a1a] overflow-hidden">
+      <div className="bg-white border-2 border-foreground rounded-xl shadow-sketch-lg overflow-hidden">
         {/* Challenge Section */}
-        <div className="p-6 border-b-2 border-dashed border-[#1a1a1a]/30">
+        <div className="p-6 border-b-2 border-dashed border-foreground/30">
           <div className="flex items-start gap-3">
-            <div className="flex-shrink-0 w-10 h-10 bg-[#ff6b9d] border-2 border-[#1a1a1a] rounded-lg flex items-center justify-center">
+            <div className="flex-shrink-0 w-10 h-10 bg-pink border-2 border-foreground rounded-lg flex items-center justify-center">
               <span className="text-white text-lg">❓</span>
             </div>
             <div>
-              <h4 className="text-sm font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">
+              <h4 className="text-sm font-bold text-foreground uppercase tracking-wider mb-2">
                 The Challenge
               </h4>
               <p className="text-gray-700 leading-relaxed">{challenge}</p>
@@ -111,12 +103,12 @@ export default function CaseStudy({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="p-5 border-2 border-[#1a1a1a] rounded-xl"
+              className="p-5 border-2 border-foreground rounded-xl"
               style={{ backgroundColor: colors.light }}
             >
-              <h4 className="text-lg font-bold text-[#1a1a1a] mb-4 flex items-center gap-3">
+              <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-3">
                 <span
-                  className="w-8 h-8 border-2 border-[#1a1a1a] rounded-lg flex items-center justify-center text-sm font-bold text-[#1a1a1a]"
+                  className="w-8 h-8 border-2 border-foreground rounded-lg flex items-center justify-center text-sm font-bold text-foreground"
                   style={{ backgroundColor: colors.bg }}
                 >
                   {index + 1}
@@ -132,69 +124,3 @@ export default function CaseStudy({
   );
 }
 
-// Flow Diagram Component for Case Studies
-export function FlowDiagram({ steps }: { steps: { label: string; branches?: string[] }[] }) {
-  return (
-    <div className="py-4">
-      {steps.map((step, index) => (
-        <div key={index} className="flex flex-col items-center">
-          {/* Node */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
-            className="px-5 py-3 bg-white border-2 border-[#1a1a1a] rounded-xl shadow-[2px_2px_0_#1a1a1a] text-center"
-          >
-            <span className="text-sm font-medium text-[#1a1a1a]">{step.label}</span>
-          </motion.div>
-
-          {/* Arrow or Branches */}
-          {index < steps.length - 1 && (
-            <div className="my-3">
-              {step.branches ? (
-                <div className="flex items-start gap-8">
-                  {step.branches.map((branch, bi) => (
-                    <div key={bi} className="flex flex-col items-center">
-                      <span className="text-[#1a1a1a] text-xl font-bold">↓</span>
-                      <span className="text-xs text-[#1a1a1a] px-3 py-1 bg-[#ffe135] border-2 border-[#1a1a1a] rounded-lg font-medium">
-                        {branch}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <span className="text-[#1a1a1a] text-xl font-bold">↓</span>
-              )}
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// Validation Stats Component
-export function ValidationStats({
-  stats,
-}: {
-  stats: { label: string; value: string; highlight?: boolean }[];
-}) {
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-      {stats.map((stat, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className={`p-4 border-2 border-[#1a1a1a] rounded-xl text-center shadow-[2px_2px_0_#1a1a1a] ${
-            stat.highlight ? "bg-[#98d4bb]" : "bg-white"
-          }`}
-        >
-          <p className="text-2xl font-bold text-[#1a1a1a]">{stat.value}</p>
-          <p className="text-sm text-gray-600">{stat.label}</p>
-        </motion.div>
-      ))}
-    </div>
-  );
-}

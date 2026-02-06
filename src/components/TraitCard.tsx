@@ -59,11 +59,11 @@ export default function TraitCard({
     >
       <Link
         href={linkTo}
-        className={`block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 ${colors.focus} focus-visible:ring-offset-2`}
+        className={`block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 ${colors.focus} focus-visible:ring-offset-2`}
         aria-label={`${title}: ${subtitle}. ${description}`}
       >
         <article
-          className={`h-full p-6 rounded-2xl border-2 ${colors.bg} ${colors.border} transition-all duration-300 cursor-pointer group motion-reduce:transition-none`}
+          className={`h-full p-6 rounded-xl border-2 ${colors.bg} ${colors.border} transition-all duration-300 cursor-pointer group motion-reduce:transition-none`}
         >
           {/* Icon */}
           <div

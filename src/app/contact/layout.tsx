@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch with Zijin Zhang. Available for product design, AI development, and collaboration opportunities.",
-  openGraph: {
-    title: "Contact | Zijin Zhang",
-    description: "Get in touch with me for collaboration opportunities.",
-    url: "https://zijinzhangprofile.com/contact",
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Zijin Zhang',
+  description: 'Get in touch with Zijin Zhang via email or LinkedIn.',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Zijin Zhang',
+    email: 'zijinz456@gmail.com',
+    sameAs: ['https://www.linkedin.com/in/zijin-zhang-2578b92b1'],
   },
 };
 
@@ -15,5 +18,10 @@ export default function ContactLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={jsonLd} />
+      {children}
+    </>
+  );
 }
