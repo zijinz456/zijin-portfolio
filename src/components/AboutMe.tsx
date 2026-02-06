@@ -16,8 +16,7 @@ export default function AboutMe() {
       >
         {/* Main intro */}
         <p className="text-gray-700 leading-relaxed">
-          I build AI-powered products that turn complex problems into clear, data-driven solutions.
-          Currently studying <strong>Finance & Business Analytics</strong> at the University of Melbourne.
+          I&apos;m a <strong>Finance & Business Analytics</strong> student at the University of Melbourne who builds AI-powered products — turning complex problems into clear, data-driven solutions.
         </p>
 
         {/* AI & Tech Passion */}
