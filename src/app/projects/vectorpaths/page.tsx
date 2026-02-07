@@ -90,7 +90,7 @@ export default function VectorPathsPage() {
                   An AI-powered adaptive learning platform for VCE Mathematics
                 </p>
                 <div className="flex flex-wrap gap-2 text-sm text-gray-500">
-                  <span className="px-3 py-1 bg-white border border-gray-200 rounded-full">Founder & Product Lead</span>
+                  <span className="px-3 py-1 bg-white border border-gray-200 rounded-full">AI Product Manager</span>
                   <span className="px-3 py-1 bg-white border border-gray-200 rounded-full">Product Strategy</span>
                   <span className="px-3 py-1 bg-white border border-gray-200 rounded-full">Algorithm Design</span>
                   <span className="px-3 py-1 bg-white border border-gray-200 rounded-full">Full-Stack Dev</span>

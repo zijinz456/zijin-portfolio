@@ -46,7 +46,7 @@ export default function IDCard({ className = "" }: IDCardProps) {
 
             <div className="flex items-center gap-2">
               <span className="text-gray-500 text-xs w-14">ROLE</span>
-              <span className="text-gray-700 text-xs">AI Product Manager</span>
+              <span className="text-gray-700 text-xs">Customer Banking Specialist</span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -72,7 +72,7 @@ export default function IDCard({ className = "" }: IDCardProps) {
 
         {/* Decorative stamp */}
         <div className="absolute top-16 right-4 w-12 h-12 border-2 border-pink rounded-full flex items-center justify-center rotate-12 opacity-60">
-          <span className="text-pink text-[8px] font-bold text-center leading-tight">AI<br/>PRODUCT</span>
+          <span className="text-pink text-[8px] font-bold text-center leading-tight">CBA<br/>BANKING</span>
         </div>
       </div>
 
